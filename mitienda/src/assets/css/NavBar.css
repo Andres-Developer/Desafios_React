@@ -6,16 +6,17 @@ ul {
   align-items: center;
 
   /* border: 2px dotted red; */
-  background-color: rgb(28,28,28);
+  background-color: #212529;
   height: 45px;
 
 }
 li.brand{
     display: flex;
-    align-items: center;
-
+    justify-content: center;
+    align-items: center; 
     color: #f4f4f4;
     font-weight: 700;
+    /* border: 1px dashed red; */
 }
 li.brand input{
     margin-right: 10px;
