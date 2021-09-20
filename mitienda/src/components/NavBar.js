@@ -9,7 +9,7 @@ const NavBar = () => {
         <ul>
             <li className="brand">
                 <input type="image" alt="logo" src={shoppingLogo} height="25px" />
-                <p>Mi TiendAPP</p>
+                <div>Mi TiendAPP</div>
             </li>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Sobre Nosotros</a></li>
