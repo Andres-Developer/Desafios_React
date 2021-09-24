@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import './../assets/css/ItemListContainer.css';
+import './../../assets/css/ItemListContainer.css';
 
 const ItemListContainer = (props) => {
     const [catalogo, setCatalogo] = useState("--State (Catálogo de Productos)--");

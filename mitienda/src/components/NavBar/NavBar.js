@@ -1,8 +1,8 @@
 import React from 'react';
-import CartWidget from "./CartWidget";
-import shoppingLogo from './../img/shoppingLogo.svg';
+import CartWidget from "./../Cart/CartWidget";
+import shoppingLogo from './../../img/shoppingLogo.svg';
 
-import './../assets/css/NavBar.css';
+import './../../assets/css/NavBar.css';
 
 const NavBar = () => {
     return (

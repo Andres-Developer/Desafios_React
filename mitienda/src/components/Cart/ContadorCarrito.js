@@ -1,5 +1,5 @@
 import React from 'react'
-import "./../assets/css/ContadorCarrito.css"
+import "./../../assets/css/ContadorCarrito.css"
 
 const ContadorCarrito = ({cantidad}) => {
     return (
