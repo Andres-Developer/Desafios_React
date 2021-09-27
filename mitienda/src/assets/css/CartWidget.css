@@ -1,4 +1,4 @@
 /* Cambio color del Carrito */
-div{
+div.cartWidget{
     color: #f4f4f4;
 }

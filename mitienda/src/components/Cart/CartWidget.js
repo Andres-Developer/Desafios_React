@@ -4,9 +4,10 @@ import ContadorCarrito from './ContadorCarrito'
 
 import "./../../assets/css/CartWidget.css";
 
+
 const CartWidget = ({cantidad}) => {
     return (
-        <div>
+        <div className="cartWidget">
             <FaShoppingCart />
             <ContadorCarrito cantidad={cantidad}/>
         </div>

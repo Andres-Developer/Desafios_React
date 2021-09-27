@@ -1,0 +1,31 @@
+div.counter {
+  color: black;
+  border: 1px solid gray;
+  border-radius: 4.5px;
+  width: 150px;
+  /* line-height: 20px; */
+  height: 39.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonItem {
+  /* color: red; */
+
+  font-size: 15px;
+  font-weight: 700;
+  /* line-height: 12px; */
+
+  
+}
+
+.buttonItem.minus{
+    background-color: rgb(180, 180, 180);
+    
+}
+
+.buttonItem.add{
+    background-color: rgb(180, 180, 180);
+    
+}
