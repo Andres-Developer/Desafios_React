@@ -14,10 +14,15 @@ const ItemCount = ({ stock, initial }) => {
     //Render
     return (
         <>
-            <div className="counter">
-                <button className="buttonItem minus btn" onClick={() => onMinus()}>-</button>
-                <div className="showCount">{count}</div>
-                <button className="buttonItem add btn" onClick={() => onAdd()}>+</button>
+            <div class="cardCounter">
+                <div className="counter">
+                    <button className="buttonItem minus btn" onClick={() => onMinus()}>-</button>
+                    <div className="showCount">{count}</div>
+                    <button className="buttonItem add btn" onClick={() => onAdd()}>+</button>
+                </div>
+                <div className="botonAgregar">
+                    <button type="" className="btn btn-outline-dark">Agregar al carrito</button>
+                </div>
             </div>
         </>
     );

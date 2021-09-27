@@ -1,5 +1,17 @@
-div.counter {
+div.cardCounter{
+  background-color: rgb(211, 211, 211);
+  width: 220px;
+  padding: 100px 10px 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+div.counter {  
   color: black;
+  background-color: rgb(255, 255, 255);
   border: 1px solid gray;
   border-radius: 4.5px;
   width: 150px;
@@ -10,16 +22,9 @@ div.counter {
   align-items: center;
 }
 
-.buttonItem {
-  /* color: red; */
-
-  font-size: 15px;
-  font-weight: 700;
-  /* line-height: 12px; */
-
-  
+div.showCount{
+ 
 }
-
 .buttonItem.minus{
     background-color: rgb(180, 180, 180);
     
@@ -28,4 +33,9 @@ div.counter {
 .buttonItem.add{
     background-color: rgb(180, 180, 180);
     
+}
+
+.botonAgregar{
+  margin-top: 10px;
+  background-color: #fff;
 }
