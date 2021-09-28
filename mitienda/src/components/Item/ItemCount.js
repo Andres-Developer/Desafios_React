@@ -14,7 +14,7 @@ const ItemCount = ({ stock, initial }) => {
     //Render
     return (
         <>
-            <div class="cardCounter">
+            <div className="cardCounter">
                 <div className="counter">
                     <button className="buttonItem minus btn" onClick={() => onMinus()}>-</button>
                     <div className="showCount">{count}</div>
