@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./../../assets/css/ItemCount.css";
 
 const ItemCount = ({ stock, initial }) => {
-    console.log(stock, initial);//Testing props
+    //Testing props
+    // console.log(stock, initial);    
     //Paso a Number los props
     stock = Number(stock);
     initial = Number(initial);
