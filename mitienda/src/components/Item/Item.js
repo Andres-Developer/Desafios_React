@@ -13,11 +13,10 @@ const Item = ({ id, title, pictureUrl, stock }) => {
                 <Card.Text>
                     Id del Item: {id}
                     <br />
-                    Stock del producto: {stock}
-                    {/* <img src={pictureUrl} alt="" /> */}
+                    Stock del producto: {stock}                    
                 </Card.Text>
+                {/* Llamando al componente encargado de cargar los detalles del Item */}
                 <ItemDetailContainer id={id}/>
-                {/* <Button variant="primary">Comprar</Button> */}
             </Card.Body>
         </Card>
     );
