@@ -3,869 +3,948 @@
     "id": 1,
     "clasificacion": "accesorio",
     "tipo": "casual",
-    "nombre": "billetera",
+    "title": "billetera",
     "marca": "tommy-hilfiger",
     "genero": "hombre",
     "color": "negro",
-    "precio": 182,
-    "img": "./img/accesorio_casual_billetera_tommy-hilfiger_hombre_negro_cuero.jpg"
+    "price": 182,
+    "stock": 18,
+    "pictureUrl": "images/accesorio_casual_billetera_tommy-hilfiger_hombre_negro_cuero.jpg"
   },
   {
     "id": 2,
     "clasificacion": "accesorio",
     "tipo": "casual",
-    "nombre": "gafas",
+    "title": "gafas",
     "marca": "timberland",
     "genero": "hombre",
     "color": "negro",
-    "precio": 262,
-    "img": "./img/accesorio_casual_gafas_timberland_hombre_negro.jpg"
+    "price": 262,
+    "stock": 11,
+    "pictureUrl": "images/accesorio_casual_gafas_timberland_hombre_negro.jpg"
   },
   {
     "id": 3,
     "clasificacion": "accesorio",
     "tipo": "casual",
-    "nombre": "reloj",
+    "title": "reloj",
     "marca": "tommy-hilfiger",
     "genero": "hombre",
     "color": "azul",
-    "precio": 173,
-    "img": "./img/accesorio_casual_reloj_tommy-hilfiger_hombre_azul.jpg"
+    "price": 173,
+    "stock": 9,
+    "pictureUrl": "images/accesorio_casual_reloj_tommy-hilfiger_hombre_azul.jpg"
   },
   {
     "id": 4,
     "clasificacion": "accesorio",
     "tipo": "casual",
-    "nombre": "reloj",
+    "title": "reloj",
     "marca": "tommy-hilfiger",
     "genero": "hombre",
     "color": "negro",
-    "precio": 155,
-    "img": "./img/accesorio_casual_reloj_tommy-hilfiger_hombre_negro.jpg"
+    "price": 155,
+    "stock": 11,
+    "pictureUrl": "images/accesorio_casual_reloj_tommy-hilfiger_hombre_negro.jpg"
   },
   {
     "id": 5,
     "clasificacion": "accesorio",
     "tipo": "casual",
-    "nombre": "reloj-pro",
+    "title": "reloj-pro",
     "marca": "tommy-hilfiger",
     "genero": "hombre",
     "color": "negro",
-    "precio": 430,
-    "img": "./img/accesorio_casual_reloj-pro_tommy-hilfiger_hombre_negro.jpg"
+    "price": 430,
+    "stock": 9,
+    "pictureUrl": "images/accesorio_casual_reloj-pro_tommy-hilfiger_hombre_negro.jpg"
   },
   {
     "id": 6,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "balon",
+    "title": "balon",
     "marca": "nike",
     "genero": "unisex",
     "color": "verde",
-    "precio": 219,
-    "img": "./img/accesorio_deporte_balon_nike_unisex_verde.jpg"
+    "price": 219,
+    "stock": 17,
+    "pictureUrl": "images/accesorio_deporte_balon_nike_unisex_verde.jpg"
   },
   {
     "id": 7,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "gafas",
+    "title": "gafas",
     "marca": "oakley",
     "genero": "hombre",
     "color": "negro",
-    "precio": 96,
-    "img": "./img/accesorio_deporte_gafas_oakley_hombre_negro_azul.jpg"
+    "price": 96,
+    "stock": 11,
+    "pictureUrl": "images/accesorio_deporte_gafas_oakley_hombre_negro_azul.jpg"
   },
   {
     "id": 8,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "gafas",
+    "title": "gafas",
     "marca": "oakley",
     "genero": "hombre",
     "color": "negro",
-    "precio": 326,
-    "img": "./img/accesorio_deporte_gafas_oakley_hombre_negro_naranja.jpg"
+    "price": 326,
+    "stock": 9,
+    "pictureUrl": "images/accesorio_deporte_gafas_oakley_hombre_negro_naranja.jpg"
   },
   {
     "id": 9,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "gorra",
+    "title": "gorra",
     "marca": "nike",
     "genero": "hombre",
     "color": "blanco",
-    "precio": 415,
-    "img": "./img/accesorio_deporte_gorra_nike_hombre_blanco.jpg"
+    "price": 415,
+    "stock": 14,
+    "pictureUrl": "images/accesorio_deporte_gorra_nike_hombre_blanco.jpg"
   },
   {
     "id": 10,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "gorra",
+    "title": "gorra",
     "marca": "oakley",
     "genero": "hombre",
     "color": "gris",
-    "precio": 306,
-    "img": "./img/accesorio_deporte_gorra_oakley_hombre_gris.jpg"
+    "price": 306,
+    "stock": 6,
+    "pictureUrl": "images/accesorio_deporte_gorra_oakley_hombre_gris.jpg"
   },
   {
     "id": 11,
     "clasificacion": "accesorio",
     "tipo": "deporte",
-    "nombre": "gorra",
+    "title": "gorra",
     "marca": "oakley",
     "genero": "hombre",
     "color": "negro",
-    "precio": 254,
-    "img": "./img/accesorio_deporte_gorra_oakley_hombre_negro.jpg"
+    "price": 254,
+    "stock": 17,
+    "pictureUrl": "images/accesorio_deporte_gorra_oakley_hombre_negro.jpg"
   },
   {
     "id": 12,
     "clasificacion": "accesorio",
     "tipo": "trekking",
-    "nombre": "bandana",
+    "title": "bandana",
     "marca": "the-north-face",
     "genero": "hombre",
     "color": "rojo",
-    "precio": 296,
-    "img": "./img/accesorio_trekking_bandana_the-north-face_hombre_rojo.jpg"
+    "price": 296,
+    "stock": 6,
+    "pictureUrl": "images/accesorio_trekking_bandana_the-north-face_hombre_rojo.jpg"
   },
   {
     "id": 13,
     "clasificacion": "accesorio",
     "tipo": "trekking",
-    "nombre": "gorro",
+    "title": "gorro",
     "marca": "the-north-face",
     "genero": "hombre",
     "color": "negro",
-    "precio": 308,
-    "img": "./img/accesorio_trekking_gorro_the-north-face_hombre_negro.jpg"
+    "price": 308,
+    "stock": 5,
+    "pictureUrl": "images/accesorio_trekking_gorro_the-north-face_hombre_negro.jpg"
   },
   {
     "id": 14,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "botas",
+    "title": "botas",
     "marca": "timberland",
     "genero": "mujer",
     "color": "cafe",
-    "precio": 254,
-    "img": "./img/calzado_casual_botas_timberland_mujer_cafe.jpg"
+    "price": 254,
+    "stock": 13,
+    "pictureUrl": "images/calzado_casual_botas_timberland_mujer_cafe.jpg"
   },
   {
     "id": 15,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "botas",
+    "title": "botas",
     "marca": "timberland",
     "genero": "mujer",
     "color": "marron",
-    "precio": 230,
-    "img": "./img/calzado_casual_botas_timberland_mujer_marron.jpg"
+    "price": 230,
+    "stock": 8,
+    "pictureUrl": "images/calzado_casual_botas_timberland_mujer_marron.jpg"
   },
   {
     "id": 16,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "botas",
+    "title": "botas",
     "marca": "timberland",
     "genero": "nino",
     "color": "negro",
-    "precio": 189,
-    "img": "./img/calzado_casual_botas_timberland_nino_negro.jpg"
+    "price": 189,
+    "stock": 12,
+    "pictureUrl": "images/calzado_casual_botas_timberland_nino_negro.jpg"
   },
   {
     "id": 17,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "sandalia",
+    "title": "sandalia",
     "marca": "timberland",
     "genero": "mujer",
     "color": "cafe",
-    "precio": 466,
-    "img": "./img/calzado_casual_sandalia_timberland_mujer_cafe.jpg"
+    "price": 466,
+    "stock": 12,
+    "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_cafe.jpg"
   },
   {
     "id": 18,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "sandalia",
+    "title": "sandalia",
     "marca": "timberland",
     "genero": "mujer",
     "color": "miel",
-    "precio": 267,
-    "img": "./img/calzado_casual_sandalia_timberland_mujer_miel.jpg"
+    "price": 267,
+    "stock": 10,
+    "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_miel.jpg"
   },
   {
     "id": 19,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "sandalia",
+    "title": "sandalia",
     "marca": "timberland",
     "genero": "mujer",
     "color": "negro",
-    "precio": 310,
-    "img": "./img/calzado_casual_sandalia_timberland_mujer_negro.jpg"
+    "price": 310,
+    "stock": 8,
+    "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_negro.jpg"
   },
   {
     "id": 20,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "sandalia",
+    "title": "sandalia",
     "marca": "timberland",
     "genero": "mujer",
     "color": "rojo",
-    "precio": 207,
-    "img": "./img/calzado_casual_sandalia_timberland_mujer_rojo.jpg"
+    "price": 207,
+    "stock": 8,
+    "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_rojo.jpg"
   },
   {
     "id": 21,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "sandalia",
+    "title": "sandalia",
     "marca": "tommy-hilfiger",
     "genero": "mujer",
     "color": "azul",
-    "precio": 262,
-    "img": "./img/calzado_casual_sandalia_tommy-hilfiger_mujer_azul.jpg"
+    "price": 262,
+    "stock": 11,
+    "pictureUrl": "images/calzado_casual_sandalia_tommy-hilfiger_mujer_azul.jpg"
   },
   {
     "id": 22,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "nike",
     "genero": "hombre",
     "color": "negro",
-    "precio": 443,
-    "img": "./img/calzado_casual_tenis_nike_hombre_negro.jpg"
+    "price": 443,
+    "stock": 6,
+    "pictureUrl": "images/calzado_casual_tenis_nike_hombre_negro.jpg"
   },
   {
     "id": 23,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "gris",
-    "precio": 371,
-    "img": "./img/calzado_casual_tenis_polo-ralph-lauren_hombre_gris.jpg"
+    "price": 371,
+    "stock": 11,
+    "pictureUrl": "images/calzado_casual_tenis_polo-ralph-lauren_hombre_gris.jpg"
   },
   {
     "id": 24,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "puma",
     "genero": "mujer",
     "color": "blanco",
-    "precio": 203,
-    "img": "./img/calzado_casual_tenis_puma_mujer_blanco.jpg"
+    "price": 203,
+    "stock": 10,
+    "pictureUrl": "images/calzado_casual_tenis_puma_mujer_blanco.jpg"
   },
   {
     "id": 25,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "hombre",
     "color": "azul",
-    "precio": 140,
-    "img": "./img/calzado_casual_tenis_timberland_hombre_azul.jpg"
+    "price": 140,
+    "stock": 6,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul.jpg"
   },
   {
     "id": 26,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "hombre",
     "color": "azul",
-    "precio": 300,
-    "img": "./img/calzado_casual_tenis_timberland_hombre_azul_cafe.jpg"
+    "price": 300,
+    "stock": 6,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul_cafe.jpg"
   },
   {
     "id": 27,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "hombre",
     "color": "azul",
-    "precio": 191,
-    "img": "./img/calzado_casual_tenis_timberland_hombre_azul_slim.jpg"
+    "price": 191,
+    "stock": 15,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul_slim.jpg"
   },
   {
     "id": 28,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "hombre",
     "color": "gris",
-    "precio": 293,
-    "img": "./img/calzado_casual_tenis_timberland_hombre_gris.jpg"
+    "price": 293,
+    "stock": 17,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_gris.jpg"
   },
   {
     "id": 29,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "hombre",
     "color": "olivo",
-    "precio": 240,
-    "img": "./img/calzado_casual_tenis_timberland_hombre_olivo.jpg"
+    "price": 240,
+    "stock": 15,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_olivo.jpg"
   },
   {
     "id": 30,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "timberland",
     "genero": "mujer",
     "color": "gris",
-    "precio": 436,
-    "img": "./img/calzado_casual_tenis_timberland_mujer_gris.jpg"
+    "price": 436,
+    "stock": 13,
+    "pictureUrl": "images/calzado_casual_tenis_timberland_mujer_gris.jpg"
   },
   {
     "id": 31,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "tommy-hilfiger",
     "genero": "mujer",
     "color": "blanco",
-    "precio": 175,
-    "img": "./img/calzado_casual_tenis_tommy-hilfiger_mujer_blanco.jpg"
+    "price": 175,
+    "stock": 13,
+    "pictureUrl": "images/calzado_casual_tenis_tommy-hilfiger_mujer_blanco.jpg"
   },
   {
     "id": 32,
     "clasificacion": "calzado",
     "tipo": "casual",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "tommy-hilfiger",
     "genero": "mujer",
     "color": "negro",
-    "precio": 206,
-    "img": "./img/calzado_casual_tenis_tommy-hilfiger_mujer_negro.jpg"
+    "price": 206,
+    "stock": 8,
+    "pictureUrl": "images/calzado_casual_tenis_tommy-hilfiger_mujer_negro.jpg"
   },
   {
     "id": 33,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "botin",
+    "title": "botin",
     "marca": "nike",
     "genero": "hombre",
     "color": "salmon",
-    "precio": 278,
-    "img": "./img/calzado_deporte_botin_nike_hombre_salmon.jpg"
+    "price": 278,
+    "stock": 13,
+    "pictureUrl": "images/calzado_deporte_botin_nike_hombre_salmon.jpg"
   },
   {
     "id": 34,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "nike",
     "genero": "hombre",
     "color": "negro",
-    "precio": 106,
-    "img": "./img/calzado_deporte_tenis_nike_hombre_negro.jpg"
+    "price": 106,
+    "stock": 19,
+    "pictureUrl": "images/calzado_deporte_tenis_nike_hombre_negro.jpg"
   },
   {
     "id": 35,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "nike",
     "genero": "mujer",
     "color": "rosado",
-    "precio": 311,
-    "img": "./img/calzado_deporte_tenis_nike_mujer_rosado.jpg"
+    "price": 311,
+    "stock": 12,
+    "pictureUrl": "images/calzado_deporte_tenis_nike_mujer_rosado.jpg"
   },
   {
     "id": 36,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "puma",
     "genero": "hombre",
     "color": "azul",
-    "precio": 259,
-    "img": "./img/calzado_deporte_tenis_puma_hombre_azul.jpg"
+    "price": 259,
+    "stock": 8,
+    "pictureUrl": "images/calzado_deporte_tenis_puma_hombre_azul.jpg"
   },
   {
     "id": 37,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "puma",
     "genero": "mujer",
     "color": "rosado",
-    "precio": 218,
-    "img": "./img/calzado_deporte_tenis_puma_mujer_rosado.jpg"
+    "price": 218,
+    "stock": 9,
+    "pictureUrl": "images/calzado_deporte_tenis_puma_mujer_rosado.jpg"
   },
   {
     "id": 38,
     "clasificacion": "calzado",
     "tipo": "deporte",
-    "nombre": "tenis",
+    "title": "tenis",
     "marca": "skechers",
     "genero": "hombre",
     "color": "negro",
-    "precio": 142,
-    "img": "./img/calzado_deporte_tenis_skechers_hombre_negro.jpg"
+    "price": 142,
+    "stock": 17,
+    "pictureUrl": "images/calzado_deporte_tenis_skechers_hombre_negro.jpg"
   },
   {
     "id": 39,
     "clasificacion": "calzado",
     "tipo": "informal",
-    "nombre": "playera",
+    "title": "playera",
     "marca": "nautica",
     "genero": "hombre",
     "color": "azul",
-    "precio": 301,
-    "img": "./img/calzado_informal_playera_nautica_hombre_azul.jpg"
+    "price": 301,
+    "stock": 13,
+    "pictureUrl": "images/calzado_informal_playera_nautica_hombre_azul.jpg"
   },
   {
     "id": 40,
     "clasificacion": "calzado",
     "tipo": "informal",
-    "nombre": "playera",
+    "title": "playera",
     "marca": "nautica",
     "genero": "hombre",
     "color": "rojo",
-    "precio": 498,
-    "img": "./img/calzado_informal_playera_nautica_hombre_rojo.jpg"
+    "price": 498,
+    "stock": 16,
+    "pictureUrl": "images/calzado_informal_playera_nautica_hombre_rojo.jpg"
   },
   {
     "id": 41,
     "clasificacion": "calzado",
     "tipo": "informal",
-    "nombre": "playera",
+    "title": "playera",
     "marca": "puma",
     "genero": "hombre",
     "color": "azul",
-    "precio": 450,
-    "img": "./img/calzado_informal_playera_puma_hombre_azul.jpg"
+    "price": 450,
+    "stock": 14,
+    "pictureUrl": "images/calzado_informal_playera_puma_hombre_azul.jpg"
   },
   {
     "id": 42,
     "clasificacion": "calzado",
     "tipo": "informal",
-    "nombre": "playera",
+    "title": "playera",
     "marca": "the-north-face",
     "genero": "mujer",
     "color": "azul",
-    "precio": 164,
-    "img": "./img/calzado_informal_playera_the-north-face_mujer_azul.jpg"
+    "price": 164,
+    "stock": 14,
+    "pictureUrl": "images/calzado_informal_playera_the-north-face_mujer_azul.jpg"
   },
   {
     "id": 43,
     "clasificacion": "calzado",
     "tipo": "informal",
-    "nombre": "playera-slim",
+    "title": "playera-slim",
     "marca": "nautica",
     "genero": "hombre",
     "color": "rojo",
-    "precio": 457,
-    "img": "./img/calzado_informal_playera-slim_nautica_hombre_rojo.jpg"
+    "price": 457,
+    "stock": 10,
+    "pictureUrl": "images/calzado_informal_playera-slim_nautica_hombre_rojo.jpg"
   },
   {
     "id": 44,
     "clasificacion": "calzado",
     "tipo": "trabajo",
-    "nombre": "bota",
+    "title": "bota",
     "marca": "timberland",
     "genero": "hombre",
     "color": "cafe",
-    "precio": 488,
-    "img": "./img/calzado_trabajo_bota_timberland_hombre_cafe.jpg"
+    "price": 488,
+    "stock": 8,
+    "pictureUrl": "images/calzado_trabajo_bota_timberland_hombre_cafe.jpg"
   },
   {
     "id": 45,
     "clasificacion": "calzado",
     "tipo": "trekking",
-    "nombre": "bota",
+    "title": "bota",
     "marca": "the-north-face",
     "genero": "hombre",
     "color": "cafe",
-    "precio": 283,
-    "img": "./img/calzado_trekking_bota_the-north-face_hombre_cafe.jpg"
+    "price": 283,
+    "stock": 16,
+    "pictureUrl": "images/calzado_trekking_bota_the-north-face_hombre_cafe.jpg"
   },
   {
     "id": 46,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "camisa",
+    "title": "camisa",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "azul",
-    "precio": 375,
-    "img": "./img/vestir_casual_camisa_polo-ralph-lauren_hombre_azul_rayas.jpg"
+    "price": 375,
+    "stock": 13,
+    "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_azul_rayas.jpg"
   },
   {
     "id": 47,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "camisa",
+    "title": "camisa",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "olivo",
-    "precio": 449,
-    "img": "./img/vestir_casual_camisa_polo-ralph-lauren_hombre_olivo.jpg"
+    "price": 449,
+    "stock": 15,
+    "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_olivo.jpg"
   },
   {
     "id": 48,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "camisa",
+    "title": "camisa",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "salmon",
-    "precio": 105,
-    "img": "./img/vestir_casual_camisa_polo-ralph-lauren_hombre_salmon.jpg"
+    "price": 105,
+    "stock": 8,
+    "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_salmon.jpg"
   },
   {
     "id": 49,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "camisa",
+    "title": "camisa",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "verde",
-    "precio": 489,
-    "img": "./img/vestir_casual_camisa_polo-ralph-lauren_hombre_verde_cuadros.jpg"
+    "price": 489,
+    "stock": 18,
+    "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_verde_cuadros.jpg"
   },
   {
     "id": 50,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "chaqueta",
+    "title": "chaqueta",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "azul",
-    "precio": 123,
-    "img": "./img/vestir_casual_chaqueta_polo-ralph-lauren_hombre_azul.jpg"
+    "price": 123,
+    "stock": 20,
+    "pictureUrl": "images/vestir_casual_chaqueta_polo-ralph-lauren_hombre_azul.jpg"
   },
   {
     "id": 51,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "chaqueta",
+    "title": "chaqueta",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "rojo",
-    "precio": 353,
-    "img": "./img/vestir_casual_chaqueta_polo-ralph-lauren_hombre_rojo.jpg"
+    "price": 353,
+    "stock": 8,
+    "pictureUrl": "images/vestir_casual_chaqueta_polo-ralph-lauren_hombre_rojo.jpg"
   },
   {
     "id": 52,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "chaqueta",
+    "title": "chaqueta",
     "marca": "the-north-face",
     "genero": "hombre",
     "color": "azul",
-    "precio": 145,
-    "img": "./img/vestir_casual_chaqueta_the-north-face_hombre_azul.jpg"
+    "price": 145,
+    "stock": 8,
+    "pictureUrl": "images/vestir_casual_chaqueta_the-north-face_hombre_azul.jpg"
   },
   {
     "id": 53,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "chaqueta",
+    "title": "chaqueta",
     "marca": "the-north-face",
     "genero": "hombre",
     "color": "gris",
-    "precio": 107,
-    "img": "./img/vestir_casual_chaqueta_the-north-face_hombre_gris.jpg"
+    "price": 107,
+    "stock": 9,
+    "pictureUrl": "images/vestir_casual_chaqueta_the-north-face_hombre_gris.jpg"
   },
   {
     "id": 54,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "pantalon",
+    "title": "pantalon",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "azul",
-    "precio": 438,
-    "img": "./img/vestir_casual_pantalon_polo-ralph-lauren_hombre_azul.jpg"
+    "price": 438,
+    "stock": 13,
+    "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_azul.jpg"
   },
   {
     "id": 55,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "pantalon",
+    "title": "pantalon",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "caqui",
-    "precio": 210,
-    "img": "./img/vestir_casual_pantalon_polo-ralph-lauren_hombre_caqui.jpg"
+    "price": 210,
+    "stock": 19,
+    "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_caqui.jpg"
   },
   {
     "id": 56,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "pantalon",
+    "title": "pantalon",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "gris",
-    "precio": 206,
-    "img": "./img/vestir_casual_pantalon_polo-ralph-lauren_hombre_gris.jpg"
+    "price": 206,
+    "stock": 11,
+    "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_gris.jpg"
   },
   {
     "id": 57,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "pantalon",
+    "title": "pantalon",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "olivo",
-    "precio": 391,
-    "img": "./img/vestir_casual_pantalon_polo-ralph-lauren_hombre_olivo.jpg"
+    "price": 391,
+    "stock": 5,
+    "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_olivo.jpg"
   },
   {
     "id": 58,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "calvin-klein",
     "genero": "hombre",
     "color": "navy",
-    "precio": 242,
-    "img": "./img/vestir_casual_remera_calvin-klein_hombre_navy.jpg"
+    "price": 242,
+    "stock": 8,
+    "pictureUrl": "images/vestir_casual_remera_calvin-klein_hombre_navy.jpg"
   },
   {
     "id": 59,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "calvin-klein",
     "genero": "mujer",
     "color": "salmon",
-    "precio": 499,
-    "img": "./img/vestir_casual_remera_calvin-klein_mujer_salmon.jpg"
+    "price": 499,
+    "stock": 6,
+    "pictureUrl": "images/vestir_casual_remera_calvin-klein_mujer_salmon.jpg"
   },
   {
     "id": 60,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "frida-kahlo",
     "genero": "mujer",
     "color": "azul",
-    "precio": 456,
-    "img": "./img/vestir_casual_remera_frida-kahlo_mujer_azul.jpg"
+    "price": 456,
+    "stock": 17,
+    "pictureUrl": "images/vestir_casual_remera_frida-kahlo_mujer_azul.jpg"
   },
   {
     "id": 61,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "gap",
     "genero": "hombre",
     "color": "navy",
-    "precio": 450,
-    "img": "./img/vestir_casual_remera_gap_hombre_navy.jpg"
+    "price": 450,
+    "stock": 5,
+    "pictureUrl": "images/vestir_casual_remera_gap_hombre_navy.jpg"
   },
   {
     "id": 62,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "gap",
     "genero": "hombre",
     "color": "negra",
-    "precio": 476,
-    "img": "./img/vestir_casual_remera_gap_hombre_negra.jpg"
+    "price": 476,
+    "stock": 6,
+    "pictureUrl": "images/vestir_casual_remera_gap_hombre_negra.jpg"
   },
   {
     "id": 63,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "gap",
     "genero": "unisex",
     "color": "verde",
-    "precio": 116,
-    "img": "./img/vestir_casual_remera_gap_unisex_verde.jpg"
+    "price": 116,
+    "stock": 5,
+    "pictureUrl": "images/vestir_casual_remera_gap_unisex_verde.jpg"
   },
   {
     "id": 64,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "harry-potter",
     "genero": "mujer",
     "color": "gris",
-    "precio": 483,
-    "img": "./img/vestir_casual_remera_harry-potter_mujer_gris.jpg"
+    "price": 483,
+    "stock": 17,
+    "pictureUrl": "images/vestir_casual_remera_harry-potter_mujer_gris.jpg"
   },
   {
     "id": 65,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "levis",
     "genero": "hombre",
     "color": "gris",
-    "precio": 226,
-    "img": "./img/vestir_casual_remera_levis_hombre_gris.jpg"
+    "price": 226,
+    "stock": 15,
+    "pictureUrl": "images/vestir_casual_remera_levis_hombre_gris.jpg"
   },
   {
     "id": 66,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "nickelodeon",
     "genero": "mujer",
     "color": "azul",
-    "precio": 467,
-    "img": "./img/vestir_casual_remera_nickelodeon_mujer_azul.jpg"
+    "price": 467,
+    "stock": 11,
+    "pictureUrl": "images/vestir_casual_remera_nickelodeon_mujer_azul.jpg"
   },
   {
     "id": 67,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "nike",
     "genero": "hombre",
     "color": "gris",
-    "precio": 199,
-    "img": "./img/vestir_casual_remera_nike_hombre_gris.jpg"
+    "price": 199,
+    "stock": 8,
+    "pictureUrl": "images/vestir_casual_remera_nike_hombre_gris.jpg"
   },
   {
     "id": 68,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "reebok",
     "genero": "hombre",
     "color": "gris",
-    "precio": 221,
-    "img": "./img/vestir_casual_remera_reebok_hombre_gris.jpg"
+    "price": 221,
+    "stock": 9,
+    "pictureUrl": "images/vestir_casual_remera_reebok_hombre_gris.jpg"
   },
   {
     "id": 69,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "reebok",
     "genero": "mujer",
     "color": "negro",
-    "precio": 204,
-    "img": "./img/vestir_casual_remera_reebok_mujer_negro.jpg"
+    "price": 204,
+    "stock": 7,
+    "pictureUrl": "images/vestir_casual_remera_reebok_mujer_negro.jpg"
   },
   {
     "id": 70,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "snoopy",
     "genero": "nina",
     "color": "coral",
-    "precio": 470,
-    "img": "./img/vestir_casual_remera_snoopy_nina_coral.jpg"
+    "price": 470,
+    "stock": 17,
+    "pictureUrl": "images/vestir_casual_remera_snoopy_nina_coral.jpg"
   },
   {
     "id": 71,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "saco",
+    "title": "saco",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "beige",
-    "precio": 444,
-    "img": "./img/vestir_casual_saco_polo-ralph-lauren_hombre_beige.jpg"
+    "price": 444,
+    "stock": 7,
+    "pictureUrl": "images/vestir_casual_saco_polo-ralph-lauren_hombre_beige.jpg"
   },
   {
     "id": 72,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "sweater-hoodie",
+    "title": "sweater-hoodie",
     "marca": "polo-ralph-lauren",
     "genero": "hombre",
     "color": "azul",
-    "precio": 216,
-    "img": "./img/vestir_casual_sweater-hoodie_polo-ralph-lauren_hombre_azul.jpg"
+    "price": 216,
+    "stock": 20,
+    "pictureUrl": "images/vestir_casual_sweater-hoodie_polo-ralph-lauren_hombre_azul.jpg"
   },
   {
     "id": 73,
     "clasificacion": "vestir",
     "tipo": "casual",
-    "nombre": "sweater-hoodie",
+    "title": "sweater-hoodie",
     "marca": "the-north-face",
     "genero": "mujer",
     "color": "rosado",
-    "precio": 304,
-    "img": "./img/vestir_casual_sweater-hoodie_the-north-face_mujer_rosado.jpg"
+    "price": 304,
+    "stock": 6,
+    "pictureUrl": "images/vestir_casual_sweater-hoodie_the-north-face_mujer_rosado.jpg"
   },
   {
     "id": 74,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "chaqueta",
+    "title": "chaqueta",
     "marca": "nike",
     "genero": "hombre",
     "color": "azul",
-    "precio": 378,
-    "img": "./img/vestir_deporte_chaqueta_nike_hombre_azul.jpg"
+    "price": 378,
+    "stock": 14,
+    "pictureUrl": "images/vestir_deporte_chaqueta_nike_hombre_azul.jpg"
   },
   {
     "id": 75,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "conjunto-ciclismo",
+    "title": "conjunto-ciclismo",
     "marca": "xtiger",
     "genero": "hombre",
     "color": "negro",
-    "precio": 189,
-    "img": "./img/vestir_deporte_conjunto-ciclismo_xtiger_hombre_negro.jpg"
+    "price": 189,
+    "stock": 18,
+    "pictureUrl": "images/vestir_deporte_conjunto-ciclismo_xtiger_hombre_negro.jpg"
   },
   {
     "id": 76,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "polo",
+    "title": "polo",
     "marca": "nike",
     "genero": "hombre",
     "color": "negro",
-    "precio": 330,
-    "img": "./img/vestir_deporte_polo_nike_hombre_negro.jpg"
+    "price": 330,
+    "stock": 10,
+    "pictureUrl": "images/vestir_deporte_polo_nike_hombre_negro.jpg"
   },
   {
     "id": 77,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "adidas",
     "genero": "hombre",
     "color": "blanco",
-    "precio": 116,
-    "img": "./img/vestir_deporte_remera_adidas_hombre_blanco.jpg"
+    "price": 116,
+    "stock": 13,
+    "pictureUrl": "images/vestir_deporte_remera_adidas_hombre_blanco.jpg"
   },
   {
     "id": 78,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "nike",
     "genero": "hombre",
     "color": "gris",
-    "precio": 200,
-    "img": "./img/vestir_deporte_remera_nike_hombre_gris.jpg"
+    "price": 200,
+    "stock": 14,
+    "pictureUrl": "images/vestir_deporte_remera_nike_hombre_gris.jpg"
   },
   {
     "id": 79,
     "clasificacion": "vestir",
     "tipo": "deporte",
-    "nombre": "remera",
+    "title": "remera",
     "marca": "under-armour",
     "genero": "hombre",
     "color": "azul",
-    "precio": 98,
-    "img": "./img/vestir_deporte_remera_under-armour_hombre_azul.jpg"
+    "price": 98,
+    "stock": 10,
+    "pictureUrl": "images/vestir_deporte_remera_under-armour_hombre_azul.jpg"
   }
 ]

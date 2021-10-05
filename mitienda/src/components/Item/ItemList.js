@@ -4,12 +4,12 @@ import moduleName from './../../assets/css/ItemList.css';
 
 const ItemList = ({ itemsArray }) => {
     //console.log(items);
-    const [items, setItems] = useState(itemsArray);
+    const [items, setItems] = useState(itemsArray); 
 
     return (
         <div>            
             <div className="listaItems">
-                {items.map(e => (<Item id={e.id} title={e.title} pictureUrl={e.pictureUrl} />))}
+                {items.map((e,idx) => (<Item id={e.id} title={e.title} stock={e.stock} pictureUrl={e.pictureUrl} key={idx}/>))}
                 {/* {console.log(items)} */}
             </div>
         </div>
