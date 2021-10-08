@@ -1,12 +1,14 @@
+import { Modal } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ itemDetail }) => {
-    /* console.log(itemDetail); */
     return (
         <>
-            <h3>{itemDetail.title + " " + itemDetail.marca.toUpperCase()}</h3>
-            <div className="d-flex align-items-center">
-                <img src={`./../`+itemDetail.pictureUrl} width="40%" alt="" />           
+            <Modal.Header closeButton>
+                <Modal.Title>{itemDetail.title + " " + itemDetail.marca.toUpperCase()}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="d-flex">
+                <img src={itemDetail.pictureUrl} width="60%" alt="" />
                 <div>
                     <button type="button" className="btn btn-warning" disabled data-bs-toggle="button">
                         Stock disponible: {itemDetail.stock}
@@ -16,7 +18,7 @@ const ItemDetail = ({ itemDetail }) => {
                     <ItemCount stock={itemDetail.stock} initial={1} />
 
                 </div>
-            </div>
+            </Modal.Body>
         </>
     );
 };

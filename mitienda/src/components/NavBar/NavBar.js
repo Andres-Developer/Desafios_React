@@ -1,7 +1,7 @@
 import React from 'react';
 import CartWidget from "./../Cart/CartWidget";
 import shoppingLogo from './../../img/shoppingLogo.svg';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import './../../assets/css/NavBar.css';
 
@@ -12,11 +12,10 @@ const NavBar = () => {
                 <input type="image" alt="logo" src={shoppingLogo} height="25px" />
                 <div>Mi TiendAPP</div>
             </Link>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><CartWidget cantidad="10"/></li>
+            <Link to="/category/1">Accesorios</Link>
+            <Link to="/category/2">Zapatos</Link>
+            <Link to="/category/3">Ropa</Link>
+            <Link to="/category/"><CartWidget cantidad="10" /></Link>
         </ul>
     );
 };

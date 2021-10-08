@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import foto from './../../img/accesorio_casual_billetera_tommy-hilfiger_hombre_negro_cuero.jpg';
+import { Link } from 'react-router-dom';
+
 import ItemDetailContainer from './ItemDetailContainer';
 
 const Item = ({ id, title, pictureUrl, stock }) => {
@@ -13,10 +14,13 @@ const Item = ({ id, title, pictureUrl, stock }) => {
                 <Card.Text>
                     Id del Item: {id}
                     <br />
-                    Stock del producto: {stock}                    
+                    Stock del producto: {stock}
                 </Card.Text>
                 {/* Llamando al componente encargado de cargar los detalles del Item */}
-                <ItemDetailContainer id={id}/>
+                {/* <ItemDetailContainer id={id} /> */}
+                <Link to={`/item/${id}`} className="btn btn-success">
+                    detalle
+                </Link>
             </Card.Body>
         </Card>
     );
