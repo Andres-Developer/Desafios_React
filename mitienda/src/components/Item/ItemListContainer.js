@@ -17,7 +17,6 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         /* setTimeout(() => setTextoTest("Listo"), 2000); */
         /* Llamando al servidor  */
-        console.log("Hook efecto")
         const llamadaServidor = async () => {
             /* await new Promise((resolve, reject) => setTimeout(() => setTextoTest("Listo"), 2000)); */
             /* await new Promise((resolve, reject) => setTimeout(resolve, 2000)).then(() => setTextoTest("Listo")); */
