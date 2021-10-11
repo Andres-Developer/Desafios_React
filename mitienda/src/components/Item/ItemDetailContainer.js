@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         /* Llamando al item para obtener TODOS los detalles a partir del ID entregado por Props */
         const getItem = async () => {
-            await new Promise((resolve, reject) => setTimeout(resolve, 2000))
+            await new Promise((resolve, reject) => setTimeout(resolve, 800))
                 .then(() => Data.find(e => e.id === parseInt(productId)))
                 .then((res) => {
                     setItemsDetail(res);
