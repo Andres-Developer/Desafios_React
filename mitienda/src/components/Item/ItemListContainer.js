@@ -7,67 +7,58 @@ import { useParams } from 'react-router';
 
 const ItemListContainer = (props) => {
     const [items, setItems] = useState(null);
+    const [loading, setLoading] = useState(true);
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();
     const [loading, setLoading] = useState(false);
+  
     const categorias = ['Accesorios', 'Calzado', 'Vestir'];
 
     /* Hook de Ciclo de Vida */
     useEffect(() => {
-
-        const cargaProductos = new Promise((resolve, reject) => {
-            setLoading(true);
-            setTimeout(() => {
-                if (idCategory != 0) {
-                    resolve(listaProductos.filter((producto) => producto.IdClasficacion == idCategory));
-                } else {
-                    resolve(listaProductos);
-                }
-            }, 1000);
-        });
         /* Llamando al servidor  */
-        /*         const llamadaServidor = async () => {            
-                    await new Promise((resolve, reject) => setTimeout(resolve, 2000))
-                        .then(() => {
-                            if (idCategory) {
-                                console.log("Entró por URL params: ", idCategory);
-                                const categoryFilter = listaProductos.filter(
-                                    (producto) => producto.IdClasficacion === parseInt(idCategory));
-        
-                                setItems(categoryFilter);
-                            } else {
-                                setItems(listaProductos);
-                            }
-        
-                        });
-                };
-                llamadaServidor(); */
-
-        //
-        cargaProductos.then((response) => {
-            setLoading(false);
-            setItems(response);
-        });
+        // console.log("Hook efecto");
+        const llamadaServidor = async () => {
+            await new Promise((resolve, reject) => setTimeout(resolve, 800))
+                .then(() => {
+                    setLoading(true);
+                    if (idCategory) {
+                        setItems(null);
+                        //console.log("Entró por URL params: ", idCategory);
+                        const categoryFilter = listaProductos.filter(
+                            (producto) => producto.IdClasificacion === parseInt(idCategory));                        
+                        setItems(categoryFilter);                       
+                    } else {
+                        setItems(null);
+                        setItems(listaProductos); 
+                    }           
+                });
+        };
+        llamadaServidor();
+        setLoading(false);
     }, [idCategory]);
 
-    if (loading) { return <Spinner animation="border" variant="primary" />; }
-    else {
-        return (
-            <div className="itemList">
-                <h2>{props.greeting}</h2>
-                <h3>Conoce todos nuestros productos </h3>
 
-                <div className="showCards">
-                    {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory - 1]}</h5> : <h5>Estos son todos nuestros productos</h5>}
-                    {items == null ? <Spinner animation="border" variant="primary" /> : <ItemList itemsArray={items} />}
+    return (
+        <div className="itemList">
+            <h2>{props.greeting}</h2>
+            <h3>Conoce todos nuestros productos </h3>
 
-                </div>
-            </div>
-        );
-    }
+            {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory - 1]}</h5> : <h5>Estos son todos nuestros productos</h5>}
+            {!loading ? <div className="showCards">
+                <Spinner animation="border" variant="primary" />
+            </div> :
+                items ?
+                    <div className="showCards">
+                        <ItemList itemsArray={items} />
+                    </div>
+                    :
+                    <div className="showCards">
+                        <Spinner animation="border" variant="primary" />
+                    </div>
+            }            
+        </div >
+    );
 };
 
-const muestraItems = (items) => {
-    console.log(items);
-};
 export default ItemListContainer;

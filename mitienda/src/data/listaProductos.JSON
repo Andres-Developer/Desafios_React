@@ -10,7 +10,7 @@
     "price": 182,
     "stock": 16,
     "pictureUrl": "images/accesorio_casual_billetera_tommy-hilfiger_hombre_negro_cuero.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -24,7 +24,7 @@
     "price": 262,
     "stock": 18,
     "pictureUrl": "images/accesorio_casual_gafas_timberland_hombre_negro.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -38,7 +38,7 @@
     "price": 173,
     "stock": 9,
     "pictureUrl": "images/accesorio_casual_reloj_tommy-hilfiger_hombre_azul.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -52,7 +52,7 @@
     "price": 155,
     "stock": 7,
     "pictureUrl": "images/accesorio_casual_reloj_tommy-hilfiger_hombre_negro.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -66,7 +66,7 @@
     "price": 430,
     "stock": 16,
     "pictureUrl": "images/accesorio_casual_reloj-pro_tommy-hilfiger_hombre_negro.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -80,7 +80,7 @@
     "price": 219,
     "stock": 12,
     "pictureUrl": "images/accesorio_deporte_balon_nike_unisex_verde.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 3
   },
   {
@@ -94,7 +94,7 @@
     "price": 96,
     "stock": 7,
     "pictureUrl": "images/accesorio_deporte_gafas_oakley_hombre_negro_azul.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -108,7 +108,7 @@
     "price": 326,
     "stock": 12,
     "pictureUrl": "images/accesorio_deporte_gafas_oakley_hombre_negro_naranja.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -122,7 +122,7 @@
     "price": 415,
     "stock": 15,
     "pictureUrl": "images/accesorio_deporte_gorra_nike_hombre_blanco.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -136,7 +136,7 @@
     "price": 306,
     "stock": 20,
     "pictureUrl": "images/accesorio_deporte_gorra_oakley_hombre_gris.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -150,7 +150,7 @@
     "price": 254,
     "stock": 11,
     "pictureUrl": "images/accesorio_deporte_gorra_oakley_hombre_negro.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -164,7 +164,7 @@
     "price": 296,
     "stock": 17,
     "pictureUrl": "images/accesorio_trekking_bandana_the-north-face_hombre_rojo.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -178,7 +178,7 @@
     "price": 308,
     "stock": 5,
     "pictureUrl": "images/accesorio_trekking_gorro_the-north-face_hombre_negro.jpg",
-    "IdClasficacion": 1,
+    "IdClasificacion": 1,
     "IdGenero": 2
   },
   {
@@ -192,7 +192,7 @@
     "price": 254,
     "stock": 15,
     "pictureUrl": "images/calzado_casual_botas_timberland_mujer_cafe.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -206,7 +206,7 @@
     "price": 230,
     "stock": 7,
     "pictureUrl": "images/calzado_casual_botas_timberland_mujer_marron.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -220,7 +220,7 @@
     "price": 189,
     "stock": 16,
     "pictureUrl": "images/calzado_casual_botas_timberland_nino_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 4
   },
   {
@@ -234,7 +234,7 @@
     "price": 466,
     "stock": 18,
     "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_cafe.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -248,7 +248,7 @@
     "price": 267,
     "stock": 13,
     "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_miel.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -262,7 +262,7 @@
     "price": 310,
     "stock": 14,
     "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -276,7 +276,7 @@
     "price": 207,
     "stock": 10,
     "pictureUrl": "images/calzado_casual_sandalia_timberland_mujer_rojo.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -290,7 +290,7 @@
     "price": 262,
     "stock": 14,
     "pictureUrl": "images/calzado_casual_sandalia_tommy-hilfiger_mujer_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -304,7 +304,7 @@
     "price": 443,
     "stock": 20,
     "pictureUrl": "images/calzado_casual_tenis_nike_hombre_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -318,7 +318,7 @@
     "price": 371,
     "stock": 15,
     "pictureUrl": "images/calzado_casual_tenis_polo-ralph-lauren_hombre_gris.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -332,7 +332,7 @@
     "price": 203,
     "stock": 18,
     "pictureUrl": "images/calzado_casual_tenis_puma_mujer_blanco.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -346,7 +346,7 @@
     "price": 140,
     "stock": 14,
     "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -360,7 +360,7 @@
     "price": 300,
     "stock": 10,
     "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul_cafe.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -374,7 +374,7 @@
     "price": 191,
     "stock": 7,
     "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_azul_slim.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -388,7 +388,7 @@
     "price": 293,
     "stock": 8,
     "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_gris.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -402,7 +402,7 @@
     "price": 240,
     "stock": 10,
     "pictureUrl": "images/calzado_casual_tenis_timberland_hombre_olivo.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -416,7 +416,7 @@
     "price": 436,
     "stock": 12,
     "pictureUrl": "images/calzado_casual_tenis_timberland_mujer_gris.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -430,7 +430,7 @@
     "price": 175,
     "stock": 15,
     "pictureUrl": "images/calzado_casual_tenis_tommy-hilfiger_mujer_blanco.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -444,7 +444,7 @@
     "price": 206,
     "stock": 6,
     "pictureUrl": "images/calzado_casual_tenis_tommy-hilfiger_mujer_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -458,7 +458,7 @@
     "price": 278,
     "stock": 19,
     "pictureUrl": "images/calzado_deporte_botin_nike_hombre_salmon.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -472,7 +472,7 @@
     "price": 106,
     "stock": 16,
     "pictureUrl": "images/calzado_deporte_tenis_nike_hombre_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -486,7 +486,7 @@
     "price": 311,
     "stock": 5,
     "pictureUrl": "images/calzado_deporte_tenis_nike_mujer_rosado.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -500,7 +500,7 @@
     "price": 259,
     "stock": 7,
     "pictureUrl": "images/calzado_deporte_tenis_puma_hombre_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -514,7 +514,7 @@
     "price": 218,
     "stock": 19,
     "pictureUrl": "images/calzado_deporte_tenis_puma_mujer_rosado.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -528,7 +528,7 @@
     "price": 142,
     "stock": 9,
     "pictureUrl": "images/calzado_deporte_tenis_skechers_hombre_negro.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -542,7 +542,7 @@
     "price": 301,
     "stock": 9,
     "pictureUrl": "images/calzado_informal_playera_nautica_hombre_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -556,7 +556,7 @@
     "price": 498,
     "stock": 17,
     "pictureUrl": "images/calzado_informal_playera_nautica_hombre_rojo.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -570,7 +570,7 @@
     "price": 450,
     "stock": 13,
     "pictureUrl": "images/calzado_informal_playera_puma_hombre_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -584,7 +584,7 @@
     "price": 164,
     "stock": 20,
     "pictureUrl": "images/calzado_informal_playera_the-north-face_mujer_azul.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 1
   },
   {
@@ -598,7 +598,7 @@
     "price": 457,
     "stock": 20,
     "pictureUrl": "images/calzado_informal_playera-slim_nautica_hombre_rojo.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -612,7 +612,7 @@
     "price": 488,
     "stock": 16,
     "pictureUrl": "images/calzado_trabajo_bota_timberland_hombre_cafe.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -626,7 +626,7 @@
     "price": 283,
     "stock": 15,
     "pictureUrl": "images/calzado_trekking_bota_the-north-face_hombre_cafe.jpg",
-    "IdClasficacion": 2,
+    "IdClasificacion": 2,
     "IdGenero": 2
   },
   {
@@ -640,7 +640,7 @@
     "price": 375,
     "stock": 12,
     "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_azul_rayas.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -654,7 +654,7 @@
     "price": 449,
     "stock": 5,
     "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_olivo.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -668,7 +668,7 @@
     "price": 105,
     "stock": 17,
     "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_salmon.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -682,7 +682,7 @@
     "price": 489,
     "stock": 12,
     "pictureUrl": "images/vestir_casual_camisa_polo-ralph-lauren_hombre_verde_cuadros.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -696,7 +696,7 @@
     "price": 123,
     "stock": 7,
     "pictureUrl": "images/vestir_casual_chaqueta_polo-ralph-lauren_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -710,7 +710,7 @@
     "price": 353,
     "stock": 11,
     "pictureUrl": "images/vestir_casual_chaqueta_polo-ralph-lauren_hombre_rojo.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -724,7 +724,7 @@
     "price": 145,
     "stock": 6,
     "pictureUrl": "images/vestir_casual_chaqueta_the-north-face_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -738,7 +738,7 @@
     "price": 107,
     "stock": 17,
     "pictureUrl": "images/vestir_casual_chaqueta_the-north-face_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -752,7 +752,7 @@
     "price": 438,
     "stock": 11,
     "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -766,7 +766,7 @@
     "price": 210,
     "stock": 17,
     "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_caqui.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -780,7 +780,7 @@
     "price": 206,
     "stock": 10,
     "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -794,7 +794,7 @@
     "price": 391,
     "stock": 10,
     "pictureUrl": "images/vestir_casual_pantalon_polo-ralph-lauren_hombre_olivo.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -808,7 +808,7 @@
     "price": 242,
     "stock": 16,
     "pictureUrl": "images/vestir_casual_remera_calvin-klein_hombre_navy.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -822,7 +822,7 @@
     "price": 499,
     "stock": 16,
     "pictureUrl": "images/vestir_casual_remera_calvin-klein_mujer_salmon.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -836,7 +836,7 @@
     "price": 456,
     "stock": 14,
     "pictureUrl": "images/vestir_casual_remera_frida-kahlo_mujer_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -850,7 +850,7 @@
     "price": 450,
     "stock": 20,
     "pictureUrl": "images/vestir_casual_remera_gap_hombre_navy.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -864,7 +864,7 @@
     "price": 476,
     "stock": 16,
     "pictureUrl": "images/vestir_casual_remera_gap_hombre_negra.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -878,7 +878,7 @@
     "price": 116,
     "stock": 19,
     "pictureUrl": "images/vestir_casual_remera_gap_unisex_verde.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 3
   },
   {
@@ -892,7 +892,7 @@
     "price": 483,
     "stock": 7,
     "pictureUrl": "images/vestir_casual_remera_harry-potter_mujer_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -906,7 +906,7 @@
     "price": 226,
     "stock": 10,
     "pictureUrl": "images/vestir_casual_remera_levis_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -920,7 +920,7 @@
     "price": 467,
     "stock": 15,
     "pictureUrl": "images/vestir_casual_remera_nickelodeon_mujer_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -934,7 +934,7 @@
     "price": 199,
     "stock": 20,
     "pictureUrl": "images/vestir_casual_remera_nike_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -948,7 +948,7 @@
     "price": 221,
     "stock": 18,
     "pictureUrl": "images/vestir_casual_remera_reebok_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -962,7 +962,7 @@
     "price": 204,
     "stock": 20,
     "pictureUrl": "images/vestir_casual_remera_reebok_mujer_negro.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -976,7 +976,7 @@
     "price": 470,
     "stock": 12,
     "pictureUrl": "images/vestir_casual_remera_snoopy_nina_coral.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -990,7 +990,7 @@
     "price": 444,
     "stock": 10,
     "pictureUrl": "images/vestir_casual_saco_polo-ralph-lauren_hombre_beige.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1004,7 +1004,7 @@
     "price": 216,
     "stock": 15,
     "pictureUrl": "images/vestir_casual_sweater-hoodie_polo-ralph-lauren_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1018,7 +1018,7 @@
     "price": 304,
     "stock": 8,
     "pictureUrl": "images/vestir_casual_sweater-hoodie_the-north-face_mujer_rosado.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 1
   },
   {
@@ -1032,7 +1032,7 @@
     "price": 378,
     "stock": 10,
     "pictureUrl": "images/vestir_deporte_chaqueta_nike_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1046,7 +1046,7 @@
     "price": 189,
     "stock": 19,
     "pictureUrl": "images/vestir_deporte_conjunto-ciclismo_xtiger_hombre_negro.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1060,7 +1060,7 @@
     "price": 330,
     "stock": 13,
     "pictureUrl": "images/vestir_deporte_polo_nike_hombre_negro.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1074,7 +1074,7 @@
     "price": 116,
     "stock": 5,
     "pictureUrl": "images/vestir_deporte_remera_adidas_hombre_blanco.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1088,7 +1088,7 @@
     "price": 200,
     "stock": 13,
     "pictureUrl": "images/vestir_deporte_remera_nike_hombre_gris.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   },
   {
@@ -1102,7 +1102,7 @@
     "price": 98,
     "stock": 6,
     "pictureUrl": "images/vestir_deporte_remera_under-armour_hombre_azul.jpg",
-    "IdClasficacion": 3,
+    "IdClasificacion": 3,
     "IdGenero": 2
   }
 ]
