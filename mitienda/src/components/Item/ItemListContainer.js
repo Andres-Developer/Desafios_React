@@ -6,12 +6,12 @@ import listaProductos from './../../data/listaProductos';
 import { useParams } from 'react-router';
 
 const ItemListContainer = (props) => {
-    const [catalogo, setCatalogo] = useState("--State (Catálogo de Productos)--");
     const [items, setItems] = useState(null);
     const [loading, setLoading] = useState(true);
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();
-
+    const [loading, setLoading] = useState(false);
+  
     const categorias = ['Accesorios', 'Calzado', 'Vestir'];
 
     /* Hook de Ciclo de Vida */
