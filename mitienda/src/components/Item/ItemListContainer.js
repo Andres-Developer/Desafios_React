@@ -7,7 +7,6 @@ import { useParams } from 'react-router';
 
 const ItemListContainer = (props) => {
     const [items, setItems] = useState(null);
-    const [loading, setLoading] = useState(true);
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();
     const [loading, setLoading] = useState(false);
