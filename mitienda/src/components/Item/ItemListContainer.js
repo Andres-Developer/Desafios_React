@@ -8,6 +8,7 @@ import { useParams } from 'react-router';
 const ItemListContainer = (props) => {
     const [catalogo, setCatalogo] = useState("--State (Catálogo de Productos)--");
     const [items, setItems] = useState(null);
+    const [loading, setLoading] = useState(true);
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();
 
@@ -15,41 +16,52 @@ const ItemListContainer = (props) => {
 
     /* Hook de Ciclo de Vida */
     useEffect(() => {
-        /* setTimeout(() => setTextoTest("Listo"), 2000); */
         /* Llamando al servidor  */
-        console.log("Hook efecto")
+        console.log("Hook efecto");
         const llamadaServidor = async () => {
-            /* await new Promise((resolve, reject) => setTimeout(() => setTextoTest("Listo"), 2000)); */
-            /* await new Promise((resolve, reject) => setTimeout(resolve, 2000)).then(() => setTextoTest("Listo")); */
-            await new Promise((resolve, reject) => setTimeout(resolve, 2000))
+            await new Promise((resolve, reject) => setTimeout(resolve, 800))
                 .then(() => {
+                    setLoading(true);
                     if (idCategory) {
                         setItems(null);
+
                         console.log("Entró por URL params: ", idCategory);
                         const categoryFilter = listaProductos.filter(
-                            (producto) => producto.IdClasficacion === parseInt(idCategory));
-
+                            (producto) => producto.IdClasificacion === parseInt(idCategory));
+                        //const productosFixedUrl = categoryFilter.map( e => e.pictureUrl = )
+                        // categoryFilter.map(e => console.log(e.pictureUrl));
                         setItems(categoryFilter);
+                        console.log("Loading: ", loading);
                     } else {
                         setItems(null);
                         setItems(listaProductos);
-                    }
-
+                        console.log("Loading else:", loading);                    }
                 });
         };
         llamadaServidor();
+        setLoading(false);
     }, [idCategory]);
+
 
     return (
         <div className="itemList">
             <h2>{props.greeting}</h2>
             <h3>Conoce todos nuestros productos </h3>
 
-            <div className="showCards">
-                {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory-1]}</h5>: <h5>Estos son todos nuestros productos</h5> }
-                {items == null ? <Spinner animation="border" variant="primary" /> : <ItemList itemsArray={items} />}
-            </div>
-        </div>
+            {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory - 1]}</h5> : <h5>Estos son todos nuestros productos</h5>}
+            {!loading ? <div className="showCards">
+                <Spinner animation="border" variant="primary" />
+            </div> :
+                items ?
+                    <div className="showCards">
+                        <ItemList itemsArray={items} />
+                    </div>
+                    :
+                    <div className="showCards">
+                        <Spinner animation="border" variant="primary" />
+                    </div>
+            }            
+        </div >
     );
 };
 
