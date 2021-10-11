@@ -9,7 +9,7 @@ const Item = ({ id, title, pictureUrl, stock }) => {
         //Renderizo una Card de Bootstrap        
         <Card style={{ width: '10rem' }}>
             {/* {console.log(pictureUrl)} */}
-            <Card.Img variant="top" src={pictureUrl} width="10px" />
+            <Card.Img variant="top" src={`./../`+pictureUrl} width="10px" />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>

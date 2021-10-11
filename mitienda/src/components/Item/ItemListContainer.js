@@ -17,25 +17,21 @@ const ItemListContainer = (props) => {
     /* Hook de Ciclo de Vida */
     useEffect(() => {
         /* Llamando al servidor  */
-        console.log("Hook efecto");
+        // console.log("Hook efecto");
         const llamadaServidor = async () => {
             await new Promise((resolve, reject) => setTimeout(resolve, 800))
                 .then(() => {
                     setLoading(true);
                     if (idCategory) {
                         setItems(null);
-
-                        console.log("Entró por URL params: ", idCategory);
+                        //console.log("Entró por URL params: ", idCategory);
                         const categoryFilter = listaProductos.filter(
-                            (producto) => producto.IdClasificacion === parseInt(idCategory));
-                        //const productosFixedUrl = categoryFilter.map( e => e.pictureUrl = )
-                        // categoryFilter.map(e => console.log(e.pictureUrl));
-                        setItems(categoryFilter);
-                        console.log("Loading: ", loading);
+                            (producto) => producto.IdClasificacion === parseInt(idCategory));                        
+                        setItems(categoryFilter);                       
                     } else {
                         setItems(null);
-                        setItems(listaProductos);
-                        console.log("Loading else:", loading);                    }
+                        setItems(listaProductos); 
+                    }           
                 });
         };
         llamadaServidor();
