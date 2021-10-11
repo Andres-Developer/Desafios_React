@@ -6,7 +6,7 @@ const ItemDetail = ({ itemDetail }) => {
         <>
             <h3>{itemDetail.title + " " + itemDetail.marca.toUpperCase()}</h3>
             <div className="d-flex align-items-center">
-                <img src={`./../`+itemDetail.pictureUrl} width="40%" alt="" />           
+                <img src={`./../`+itemDetail.pictureUrl} width="30%" alt="" />           
                 <div>
                     <button type="button" className="btn btn-warning" disabled data-bs-toggle="button">
                         Stock disponible: {itemDetail.stock}
