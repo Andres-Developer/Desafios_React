@@ -24,12 +24,14 @@ const ItemListContainer = (props) => {
             await new Promise((resolve, reject) => setTimeout(resolve, 2000))
                 .then(() => {
                     if (idCategory) {
+                        setItems(null);
                         console.log("Entró por URL params: ", idCategory);
                         const categoryFilter = listaProductos.filter(
                             (producto) => producto.IdClasficacion === parseInt(idCategory));
 
                         setItems(categoryFilter);
                     } else {
+                        setItems(null);
                         setItems(listaProductos);
                     }
 
