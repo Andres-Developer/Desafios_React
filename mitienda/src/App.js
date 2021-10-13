@@ -4,7 +4,7 @@ import './assets/css/App.css';
 import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
-
+import  Cart  from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -20,7 +20,9 @@ function App() {
         <Route exact path="/item/:id">
           <ItemDetailContainer />
         </Route>
-
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
       </Switch>
     </Router>
   );

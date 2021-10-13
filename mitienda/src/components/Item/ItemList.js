@@ -12,7 +12,6 @@ const ItemList = ({ itemsArray }) => {
                 {items.map((e, idx) => {
                     // console.log(e.pictureUrl);
                     return <Item id={e.id} title={e.title} stock={e.stock} pictureUrl={e.pictureUrl} key={idx} />;
-
                 })}
                 {/* {console.log(items)} */}
             </div>
