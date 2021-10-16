@@ -9,7 +9,7 @@ const CartWidget = ({cantidad}) => {
     return (
         <div className="cartWidget">
             <FaShoppingCart />
-            <ContadorCarrito cantidad={cantidad}/>
+            <ContadorCarrito />
         </div>
     );
 };
