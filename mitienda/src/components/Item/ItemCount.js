@@ -3,7 +3,7 @@ import "./../../assets/css/ItemCount.css";
 import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
 
-const ItemCount = ({ productosAgregadosCarrito, stock, initial }) => {
+const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto }) => {
     //Testing props
     // console.log(stock, initial);    
     //Paso a Number los props
@@ -13,7 +13,7 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial }) => {
     const [count, setCount] = useState(initial);
     const [agregadoCarrito, setAgregadoCarrito] = useState(false);
     //Context:
-    const [state, setState] = useContext(CartContext);
+    const { addItem } = useContext(CartContext);
     //Lógica de botones
     let onAdd = () => { count < stock ? setCount(count + 1) : alert(`No puedes agregar más de ${stock} productos porque no hay más stock`); };
     let onMinus = () => { count > initial ? setCount(count - 1) : alert(`El valor mínimo es: ${initial}`); };
@@ -29,7 +29,7 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial }) => {
                             <button className="buttonItem add btn" onClick={() => onAdd()}>+</button>
                         </div>
                         <div className="botonAgregar">
-                            <button type="" className="btn btn-outline-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); setState({ ...state, count: count }); }}>Agregar al carrito</button>
+                            <button type="" className="btn btn-outline-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); addItem({ idProducto, 'cantidad': count }); }}>Agregar al carrito</button>
                         </div>
                     </>
                     :
