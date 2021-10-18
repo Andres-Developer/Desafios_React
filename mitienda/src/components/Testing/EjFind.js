@@ -146,5 +146,32 @@ const array1 = [
 ];
 const found = array1.find(e => e.id == 10);
 
+const index = array1.findIndex(e => e.id == 10);
+//Rta index: 
+console.log("index :", index);
+
+
 console.log(found);
-// expected output: 12
+// expected output:
+//  {
+//   id: 10,
+//   clasificacion: 'accesorio',
+//   tipo: 'deporte',
+//   title: 'gorra',
+//   marca: 'oakley',
+//   genero: 'hombre',
+//   color: 'gris',
+//   precio: 306,
+//   stock: 6,
+//   pictureUrl: 'images/accesorio_deporte_gorra_oakley_hombre_gris.jpg'
+// }
+let newObject = { ...found, 'title': 'gorra_MOD', 'precio': found.precio + 5 };
+console.log(newObject);
+
+let arrayActualizado = [...array1, newObject];
+console.log(arrayActualizado);
+
+///// MAP en listas: para modificar SOLO 1 elementod el array en su MISMA POSICIÓN
+let listaSinElemento = array1.map(e => (e.id == 7 ? { "editado": "editado" } : e));
+console.log(listaSinElemento);
+// muestra el mismo array pero en donde iría el objeto con id 7  irá el objeto:  { "editado": "editado" }
