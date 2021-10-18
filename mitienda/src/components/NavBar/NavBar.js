@@ -1,21 +1,21 @@
 import React  from 'react';
 import CartWidget from "./../Cart/CartWidget";
 import shoppingLogo from './../../img/shoppingLogo.svg';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import './../../assets/css/NavBar.css';
 
 const NavBar = () => {
     return (
-        <ul>
-            <Link className="brand" to="/">
+        <ul className="Navbar">
+            <NavLink className="brand " to="/">
                 <input type="image" alt="logo" src={shoppingLogo} height="25px" />
-                <div>Mi TiendAPP</div>
-            </Link>
-            <Link to="/category/1">Accesorios</Link>
-            <Link to="/category/2">Zapatos</Link>
-            <Link to="/category/3">Ropa</Link>
-            <Link to="/category/"><CartWidget /></Link>
+                <span>Mi TiendAPP</span>
+            </NavLink>
+            <NavLink className="nav_link" to="/category/1">Accesorios</NavLink>
+            <NavLink className="nav_link" to="/category/2">Zapatos</NavLink>
+            <NavLink className="nav_link" to="/category/3">Ropa</NavLink>
+            <NavLink className="nav_link" to="/cart/"><CartWidget /></NavLink>
         </ul>
     );
 };
