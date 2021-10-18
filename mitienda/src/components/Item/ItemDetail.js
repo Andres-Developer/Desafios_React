@@ -26,7 +26,7 @@ const ItemDetail = ({ itemDetail }) => {
                     <h4>{"Precio: " + itemDetail.price + "$"}</h4>
                     {/* Agrego ItemCount con datos de Stock traídos por props */}
                     {/* Le paso el evento para que desde ItemCount Me guarde la cantiidad de productos Agregados al Carrito */}
-                    <ItemCount productosAgregadosCarrito={productosAgregadosCarrito} stock={itemDetail.stock} initial={1} />
+                    <ItemCount productosAgregadosCarrito={productosAgregadosCarrito} idProducto={itemDetail.id} stock={itemDetail.stock} initial={1} />
                 </div>
             </div>
         </>
