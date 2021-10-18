@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Provider from './context/CartContext';
+import ProviderCart from './context/CartContext';
 import ItemListContainer from './components/Item/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
@@ -12,7 +12,7 @@ import './assets/css/App.css';
 
 function App() {
   return (
-    <Provider>
+    <ProviderCart>
       <Router>
         <NavBar />
         <Switch>
@@ -30,7 +30,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </Provider>
+    </ProviderCart>
   );
 }
 
