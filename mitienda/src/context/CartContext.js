@@ -37,8 +37,53 @@ const ProviderCart = ({ children }) => {
             }
         }
     };
+    //Función para remover item de la lista de items:
+    const removeItem = (idProducto) => {
+        //console.log("id llega:", idProducto);
+        let listaSinItem = itemsCarrito.filter(e => e.idProducto != idProducto);
+        console.log("lista con item: ", itemsCarrito);
+        console.log("lista SIN item: ", listaSinItem);
+        setItemsCarrito(listaSinItem);
+    };
+    //Función para agregar más Cantidad a un mismo item
+    const addCountItem = (idProducto, cantidad, stock) => {
+        console.log("id llega:", idProducto);
+        let listaModCantidadItem = itemsCarrito.map(e => {
+            if (e.idProducto == idProducto) {
+                if (e.cantidad < Number(stock)) {
+                    return { ...e, 'cantidad': e.cantidad += Number(cantidad) };
+                } else {
+                    alert(`No puedes agregar más productos que el stock de ${stock}`);
+                    return e;
+                }
+            } else {
+                return e;
+            }
+        });
+        //console.log("Lista cantidad modificada: ", listaModCantidadItem);
+        setItemsCarrito(listaModCantidadItem);
+    };
+    //Funcion para remover Cantidad a un mismo item
+    const removeCountItem = (idProducto, cantidad) => {
+        console.log("id llega:", idProducto);
+        let listaModCantidadItem = itemsCarrito.map(e => {
+            if (e.idProducto == idProducto) {
+                if (e.cantidad > 1) {
+                    return { ...e, 'cantidad': e.cantidad -= Number(cantidad) };
+                } else {
+                    alert(`No puedes eliminar menos productos que 1, si deseas puedes eliminar el item con el botón de: X`);
+                    return e;
+                }
+            } else {
+                return e;
+            }
+        });
+        console.log("Lista cantidad modificada: ", listaModCantidadItem);
+        setItemsCarrito(listaModCantidadItem);
+    };
+
     return (
-        <CartContext.Provider value={{ itemsCarrito, addItem, totalItems }}>
+        <CartContext.Provider value={{ itemsCarrito, addItem, removeItem, addCountItem, removeCountItem, totalItems }}>
             {children}
         </CartContext.Provider>
     );
