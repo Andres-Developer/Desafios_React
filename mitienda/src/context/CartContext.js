@@ -6,7 +6,7 @@ const ProviderCart = ({ children }) => {
     ]);
 
     useEffect(() => {
-        console.log(itemsCarrito);
+        //console.log(itemsCarrito);
         let sumaCantidad = 0;
         //---Suma cantidad TOTAL de productos en el Carrito
         itemsCarrito.forEach(e => sumaCantidad += e.cantidad);
@@ -24,7 +24,7 @@ const ProviderCart = ({ children }) => {
         } else {
             //----Busca si el item está repetido
             let itemRepetido = itemsCarrito.find(e => e.idProducto == item.idProducto);
-            console.log("rta find:", itemRepetido);
+            //console.log("rta find:", itemRepetido);
             //----Condición si hay repetidos
             if (itemRepetido) {
                 //console.log("Item para actualizar cantidad:", item);//---Testing
@@ -41,8 +41,8 @@ const ProviderCart = ({ children }) => {
     const removeItem = (idProducto) => {
         //console.log("id llega:", idProducto);
         let listaSinItem = itemsCarrito.filter(e => e.idProducto != idProducto);
-        console.log("lista con item: ", itemsCarrito);
-        console.log("lista SIN item: ", listaSinItem);
+        //console.log("lista con item: ", itemsCarrito);
+        //console.log("lista SIN item: ", listaSinItem);
         setItemsCarrito(listaSinItem);
     };
     //Función para agregar más Cantidad a un mismo item

@@ -1,16 +1,25 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
-import { Spinner } from 'react-bootstrap';
+import { Spinner, Modal, Button } from 'react-bootstrap';
 import Data from "./../../data/listaProductos.json"; //Información completa de los ITEMS
 import './../../assets/css/Cart.css';
 
 const Cart = () => {
     const [infoCart, setInfoCart] = useState(null);
     const [itemsInfoCompleta, setItemsInfoCompleta] = useState(null);
+    //Estado de confirmación de eliminación
+    const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
+    const [idItemEliminar, setIdItemEliminar] = useState(null);
+
     //Context Cart
     const { itemsCarrito, totalItems, removeItem, addCountItem, removeCountItem } = useContext(CartContext);
+    //Estados del Modal
+    const [show, setShow] = useState(false);
 
+    //Funciones del Modal
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     /* Hook de Ciclo de Vida */
     useEffect(() => {
@@ -22,7 +31,7 @@ const Cart = () => {
         };
         getCart();
         //
-        console.log("items carrito: ", itemsCarrito);
+        //console.log("items carrito: ", itemsCarrito);
         //
 
         let itemsFiltrados = itemsCarrito.map(e => ({
@@ -32,7 +41,7 @@ const Cart = () => {
             'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
-        console.log("itemsFiltrados: ", itemsFiltrados);
+        //console.log("itemsFiltrados: ", itemsFiltrados);
         setItemsInfoCompleta(itemsFiltrados);
     }, []);
 
@@ -46,10 +55,21 @@ const Cart = () => {
             'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
-        console.log("itemsFiltrados: ", itemsFiltrados);
+        //console.log("itemsFiltrados: ", itemsFiltrados);
         setItemsInfoCompleta(itemsFiltrados);
     }, [itemsCarrito]);
 
+
+    //Función que confirma la eliminación del Item de la lista
+    const confirmaEliminacionItem = () => {
+        //console.log("Entro a la confirmación eliminacion");
+        removeItem(idItemEliminar);
+    };
+
+    //función que muestra el modal
+    const modalEliminacionItem = () => {
+        handleShow();
+    };
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
@@ -81,7 +101,7 @@ const Cart = () => {
                                         <td>
                                             <div className="btn btn-primary rounded-pill" onClick={() => { removeCountItem(e.idProducto, 1); }}  >-</div>
                                             <div className="btn btn-primary rounded-pill" onClick={() => { addCountItem(e.idProducto, 1, e.stock); }}>+</div>
-                                            <div className="btn btn-danger rounded-pill" onClick={() => { removeItem(e.idProducto); }}>x</div>
+                                            <div className="btn btn-danger rounded-pill" onClick={() => { modalEliminacionItem(); setIdItemEliminar(e.idProducto); }}>x</div>
 
                                         </td>
                                         <td className="py-auto text-center" >{e.cantidad} </td>
@@ -100,11 +120,23 @@ const Cart = () => {
                     <>
                         <h4>Tu carrito de compras está vacío</h4>
                         <h5 className="mt-5 mb-5">Da click en el siguiente botón para que puedas comprar </h5>
-                        <Link className="btn btn-outline-dark" to="/">Volver a Productos</Link>
+                        <Link className="btn btn-dark" to="/">Volver a Productos</Link>
                     </>
-
-
             }
+            < Modal show={show} onHide={handleClose} >
+                <Modal.Header closeButton>
+                    <Modal.Title>¡Confirmación Eliminación!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>¿Realmente deseas eliminar el producto del carrito de compras?</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Cancelar
+                    </Button>
+                    <Button variant="primary" onClick={() => { handleClose(); confirmaEliminacionItem(); }}>
+                        Aceptar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div >
     );
 };

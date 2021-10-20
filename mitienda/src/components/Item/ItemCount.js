@@ -29,13 +29,13 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto }) =>
                             <button className="buttonItem add btn" onClick={() => onAdd()}>+</button>
                         </div>
                         <div className="botonAgregar">
-                            <button type="" className="btn btn-outline-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); addItem({ idProducto, 'cantidad': count }); }}>Agregar al carrito</button>
+                            <button type="" className="btn btn-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); addItem({ idProducto, 'cantidad': count }); }}>Agregar al carrito</button>
                         </div>
                     </>
                     :
                     <div className="botonTerminarCompra">
                         <br />
-                        <Link type="" className="btn btn-outline-primary" to="/cart">Terminar mi Compra</Link>
+                        <Link type="" className="btn btn-primary" to="/cart">Terminar mi Compra</Link>
                     </div>
                 }
 
