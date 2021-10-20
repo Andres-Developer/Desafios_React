@@ -12,7 +12,7 @@ const ItemDetail = ({ itemDetail }) => {
 
 
     useEffect(() => {
-        console.log("Productos traídos de ItemCount: ", totalProductos);
+        //console.log("Productos traídos de ItemCount: ", totalProductos);
     }, [totalProductos]);
     return (
         <>
