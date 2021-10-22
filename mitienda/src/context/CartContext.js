@@ -2,21 +2,28 @@ import React, { createContext, useState, useEffect } from "react";
 
 const ProviderCart = ({ children }) => {
     const [totalItems, setTotalItems] = useState(0);
-    const [itemsCarrito, setItemsCarrito] = useState([
-    ]);
+    const [totalPrecio, setTotalPrecio] = useState(0);
+    const [itemsCarrito, setItemsCarrito] = useState([]);
 
     useEffect(() => {
         //console.log(itemsCarrito);
         let sumaCantidad = 0;
+        let sumaPrecios = 0;
         //---Suma cantidad TOTAL de productos en el Carrito
-        itemsCarrito.forEach(e => sumaCantidad += e.cantidad);
+        itemsCarrito.forEach(e => {
+            sumaCantidad += e.cantidad;
+            sumaPrecios += e.cantidad * e.precio;
+            console.log("precio: ", e.precio);
+        });
+        //console.log("suma total precios: ", sumaPrecios);
         // console.log("sumatoria de cantidad productos: ", sumaCantidad);
         setTotalItems(sumaCantidad);
+        setTotalPrecio(sumaPrecios);
     }, [itemsCarrito]);
 
     //Función que agrega items a la lista de objetos de items
     const addItem = (item) => {
-        //console.log("click addItem: ", item); //---Testing
+        console.log("click addItem: ", item); //---Testing
         //console.log("Items del context:", itemsCarrito);//---Testing
         //----Verifica si la lista está vacía
         if (itemsCarrito.length == 0) {
@@ -83,7 +90,7 @@ const ProviderCart = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ itemsCarrito, addItem, removeItem, addCountItem, removeCountItem, totalItems }}>
+        <CartContext.Provider value={{ itemsCarrito, setItemsCarrito, addItem, removeItem, addCountItem, removeCountItem, totalItems, totalPrecio }}>
             {children}
         </CartContext.Provider>
     );
