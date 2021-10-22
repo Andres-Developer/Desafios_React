@@ -19,14 +19,14 @@ const ItemDetail = ({ itemDetail }) => {
             <h3>{itemDetail.title + " " + itemDetail.marca.toUpperCase()}</h3>
             <div className="d-flex align-items-center">
                 <img src={`./../` + itemDetail.pictureUrl} width="30%" alt="" />
-                <div>
+                <div className="ms-5">
                     <button type="button" className="btn btn-warning" disabled data-bs-toggle="button">
                         Stock disponible: {itemDetail.stock}
                     </button>
                     <h4>{"Precio: " + itemDetail.price + "$"}</h4>
                     {/* Agrego ItemCount con datos de Stock traídos por props */}
                     {/* Le paso el evento para que desde ItemCount Me guarde la cantiidad de productos Agregados al Carrito */}
-                    <ItemCount productosAgregadosCarrito={productosAgregadosCarrito} idProducto={itemDetail.id} stock={itemDetail.stock} initial={1} />
+                    <ItemCount productosAgregadosCarrito={productosAgregadosCarrito} idProducto={itemDetail.id} stock={itemDetail.stock} precio={itemDetail.price} initial={1} />
                 </div>
             </div>
         </>

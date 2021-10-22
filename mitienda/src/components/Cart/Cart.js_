@@ -9,7 +9,7 @@ const Cart = () => {
     const [infoCart, setInfoCart] = useState(null);
     const [itemsInfoCompleta, setItemsInfoCompleta] = useState(null);
     //Estado de confirmación de eliminación
-    const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
+    // const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
     const [idItemEliminar, setIdItemEliminar] = useState(null);
 
     //Context Cart

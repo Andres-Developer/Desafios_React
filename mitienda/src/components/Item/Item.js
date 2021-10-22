@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import ItemDetailContainer from './ItemDetailContainer';
+import ItemDetailContainer from './ItemDetailContainer.js_';
 
 const Item = ({ id, title, pictureUrl, stock }) => {
     return (

@@ -3,7 +3,7 @@ import "./../../assets/css/ItemCount.css";
 import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
 
-const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto }) => {
+const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, precio }) => {
     //Testing props
     // console.log(stock, initial);    
     //Paso a Number los props
@@ -29,13 +29,15 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto }) =>
                             <button className="buttonItem add btn" onClick={() => onAdd()}>+</button>
                         </div>
                         <div className="botonAgregar">
-                            <button type="" className="btn btn-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); addItem({ idProducto, 'cantidad': count }); }}>Agregar al carrito</button>
+                            <button type="" className="btn btn-dark" onClick={() => { productosAgregadosCarrito(count); setAgregadoCarrito(true); addItem({ idProducto, 'cantidad': count, precio }); }}>Agregar al carrito</button>
                         </div>
                     </>
                     :
-                    <div className="botonTerminarCompra">
+                    <div className="botonTerminarCompra d-flex flex-column">
                         <br />
                         <Link type="" className="btn btn-primary" to="/cart">Terminar mi Compra</Link>
+                        <br />
+                        <Link type="" className="btn btn-outline-success" to="/">Seguir Comprando</Link>
                     </div>
                 }
 
