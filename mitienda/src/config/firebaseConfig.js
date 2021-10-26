@@ -29,7 +29,7 @@ const database = getFirestore();
 export const guardarDatabase = async (nombreDatabase, data) => {
   try {
     const response = await addDoc(collection(database, nombreDatabase), data);
-    console.log(response);
+    // console.log("id documento insertado: ", response.id);
     return response;
   } catch (error) {
     throw new Error(error.message);

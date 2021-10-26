@@ -8,6 +8,7 @@ import Cart from "./components/Cart/CartFirebase";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
+import { Form } from './components/Form/Form';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <Cart />
+          </Route>
+          <Route exact path="/form">
+            <Form />
           </Route>
         </Switch>
       </Router>
