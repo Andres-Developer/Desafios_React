@@ -146,7 +146,7 @@ const Cart = () => {
                                 </tr>
                             </tfoot>
                         </table>
-                        <Link className="btn btn-outline-primary my-2" to="/form">
+                        <Link to={{ pathname: "/form", state: { itemsInfoCompleta } }}>
                             Ir a pagar
                         </Link>
                         <div className="btn btn-outline-danger" onClick={() => { modalVaciarCarrito(); }}>

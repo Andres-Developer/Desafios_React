@@ -1,8 +1,10 @@
 import React from 'react';
-import { useState, useContext } from 'react';
+import { useState, useContext  } from 'react';
 import { consultarDocumentoDatabase, guardarDatabase, fechaFirebase } from './../../config/firebaseConfig';
 import { Spinner, Modal, Button } from 'react-bootstrap';
 import { CartContext } from 'context/CartContext';
+import { useLocation } from 'react-router-dom';
+
 
 export const Form = () => {
     const [ordenCompra, setOrdenCompra] = useState(null);
@@ -13,12 +15,17 @@ export const Form = () => {
     const [email, setEmail] = useState(null);
     const [telefono, setTelefono] = useState(null);
 
+    //Props del Lik
+    const location = useLocation();
+    const  {itemsInfoCompleta}  = location.state;
+
     //Context de Cart
-    const { itemsCarrito, setItemsCarrito, totalItems, removeItem, addCountItem, removeCountItem, totalPrecio } = useContext(CartContext);
+    const { totalItems, totalPrecio } = useContext(CartContext);
 
     //Manejador eveto submit formulario
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log("itemsInfoCompleta: ",itemsInfoCompleta)
         const nueva_orden = {
             buyer: {
                 nombre,
@@ -26,7 +33,7 @@ export const Form = () => {
                 email,
                 telefono
             },
-            items: [...itemsCarrito],
+            items: [...itemsInfoCompleta],
             date: fechaFirebase(),
             total: totalPrecio
         };
@@ -50,11 +57,27 @@ export const Form = () => {
         setOrdenCompra(ordenObtenida);
     };
 
+    //Función para convertir Timestamp a formato legible por el usuario
+    const convierteFechaHora = (timeStamp) => {
+        // console.log(timeStamp.toMillis())
+        let fecha = new Date(timeStamp.toMillis()); //Fecha-hora con el timeStamp de Firebase
+        let mes = fecha.getMonth() + 1; //obteniendo mes
+        let dia = fecha.getDate(); //obteniendo dia
+        let ano = fecha.getFullYear(); //obteniendo año
+        let hora2 = fecha.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true,
+        });
+        return `${dia}/${mes}/${ano} -  ${hora2}`;
+    };
+
     //Función que muestra un  número en formato separado por comas en los miles (para facilidad de ver el número)
     const muestraNumeroComas = (value) => {
         return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
-    
+
     return (
         !ordenCompra ?
             <form className="container px-5 my-5" onSubmit={handleSubmit}>
@@ -78,17 +101,49 @@ export const Form = () => {
                 <input type="submit" className="btn btn-primary" value="Orden de Compra" />
             </form>
             :
-            <>
-                <div className="h3">
-                    Felicidades, tu orden de compra es: { }
+            <div className="container pt-4">
+                <div className="text-primary h4">
+                    Felicidades, el resumen de tu compra es: { }
                 </div>
-                <table id="tablaCart" className='table table-bordered align-middle'>
+                <table className='table table-bordered align-middle mt-4 mb-3'>
+
+
+                    <tr>
+                        <th>Id de orden</th>
+                        <td>{ordenCompra.id}</td>
+                    </tr>
+                    <tr>
+                        <th>Fecha/Hora de compra</th>
+                        <td>{convierteFechaHora(ordenCompra.date)}</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>{ordenCompra.buyer.nombre}</td>
+                    </tr>
+                    <tr>
+                        <th>Apellido</th>
+                        <td>{ordenCompra.buyer.apellido}</td>
+                    </tr>
+                    <tr>
+                        <th>Teléfono</th>
+                        <td>{ordenCompra.buyer.telefono}</td>
+                    </tr>
+                    <tr>
+                        <th>e-mail</th>
+                        <td>{ordenCompra.buyer.email}</td>
+                    </tr>
+                </table>
+                <div className="text-primary h4 pt-4">
+                    Lista de compras realizadas:
+                </div>
+                <table id="tablaOrden" className='table table-bordered align-middle'>
                     <thead  >
                         <tr>
                             <th className="text-center">Producto</th>
+                            <th className="text-center">id</th>
                             <th className="text-center">Cantidad</th>
                             <th className="text-center">Precio unitario</th>
-                            <th className="text-center">Precio*cantidad</th>
+                            <th className="text-center">Precio * cantidad</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,10 +151,11 @@ export const Form = () => {
                             <tr key={e.idProducto} className="">
                                 <td className="d-flex justify-content-end">
                                     <div className="text-capitalize">
-                                        {e.title + ' ' + e.marca + ' id:' + e.idProducto}
+                                        {e.title + ' ' + e.marca }
                                         <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
                                     </div>
                                 </td>
+                                <td>{e.idProducto}</td>
                                 <td className="py-auto text-center" >{e.cantidad} </td>
                                 <td className="py-auto text-center" >${muestraNumeroComas(e.precio)} </td>
                                 <td className="py-auto text-center" >${muestraNumeroComas(e.precio * e.cantidad)} </td>
@@ -115,6 +171,6 @@ export const Form = () => {
                         </tr>
                     </tfoot>
                 </table>
-            </>
+            </div>
     );
 };
