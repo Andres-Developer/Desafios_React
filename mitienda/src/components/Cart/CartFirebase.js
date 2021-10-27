@@ -146,9 +146,12 @@ const Cart = () => {
                                 </tr>
                             </tfoot>
                         </table>
-                        <Link to={{ pathname: "/form", state: { itemsInfoCompleta } }}>
-                            Ir a pagar
-                        </Link>
+                        <div class="d-flex mb-3">
+                            <Link className="btn btn-primary mx-1" to={{ pathname: "/form", itemsInfoCompleta  }} >
+                                Ir a pagar
+                            </Link>
+                            <Link type="" className="btn btn-success mx-1" to="/">Seguir Comprando</Link>
+                        </div>
                         <div className="btn btn-outline-danger" onClick={() => { modalVaciarCarrito(); }}>
                             Vaciar carrito de compras
                         </div>
@@ -157,7 +160,7 @@ const Cart = () => {
                     <>
                         <h4>Tu carrito de compras está vacío</h4>
                         <h5 className="mt-5 mb-5">Da click en el siguiente botón para que puedas comprar </h5>
-                        <Link className="btn btn-dark" to="/">Volver a Productos</Link>
+                        <Link className="btn btn-warning" to="/">Volver a Productos</Link>
                     </>
             }
             {/* Modal Confirma Eliminar Item */}
