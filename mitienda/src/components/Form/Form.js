@@ -4,6 +4,7 @@ import { consultarDocumentoDatabase, guardarDatabase, fechaFirebase } from './..
 import { Spinner, Modal, Button } from 'react-bootstrap';
 import { CartContext } from 'context/CartContext';
 import { useLocation, Link } from 'react-router-dom';
+import './../../assets/css/Form.css';
 
 
 export const Form = () => {
@@ -43,7 +44,7 @@ export const Form = () => {
         let ordenGuardada = await guardarDatabase('ordenes_compra', nueva_orden);
         // console.log("orden Guardada: ", ordenGuardada.id);        
         //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
-        
+
         //Setea a 0 el contenido del carrito de compras
         setItemsCarrito([]);
         //Obtiene toda la orden desde la DB
@@ -89,7 +90,7 @@ export const Form = () => {
         // console.log("ordenCompra", ordenCompra);
         return (
             !ordenCompra ?
-                <form className="container px-5 my-5" onSubmit={handleSubmit}>
+                <form className="container px-5 my-5 maxAncho" onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label for="inputNombre" className="form-label">Nombre</label>
                         <input type="text" className="form-control" id="inputNombre" aria-describedby="name" placeholder="Ingresa tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
@@ -112,14 +113,14 @@ export const Form = () => {
                 : loading ?
                     <Spinner />
                     :
-                    <div className="container pt-4">
+                    <div className="container d-flex flex-column justify-content-center align-items-center pt-4 ">
                         <div className="text-primary h4">
                             Felicidades, el resumen de tu compra es: { }
                         </div>
-                        <table className='table table-bordered align-middle mt-4 mb-3'>
+                        <table className='table table-bordered align-middle mt-4 mb-3 maxAncho'>
                             <tr>
                                 <th>Id de orden</th>
-                                <td>{ordenCompra.id}</td>
+                                <td className="text-muted fw-bold">{ordenCompra.id}</td>
                             </tr>
                             <tr>
                                 <th>Fecha/Hora de compra</th>
@@ -145,7 +146,7 @@ export const Form = () => {
                         <div className="text-primary h4 pt-4">
                             Items de tu compra:
                         </div>
-                        <table id="tablaOrden" className='table table-bordered align-middle'>
+                        <table id="tablaOrden" className='table table-bordered align-middle maxAncho'>
                             <thead  >
                                 <tr>
                                     <th className="text-center">Producto</th>
