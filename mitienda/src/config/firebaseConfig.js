@@ -9,7 +9,8 @@ import {
   addDoc,
   deleteDoc,
   updateDoc,
-  where
+  where,
+  Timestamp
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -131,4 +132,9 @@ export const eliminarDocumentoDatabase = async (nombreDatabase, id) => {
   } catch (error) {
     throw new Error(error.message);
   }
+};
+
+//Obtener Fecha TimeStamp
+export const fechaFirebase = () => {
+  return Timestamp.fromDate(new Date());
 };
