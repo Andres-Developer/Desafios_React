@@ -33,7 +33,7 @@ export const Form = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (email === emailVerification && !emailErr && !emailVerificationErr) {
-            console.log("itemsInfoCompleta: ", itemsInfoCompleta);
+            // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
             let nro_orden = await generaNumeroOrden();
             const nueva_orden = {
                 buyer: {
@@ -71,11 +71,11 @@ export const Form = () => {
         const emailInput = e.target.value;
         setEmail(emailInput);
         if (emailRegex.test(emailInput)) {
-            console.log("email ok: ", emailInput);
+            // console.log("email ok: ", emailInput);
             setEmailErr(false);
         } else {
             setEmailErr(true);
-            console.log("email fail: ", emailInput);
+            // console.log("email fail: ", emailInput);
         }
     };
 
@@ -83,11 +83,11 @@ export const Form = () => {
         const emailInput = e.target.value;
         setEmailVerification(emailInput);
         if (emailRegex.test(emailInput)) {
-            console.log("email verification ok: ", emailInput);
+            // console.log("email verification ok: ", emailInput);
             setEmailVerificationErr(false);
         } else {
             setEmailVerificationErr(true);
-            console.log("email verification fail: ", emailInput);
+            // console.log("email verification fail: ", emailInput);
         }
     };
 
