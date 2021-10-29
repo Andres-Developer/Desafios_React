@@ -34,6 +34,7 @@ export const Form = () => {
         event.preventDefault();
         if (email === emailVerification && !emailErr && !emailVerificationErr) {
             // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
+            setLoading(true);
             let nro_orden = await generaNumeroOrden();
             const nueva_orden = {
                 buyer: {
@@ -48,8 +49,7 @@ export const Form = () => {
                 totalPrecio,
                 nro_orden
             };
-            // console.log(ordenCompra);
-            setLoading(true);
+            // console.log(ordenCompra);            
             let ordenGuardada = await guardarDatabase('ordenes_compra', nueva_orden);
             // console.log("orden Guardada: ", ordenGuardada.id);        
             //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
@@ -96,9 +96,9 @@ export const Form = () => {
         setLoading(true);
         setOrdenCompra(null);
         const ordenObtenida = await consultarDocumentoDatabase('ordenes_compra', idOrder);
-        setLoading(false);
         // console.log("orden Obtenida: ", ordenObtenida);
         setOrdenCompra(ordenObtenida);
+        setLoading(false);
     };
 
     //----Función para convertir Timestamp a formato legible por el usuario
@@ -149,7 +149,7 @@ export const Form = () => {
         // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
         // console.log("ordenCompra", ordenCompra);
         return (
-            !ordenCompra ?
+            !ordenCompra && !loading ?
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
@@ -267,7 +267,12 @@ export const Form = () => {
                     </div>
                 </div >
                 : loading ?
-                    <Spinner />
+                    <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
+                        <div className="my-3">
+                            Procesando tu compra, aguarda unos segundos...
+                        </div>
+                        <Spinner animation="border" variant="primary" />
+                    </div>
                     :
                     <div className="container d-flex flex-column justify-content-center align-items-center pt-4 ">
                         <div className="d-flex flex-column justify-content-center align-items-center">
