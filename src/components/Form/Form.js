@@ -246,8 +246,9 @@ export const Form = () => {
                     <Spinner />
                     :
                     <div className="container d-flex flex-column justify-content-center align-items-center pt-4 ">
-                        <div className="text-primary h4">
-                            Felicidades, el resumen de tu compra es: { }
+                        <div className="d-flex flex-column justify-content-center align-items-center">
+                            <div className="h2 text-success">¡Felicidades! </div> 
+                            <div className="h5 text-primary">El resumen de tu compra es: </div>
                         </div>
                         <table className='table table-bordered align-middle mt-4 mb-3 maxAncho'>
                             <tr>
