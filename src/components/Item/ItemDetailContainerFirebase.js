@@ -46,7 +46,12 @@ const ItemDetailContainer = () => {
     return (
         <div>
             {/* Llamando al componeente que renderizará los detalles del Item */}
-            {!itemDetail ? <Spinner animation="border" variant="primary" /> : <ItemDetail itemDetail={itemDetail} />}
+            {!itemDetail ?
+                <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
+                <Spinner animation="border" variant="primary" />
+            </div>
+                :
+                <ItemDetail itemDetail={itemDetail} />}
 
             {/*  */}
         </div>

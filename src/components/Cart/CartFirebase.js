@@ -99,7 +99,10 @@ const Cart = () => {
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
-            {!infoCart ? <Spinner animation="border" variant="primary" />
+            {!infoCart ?
+                <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
+                    <Spinner animation="border" variant="primary" />
+                </div>
                 :
                 itemsCarrito.length != 0
                     ?
