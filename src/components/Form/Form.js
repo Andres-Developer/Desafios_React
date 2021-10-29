@@ -62,7 +62,7 @@ export const Form = () => {
         }
     };
 
-    //Función RegExp
+    //---Funciones Validación Doble Email--------------------------
     const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     const handleEmail = (e) => {
@@ -76,7 +76,6 @@ export const Form = () => {
             console.log("email fail: ", emailInput);
         }
     };
-
 
     const handleEmailVerification = (e) => {
         const emailInput = e.target.value;
@@ -120,8 +119,6 @@ export const Form = () => {
     const muestraNumeroComas = (value) => {
         return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
-
-
 
 
     if (itemsInfoCompleta !== undefined) {
@@ -193,21 +190,21 @@ export const Form = () => {
                                 {email !== emailVerification && (emailErr && emailVerificationErr && !email && !emailVerification) ?
                                     <>
                                         <div className="text-danger form-text">
-                                            *Los e-mail deben coincidir para que se habilite el botón "Generar orden de compra"
+                                            *Los e-mail deben coincidir para que se habilite el botón "Realizar Compra"
                                         </div>
-                                        <input type="submit" className="btn btn-primary" value="Generar orden de Compra" disabled />
+                                        <input type="submit" className="btn btn-primary" value="Realizar Compra" disabled />
                                     </>
                                     :
                                     (email === emailVerification && email && emailVerification && !emailErr && !emailVerificationErr && nombre && apellido && telefono) ?
                                         <>
-                                            <input type="submit" className="btn btn-primary" value="Generar orden de Compra" />
+                                            <input type="submit" className="btn btn-primary" value="Realizar Compra" />
                                         </>
                                         :
                                         <>
                                             <div className="text-muted form-text">
-                                                *Debes ingresar todos los datos para que se habilite el botón "Generar orden de compra"
+                                                *Debes ingresar todos los datos para que se habilite el botón "Realizar Compra"
                                             </div>
-                                            <input type="submit" className="btn btn-primary" value="Generar orden de Compra" disabled />
+                                            <input type="submit" className="btn btn-primary" value="Realizar Compra" disabled />
                                         </>
 
                                 }
@@ -215,7 +212,7 @@ export const Form = () => {
                         </div>
                         <div className="col-6 mt-5 justify-content-end">
                             <div className="h5">
-                                Resumen de tu compra:
+                                Resumen de tu carrito de compras:
                             </div>
                             {itemsInfoCompleta.map(e => (
 
