@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
-import { consultarDocumentoDatabase, guardarDatabase, fechaFirebase } from './../../config/firebaseConfig';
+import { consultarDocumentoDatabase, guardarDatabase, fechaFirebase, consultarDatabase, getFilterCollection } from './../../config/firebaseConfig';
 import { Spinner, Modal, Button } from 'react-bootstrap';
 import { CartContext } from 'context/CartContext';
 import { useLocation, Link } from 'react-router-dom';
@@ -29,11 +29,12 @@ export const Form = () => {
     const location = useLocation();
     const itemsInfoCompleta = location.itemsInfoCompleta;
 
-    //Manejador eveto submit formulario
+    //--Función Submit que envía la información de Orden de Compra a la DB
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (email === emailVerification) {
+        if (email === emailVerification && !emailErr && !emailVerificationErr) {
             console.log("itemsInfoCompleta: ", itemsInfoCompleta);
+            let nro_orden = await generaNumeroOrden();
             const nueva_orden = {
                 buyer: {
                     nombre,
@@ -44,7 +45,8 @@ export const Form = () => {
                 items: [...itemsInfoCompleta],
                 date: fechaFirebase(),
                 totalItems,
-                totalPrecio
+                totalPrecio,
+                nro_orden
             };
             // console.log(ordenCompra);
             setLoading(true);
@@ -89,7 +91,7 @@ export const Form = () => {
         }
     };
 
-    // Carga la Orden generada desde la DB
+    //---Funcion Carga la Orden generada desde la DB--------------------
     const getOrder = async (idOrder) => {
         setLoading(true);
         setOrdenCompra(null);
@@ -99,7 +101,7 @@ export const Form = () => {
         setOrdenCompra(ordenObtenida);
     };
 
-    //Función para convertir Timestamp a formato legible por el usuario
+    //----Función para convertir Timestamp a formato legible por el usuario
     const convierteFechaHora = (timeStamp) => {
         // console.log(timeStamp.toMillis())
         let fecha = new Date(timeStamp.toMillis()); //Fecha-hora con el timeStamp de Firebase
@@ -115,12 +117,34 @@ export const Form = () => {
         return `${dia}/${mes}/${ano} -  ${hora2}`;
     };
 
-    //Función que muestra un  número en formato separado por comas en los miles (para facilidad de ver el número)
+    //---Función que muestra un  número en formato separado por comas en los miles (para facilidad de ver el número)
     const muestraNumeroComas = (value) => {
         return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
+    //--Función Generadora de Número de Orden (verifica si existe, lo incrementa)
+    let generaNumeroOrden = async () => {
+        let dbConsultada = await consultarDatabase("ordenes_compra");
+        if (dbConsultada.length === 0) {
+            return 1;
+        } else {
+            //--Obtiene una lista ordenada descendentemente por "nro_orden" (>1)
+            let datosOrdenados = await getFilterCollection("ordenes_compra", "nro_orden", ">", 1, 1, "desc");
 
+            //--extrae el primer elemento de la lista ordenada
+            let primerElementoLista = datosOrdenados[0];
+
+            //--Obtiene el nro_orden del primer elemento:
+            let nro_orden_maximo = primerElementoLista.nro_orden;
+            //console.log("nro_orden_maximo: ", nro_orden_maximo);
+
+            //Retorna el numero de orden para ser usado
+            return nro_orden_maximo + 1;
+        }
+    };
+
+    //============================= RENDER =========================================================================================
+    //--Render Condicional (Renderiza solo si vienen elementos en el carrito de compras)
     if (itemsInfoCompleta !== undefined) {
         // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
         // console.log("ordenCompra", ordenCompra);
@@ -247,13 +271,17 @@ export const Form = () => {
                     :
                     <div className="container d-flex flex-column justify-content-center align-items-center pt-4 ">
                         <div className="d-flex flex-column justify-content-center align-items-center">
-                            <div className="h2 text-success">¡Felicidades! </div> 
+                            <div className="h2 text-success">¡Felicidades! </div>
                             <div className="h5 text-primary">El resumen de tu compra es: </div>
                         </div>
                         <table className='table table-bordered align-middle mt-4 mb-3 maxAncho'>
                             <tr>
                                 <th>Id de orden</th>
                                 <td className="text-muted fw-bold">{ordenCompra.id}</td>
+                            </tr>
+                            <tr>
+                                <th>N° de orden</th>
+                                <td className="text-muted fw-bold">{ordenCompra.nro_orden}</td>
                             </tr>
                             <tr>
                                 <th>Fecha/Hora de compra</th>
@@ -326,7 +354,5 @@ export const Form = () => {
                 <Link className="btn btn-primary" to="/">Volver a Productos</Link>
             </div>
         );
-
     }
-
 };
