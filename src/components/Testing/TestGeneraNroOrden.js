@@ -8,8 +8,8 @@ const TestGeneraNroOrden = () => {
         if (dbConsultada.length === 0) {
             return 1;
         } else {
-            //--Obtiene una lista ordenada descendentemente por "nro_orden" (>1)
-            let datosOrdenados = await getFilterCollection("ordenes_compra", "nro_orden", ">", 1, 1, "desc");
+            //--Obtiene una lista ordenada descendentemente por "nro_orden" (>0)
+            let datosOrdenados = await getFilterCollection("ordenes_compra", "nro_orden", ">", 0, 1, "desc");
 
             //--extrae el primer elemento de la lista ordenada
             let primerElementoLista = datosOrdenados[0];
