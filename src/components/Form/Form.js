@@ -14,42 +14,80 @@ export const Form = () => {
     const [nombre, setNombre] = useState(null);
     const [apellido, setApellido] = useState(null);
     const [email, setEmail] = useState(null);
+    const [emailVerification, setEmailVerification] = useState(null);
+    const [emailErr, setEmailErr] = useState(false);
+    const [emailVerificationErr, setEmailVerificationErr] = useState(false);
     const [telefono, setTelefono] = useState(null);
+
+
+
 
     //Context de Cart
     const { totalItems, totalPrecio, setItemsCarrito } = useContext(CartContext);
 
-    //Props del Lik
+    //Props del LINK
     const location = useLocation();
     const itemsInfoCompleta = location.itemsInfoCompleta;
 
     //Manejador eveto submit formulario
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log("itemsInfoCompleta: ", itemsInfoCompleta);
-        const nueva_orden = {
-            buyer: {
-                nombre,
-                apellido,
-                email,
-                telefono
-            },
-            items: [...itemsInfoCompleta],
-            date: fechaFirebase(),
-            totalItems,
-            totalPrecio
-        };
-        // console.log(ordenCompra);
-        setLoading(true);
-        let ordenGuardada = await guardarDatabase('ordenes_compra', nueva_orden);
-        // console.log("orden Guardada: ", ordenGuardada.id);        
-        //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
+        if (email === emailVerification) {
+            console.log("itemsInfoCompleta: ", itemsInfoCompleta);
+            const nueva_orden = {
+                buyer: {
+                    nombre,
+                    apellido,
+                    email,
+                    telefono
+                },
+                items: [...itemsInfoCompleta],
+                date: fechaFirebase(),
+                totalItems,
+                totalPrecio
+            };
+            // console.log(ordenCompra);
+            setLoading(true);
+            let ordenGuardada = await guardarDatabase('ordenes_compra', nueva_orden);
+            // console.log("orden Guardada: ", ordenGuardada.id);        
+            //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
 
-        //Setea a 0 el contenido del carrito de compras
-        setItemsCarrito([]);
-        //Obtiene toda la orden desde la DB
-        getOrder(ordenGuardada.id);
-        setLoading(false);
+            //Setea a 0 el contenido del carrito de compras
+            setItemsCarrito([]);
+            //Obtiene toda la orden desde la DB
+            getOrder(ordenGuardada.id);
+            setLoading(false);
+        } else {
+            alert("Los e-mail deben coincidir para realizar la la orden de compra");
+        }
+    };
+
+    //Función RegExp
+    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    const handleEmail = (e) => {
+        const emailInput = e.target.value;
+        setEmail(emailInput);
+        if (emailRegex.test(emailInput)) {
+            console.log("email ok: ", emailInput);
+            setEmailErr(false);
+        } else {
+            setEmailErr(true);
+            console.log("email fail: ", emailInput);
+        }
+    };
+
+
+    const handleEmailVerification = (e) => {
+        const emailInput = e.target.value;
+        setEmailVerification(emailInput);
+        if (emailRegex.test(emailInput)) {
+            console.log("email verification ok: ", emailInput);
+            setEmailVerificationErr(false);
+        } else {
+            setEmailVerificationErr(true);
+            console.log("email verification fail: ", emailInput);
+        }
     };
 
     // Carga la Orden generada desde la DB
@@ -85,31 +123,128 @@ export const Form = () => {
 
 
 
+
     if (itemsInfoCompleta !== undefined) {
         // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
         // console.log("ordenCompra", ordenCompra);
         return (
             !ordenCompra ?
-                <form className="container px-5 my-5 maxAncho" onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label for="inputNombre" className="form-label">Nombre</label>
-                        <input type="text" className="form-control" id="inputNombre" aria-describedby="name" placeholder="Ingresa tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div className="headerForm container mt-5 d-flex flex-column justify-content-center align-items-center">
+                                <div className="h4">¡Ya casi lo tienes!</div>
+                                <div className="h6">Para finalizar la compra por favor diligencia el siguiente formulario</div>
+                            </div>
+                            <form className="container  pt-4 maxAncho" onSubmit={handleSubmit}>
+                                <div className="mb-3">
+                                    <label for="inputNombre" className="form-label">Nombre</label>
+                                    <input type="text" className="form-control" id="inputNombre" aria-describedby="name" placeholder="Ingresa tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
+                                </div>
+                                <div className="mb-3">
+                                    <label for="inputApellido" className="form-label">Apellido</label>
+                                    <input type="text" className="form-control" id="inputApellido" aria-describedby="last_name" placeholder="Ingresa tu apellido" value={apellido} onChange={(e) => setApellido(e.target.value)} required />
+                                </div>
+                                <div className="mb-3">
+                                    <label for="inputEmail" className="form-label">Email</label>
+                                    <input type="email"
+                                        className="form-control"
+                                        id="inputEmail"
+                                        aria-describedby="emailHelp"
+                                        placeholder="e-mail"
+                                        value={email}
+                                        onChange={handleEmail}
+                                        required
+                                    />
+                                    {
+                                        emailErr ?
+                                            <div id="emailHelp" className="form-text text-danger">Ingresa un email válido: nombre@dominio.net</div>
+                                            :
+                                            email !== emailVerification ?
+                                                <div id="emailHelp" className="form-text text-danger">Los email no coinciden</div>
+                                                :
+                                                null
+                                    }
+                                </div>
+                                <div className="mb-3">
+                                    <label for="inputEmailVerification" className="form-label">*Repite tu Email</label>
+                                    <input type="email"
+                                        className="form-control"
+                                        id="inputEmailVerification"
+                                        aria-describedby="emailHelp"
+                                        placeholder="Repite tu e-mail"
+                                        value={emailVerification}
+                                        onChange={handleEmailVerification}
+                                        required />
+                                    {
+                                        emailVerificationErr ?
+                                            <div id="emailHelp" className="form-text text-danger">Ingresa un email válido: nombre@dominio.net</div>
+                                            :
+                                            email !== emailVerification ?
+                                                <div id="emailHelp" className="form-text text-danger">Los email no coinciden</div>
+                                                :
+                                                null
+                                    }
+                                </div>
+                                <div className="mb-3">
+                                    <label for="inputTelefono" className="form-label">Telefono</label>
+                                    <input type="text" className="form-control" id="inputTelefono" aria-describedby="phone" placeholder="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} required />
+                                </div>
+                                {email !== emailVerification && (emailErr && emailVerificationErr && !email && !emailVerification) ?
+                                    <>
+                                        <div className="text-danger form-text">
+                                            *Los e-mail deben coincidir para que se habilite el botón "Generar orden de compra"
+                                        </div>
+                                        <input type="submit" className="btn btn-primary" value="Generar orden de Compra" disabled />
+                                    </>
+                                    :
+                                    (email === emailVerification && email && emailVerification && !emailErr && !emailVerificationErr && nombre && apellido && telefono) ?
+                                        <>
+                                            <input type="submit" className="btn btn-primary" value="Generar orden de Compra" />
+                                        </>
+                                        :
+                                        <>
+                                            <div className="text-muted form-text">
+                                                *Debes ingresar todos los datos para que se habilite el botón "Generar orden de compra"
+                                            </div>
+                                            <input type="submit" className="btn btn-primary" value="Generar orden de Compra" disabled />
+                                        </>
+
+                                }
+                            </form>
+                        </div>
+                        <div className="col-6 mt-5 justify-content-end">
+                            <div className="h5">
+                                Resumen de tu compra:
+                            </div>
+                            {itemsInfoCompleta.map(e => (
+
+                                <ul ul key={e.idProducto} className="listaResumen " >
+                                    <li className="itemListaResumen border border-2 p-2">
+                                        <div className=" d-flex justify-content-start align-items-center">
+                                            <img className="mx-1" src={`./../` + e.pictureUrl} alt="" width="50px" />
+                                            <div>
+                                                <div className="h6 text-capitalize">
+                                                    {e.title + ' ' + e.marca}
+                                                </div>
+                                                <div>
+                                                    Unidades: {e.cantidad} - Valor unidad: ${muestraNumeroComas(e.precio)}
+                                                </div>
+                                                <div >
+                                                    Valor por cantidad:  ${muestraNumeroComas(e.precio * e.cantidad)}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            ))}
+                            <div className="fw-bold">
+                                Total cantidades: {totalItems} - Precio Total: ${muestraNumeroComas(totalPrecio)}
+
+                            </div>
+                        </div>
                     </div>
-                    <div className="mb-3">
-                        <label for="inputApellido" className="form-label">Apellido</label>
-                        <input type="text" className="form-control" id="inputApellido" aria-describedby="last_name" placeholder="Ingresa tu apellido" value={apellido} onChange={(e) => setApellido(e.target.value)} required />
-                    </div>
-                    <div className="mb-3">
-                        <label for="inputEmail" className="form-label">Email</label>
-                        <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                        <div id="emailHelp" className="form-text">Nunca compartiremos tu e-mail con nadie</div>
-                    </div>
-                    <div className="mb-3">
-                        <label for="inputTelefono" className="form-label">Telefono</label>
-                        <input type="text" className="form-control" id="inputTelefono" aria-describedby="phone" placeholder="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} required />
-                    </div>
-                    <input type="submit" className="btn btn-primary" value="Generar orden de Compra" />
-                </form>
+                </div >
                 : loading ?
                     <Spinner />
                     :

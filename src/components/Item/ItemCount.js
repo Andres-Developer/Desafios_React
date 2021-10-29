@@ -33,9 +33,9 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, prec
                         </div>
                     </>
                     :
-                    <div className="botonTerminarCompra d-flex flex-column">
+                    <div className="botonTerminarCompra">
                         <br />
-                        <Link type="" className="btn btn-primary" to="/cart">Terminar mi Compra</Link>
+                        <Link type="" className="btn btn-primary my-2" to="/cart">Terminar mi Compra</Link>
                         <br />
                         <Link type="" className="btn btn-outline-success" to="/">Seguir Comprando</Link>
                     </div>

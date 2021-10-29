@@ -6,6 +6,7 @@ import { CartContext } from 'context/CartContext';
 import { Spinner, Modal, Button } from 'react-bootstrap';
 // import Data from "./../../data/listaProductos.json"; //Información completa de los ITEMS
 import './../../assets/css/Cart.css';
+import { FaCheck } from 'react-icons/fa';
 
 const Cart = () => {
     const [infoCart, setInfoCart] = useState(null);
@@ -146,11 +147,13 @@ const Cart = () => {
                                 </tr>
                             </tfoot>
                         </table>
-                        <div class="d-flex mb-3">
-                            <Link className="btn btn-primary mx-1" to={{ pathname: "/form", itemsInfoCompleta  }} >
-                                Ir a pagar
+                        <div className="d-flex mb-3">
+                            <Link className="btn btn-primary mx-1" to={{ pathname: "/form", itemsInfoCompleta }} >
+                                <FaCheck className="me-2" />
+                                Finalizar compra
                             </Link>
                             <Link type="" className="btn btn-success mx-1" to="/">Seguir Comprando</Link>
+
                         </div>
                         <div className="btn btn-outline-danger" onClick={() => { modalVaciarCarrito(); }}>
                             Vaciar carrito de compras

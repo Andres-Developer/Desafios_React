@@ -1,4 +1,15 @@
-.maxAncho{
-    /* color: red; */
-    max-width: 600px;
+.maxAncho {
+  /* color: red; */
+  /* max-width: 600px; */
+}
+
+.listaResumen {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin: 5px 0;
+}
+
+.itemListaResumen {
+  max-width: 350px;
 }
