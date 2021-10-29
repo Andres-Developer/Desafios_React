@@ -10,7 +10,9 @@ import {
   deleteDoc,
   updateDoc,
   where,
-  Timestamp
+  Timestamp,
+  orderBy,
+  limit
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -137,4 +139,49 @@ export const eliminarDocumentoDatabase = async (nombreDatabase, id) => {
 //Obtener Fecha TimeStamp
 export const fechaFirebase = () => {
   return Timestamp.fromDate(new Date());
+};
+
+
+//======================CONSULTA PARA ORDENAR===============================
+
+
+export const getFilterCollection = async (nombreColeccion, keyDocumento, condicion, value, limite, orden="asc") => {
+
+  //orden: 'asc', 'desc"
+
+  // Filtros
+  // < menor que
+  // <= menor o igual que
+  // == igual que
+  // > mayor que
+  // >= mayor que o igual que
+  // != no igual a
+  // array - contains
+  // array - contains - any
+  // in
+  // not -in
+
+  try {
+    const response = await getDocs(
+      query(
+        collection(database, nombreColeccion),
+        where(keyDocumento, condicion, value), // filtros
+        // where("edad", ">", 12), // Ejemplo
+        orderBy(keyDocumento, orden), // orden: por defecto es ascendente y se puedde pasar: ,"desc"
+        limit(limite) // Limitar la cantidad de registros
+      )
+    );
+    //console.log(response);
+    const elementos = response.docs.map((doc) => {
+      const document = {
+        id: doc.id,
+        ...doc.data()
+      };
+      return document;
+    });
+
+    return elementos;
+  } catch (error) {
+    throw new Error(error.message);
+  }
 };
