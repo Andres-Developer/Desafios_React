@@ -62,7 +62,7 @@ export const consultarDatabase = async (nombreDatabase) => {
 export const consultarDocumentoDatabase = async (nombreDatabase, id) => {
   try {
     const response = await getDoc(doc(database, nombreDatabase, id));
-    console.log("response 1 documento: ", response);
+    //console.log("response 1 documento: ", response);
     const document = {
       id: response.id,
       ...response.data(),
