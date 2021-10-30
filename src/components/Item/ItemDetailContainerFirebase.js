@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 //Consulta a configuracion firebase
-import { consultarDatabase } from './../../config/firebaseConfig';
+import { consultarDatabase, consultarDocumentoDatabase } from './../../config/firebaseConfig';
 import { Spinner } from 'react-bootstrap';
 //import Data from "../../data/listaProductos.json"; //Información completa de los ITEMS
 import ItemDetail from "./ItemDetail";
@@ -12,19 +12,16 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false);
 
 
-    // Carga productos desde la DB
+    // Carga producto desde la DB
     const getItem = async () => {
         setLoading(true);
-        const listaTemporal = await consultarDatabase('productos');
+        const productoObtenido = await consultarDocumentoDatabase ('productos', productId)
         setLoading(false);
-        //setListaProductos(listaTemporal);
-        // console.log("lista Temporal: ", listaTemporal);
 
         if (!loading) {
             setLoading(true);
             setItemDetail(null);
-            let productoEncontrado = listaTemporal.find(e => e.id === parseInt(productId));
-            setItemDetail(productoEncontrado);
+            setItemDetail(productoObtenido);
             setLoading(false);
         }
     };
@@ -37,7 +34,6 @@ const ItemDetailContainer = () => {
         /* Llamando al item para obtener TODOS los detalles a partir del ID entregado por Props */
 
         getItem();
-
 
     }, [productId]);
 
