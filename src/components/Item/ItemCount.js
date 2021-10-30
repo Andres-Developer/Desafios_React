@@ -37,10 +37,10 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, prec
                         <br />
                         <Link type="" className="btn btn-primary my-2" to="/cart">Terminar mi Compra</Link>
                         <br />
-                        <Link type="" className="btn btn-outline-success" to="/">Seguir Comprando</Link>
+
                     </div>
                 }
-
+                <Link type="" className="btn btn-outline-success mt-2" to="/">Seguir Comprando</Link>
             </div>
         </>
     );
