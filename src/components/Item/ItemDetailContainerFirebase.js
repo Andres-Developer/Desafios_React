@@ -10,18 +10,24 @@ const ItemDetailContainer = () => {
     const [itemDetail, setItemDetail] = useState(null);
     const { id: productId } = useParams();
     const [loading, setLoading] = useState(false);
+    const [noEncontrado, setNoEncontrado] = useState(false);
 
 
     // Carga producto desde la DB
     const getItem = async () => {
         setLoading(true);
-        const productoObtenido = await consultarDocumentoDatabase ('productos', productId)
+        const productoObtenido = await consultarDocumentoDatabase('productos', productId);
+        //console.log("producto Encontrado: ", productoObtenido);
         setLoading(false);
 
         if (!loading) {
             setLoading(true);
             setItemDetail(null);
-            setItemDetail(productoObtenido);
+            if (productoObtenido !== null) {
+                setItemDetail(productoObtenido);
+            } else {
+                setNoEncontrado(true);
+            }
             setLoading(false);
         }
     };
@@ -42,12 +48,19 @@ const ItemDetailContainer = () => {
     return (
         <div>
             {/* Llamando al componeente que renderizará los detalles del Item */}
-            {!itemDetail ?
-                <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
-                <Spinner animation="border" variant="primary" />
-            </div>
-                :
-                <ItemDetail itemDetail={itemDetail} />}
+            {
+                !noEncontrado ?
+                    !itemDetail ?
+                        <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
+                            <Spinner animation="border" variant="primary" />
+                        </div>
+                        :
+                        <ItemDetail itemDetail={itemDetail} />
+                    :
+                        <div className="container d-flex align-items-center justify-content-center my-5 py-5">
+                            <div className="h3">Producto con id: <strong className="text-danger">{productId}</strong> no encontrado en la base de datos</div>
+                        </div>
+                    }
 
             {/*  */}
         </div>
