@@ -35,7 +35,7 @@ const ItemListContainer = (props) => {
                 // console.log("Entró por URL params: ", idCategory);
                 // console.log("Entró con lista temporal: ", listaTemporal);
                 const categoryFilter = listaTemporal.filter(
-                    (producto) => producto.IdClasificacion === parseInt(idCategory));
+                    (producto) => producto.IdCategory === parseInt(idCategory));
                 // console.log("categoryFilter: ", categoryFilter)
                 setItems(categoryFilter);
                 setItemsFiltrados(categoryFilter);
