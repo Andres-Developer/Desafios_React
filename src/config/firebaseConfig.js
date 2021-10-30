@@ -29,9 +29,9 @@ initializeApp(firebaseConfig);
 const database = getFirestore();
 
 // Guardar
-export const guardarDatabase = async (nombreDatabase, data) => {
+export const guardarDatabase = async (nombreColeccion, data) => {
   try {
-    const response = await addDoc(collection(database, nombreDatabase), data);
+    const response = await addDoc(collection(database, nombreColeccion), data);
     // console.log("id documento insertado: ", response.id);
     return response;
   } catch (error) {
@@ -40,14 +40,14 @@ export const guardarDatabase = async (nombreDatabase, data) => {
 };
 
 // Consultar todos los documentos (Coleccion)
-export const consultarDatabase = async (nombreDatabase) => {
+export const consultarDatabase = async (nombreColeccion) => {
   try {
-    const response = await getDocs(query(collection(database, nombreDatabase)));
+    const response = await getDocs(query(collection(database, nombreColeccion)));
     // console.log("response.docs: ", response.docs);//Testing
     const elementos = response.docs.map((doc) => {
       const document = {
-        id: doc.id,
-        ...doc.data(),
+        id: doc.id, //doc.id: es el id que genera firebase (externo)
+        ...doc.data(), // Si ya existe un atributo "id" lo reescribe del id que genera firebase
       };
       return document;
     });
@@ -59,9 +59,9 @@ export const consultarDatabase = async (nombreDatabase) => {
 };
 
 // Consultar un documento
-export const consultarDocumentoDatabase = async (nombreDatabase, id) => {
+export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
   try {
-    const response = await getDoc(doc(database, nombreDatabase, id));
+    const response = await getDoc(doc(database, nombreColeccion, id));
     //console.log("response 1 documento: ", response);
     const document = {
       id: response.id,
@@ -75,13 +75,13 @@ export const consultarDocumentoDatabase = async (nombreDatabase, id) => {
 };
 
 //Consultar un documento filtrado por: id
-export const buscarDocumentoFiltrado = async (nombreDatabase, id) => {
+export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
   try {
     let document = '';
     let elementos = '';
     const response = await getDocs(
       query(
-        collection(database, nombreDatabase), where("id", "==", id)
+        collection(database, nombreColeccion), where("id", "==", id)
       )
     );
     // console.log("response filtrado: ", response);
@@ -103,9 +103,9 @@ export const buscarDocumentoFiltrado = async (nombreDatabase, id) => {
 
 
 // Actualizar un documento
-export const actualizarDocumentoDatabase = async (nombreDatabase, id, data) => {
+export const actualizarDocumentoDatabase = async (nombreColeccion, id, data) => {
   try {
-    const response = await updateDoc(doc(database, nombreDatabase, id), data);
+    const response = await updateDoc(doc(database, nombreColeccion, id), data);
     console.log(response);
   } catch (error) {
     throw new Error(error.message);
@@ -113,12 +113,12 @@ export const actualizarDocumentoDatabase = async (nombreDatabase, id, data) => {
 };
 
 // Actualizar un documento Filtrado Id
-export const actualizarDocumentoFiltrado = async (nombreDatabase, id, data) => {
+export const actualizarDocumentoFiltrado = async (nombreColeccion, id, data) => {
   try {
-    const q = query(collection(database, nombreDatabase), where("id", "==", id));
+    const q = query(collection(database, nombreColeccion), where("id", "==", id));
     const response = await getDocs(q);
     response.forEach(async (element) => {
-      await updateDoc(doc(database, nombreDatabase, element.id), data);
+      await updateDoc(doc(database, nombreColeccion, element.id), data);
     });
   } catch (error) {
     throw new Error(error.message);
@@ -127,9 +127,9 @@ export const actualizarDocumentoFiltrado = async (nombreDatabase, id, data) => {
 
 
 // Eliminar un documento
-export const eliminarDocumentoDatabase = async (nombreDatabase, id) => {
+export const eliminarDocumentoDatabase = async (nombreColeccion, id) => {
   try {
-    const response = await deleteDoc(doc(database, nombreDatabase, id));
+    const response = await deleteDoc(doc(database, nombreColeccion, id));
     console.log(response);
   } catch (error) {
     throw new Error(error.message);
