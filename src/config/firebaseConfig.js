@@ -69,7 +69,7 @@ export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
         id: response.id,
         ...response.data(),
       };
-      console.log("Documento consultado: ", document);
+      //console.log("Documento consultado: ", document);
       return document;
     } else {
       //No encontró el documento

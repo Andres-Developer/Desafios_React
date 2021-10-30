@@ -13,7 +13,7 @@ const ProviderCart = ({ children }) => {
         itemsCarrito.forEach(e => {
             sumaCantidad += e.cantidad;
             sumaPrecios += e.cantidad * e.precio;
-            console.log("precio: ", e.precio);
+            //console.log("precio: ", e.precio);
         });
         //console.log("suma total precios: ", sumaPrecios);
         // console.log("sumatoria de cantidad productos: ", sumaCantidad);
@@ -23,7 +23,7 @@ const ProviderCart = ({ children }) => {
 
     //Función que agrega items a la lista de objetos de items
     const addItem = (item) => {
-        console.log("click addItem: ", item); //---Testing
+        //console.log("click addItem: ", item); //---Testing
         //console.log("Items del context:", itemsCarrito);//---Testing
         //----Verifica si la lista está vacía
         if (itemsCarrito.length == 0) {
