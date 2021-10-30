@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 
 import ItemDetailContainer from './ItemDetailContainer.js_';
 
-const Item = ({ id, title, pictureUrl, stock }) => {
+const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
     return (
         //Renderizo una Card de Bootstrap        
         <Card style={{ width: '10rem' }}>
             {/* {console.log(pictureUrl)} */}
             <Card.Img variant="top" src={`./../`+pictureUrl} width="10px" />
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <Card.Title className="text-capitalize">{title}</Card.Title>
                 <Card.Text>
-                    Id del Item: {id}
+                    Ref: {id_interno}
                     <br />
                     Stock del producto: {stock}
                 </Card.Text>
