@@ -58,17 +58,23 @@ export const consultarDatabase = async (nombreColeccion) => {
   }
 };
 
-// Consultar un documento
+// Consultar un documento por ID (externo generado por Firebase)
 export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
   try {
     const response = await getDoc(doc(database, nombreColeccion, id));
-    //console.log("response 1 documento: ", response);
-    const document = {
-      id: response.id,
-      ...response.data(),
-    };
-    console.log("Documento consultado: ", document);
-    return document;
+    // console.log("response consulta 1 documento: ", response._document);
+    // Si no encuentra el documento response._document = null
+    if (response._document !== null) {
+      const document = {
+        id: response.id,
+        ...response.data(),
+      };
+      console.log("Documento consultado: ", document);
+      return document;
+    } else {
+      //No encontró el documento
+      return null;
+    }
   } catch (error) {
     throw new Error(error.message);
   }
@@ -145,7 +151,7 @@ export const fechaFirebase = () => {
 //======================CONSULTA PARA ORDENAR===============================
 
 
-export const getFilterCollection = async (nombreColeccion, keyDocumento, condicion, value, limite, orden="asc") => {
+export const getFilterCollection = async (nombreColeccion, keyDocumento, condicion, value, limite, orden = "asc") => {
 
   //orden: 'asc', 'desc"
 
