@@ -159,15 +159,15 @@ export const Form = () => {
                             </div>
                             <form className="container  pt-4 maxAncho" onSubmit={handleSubmit}>
                                 <div className="mb-3">
-                                    <label for="inputNombre" className="form-label">Nombre</label>
+                                    <label htmlFor="inputNombre" className="form-label">Nombre</label>
                                     <input type="text" className="form-control" id="inputNombre" aria-describedby="name" placeholder="Ingresa tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="inputApellido" className="form-label">Apellido</label>
+                                    <label htmlFor="inputApellido" className="form-label">Apellido</label>
                                     <input type="text" className="form-control" id="inputApellido" aria-describedby="last_name" placeholder="Ingresa tu apellido" value={apellido} onChange={(e) => setApellido(e.target.value)} required />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="inputEmail" className="form-label">Email</label>
+                                    <label htmlFor="inputEmail" className="form-label">Email</label>
                                     <input type="email"
                                         className="form-control"
                                         id="inputEmail"
@@ -188,7 +188,7 @@ export const Form = () => {
                                     }
                                 </div>
                                 <div className="mb-3">
-                                    <label for="inputEmailVerification" className="form-label">*Repite tu Email</label>
+                                    <label htmlFor="inputEmailVerification" className="form-label">*Repite tu Email</label>
                                     <input type="email"
                                         className="form-control"
                                         id="inputEmailVerification"
@@ -208,7 +208,7 @@ export const Form = () => {
                                     }
                                 </div>
                                 <div className="mb-3">
-                                    <label for="inputTelefono" className="form-label">Telefono</label>
+                                    <label htmlFor="inputTelefono" className="form-label">Telefono</label>
                                     <input type="text" className="form-control" id="inputTelefono" aria-describedby="phone" placeholder="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} required />
                                 </div>
                                 {email !== emailVerification && (emailErr && emailVerificationErr && !email && !emailVerification) ?
