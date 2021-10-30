@@ -8,16 +8,16 @@ import './../../assets/css/Form.css';
 
 
 export const Form = () => {
-    const [ordenCompra, setOrdenCompra] = useState(null);
+    const [ordenCompra, setOrdenCompra] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const [nombre, setNombre] = useState(null);
-    const [apellido, setApellido] = useState(null);
-    const [email, setEmail] = useState(null);
-    const [emailVerification, setEmailVerification] = useState(null);
+    const [nombre, setNombre] = useState('');
+    const [apellido, setApellido] = useState('');
+    const [email, setEmail] = useState('');
+    const [emailVerification, setEmailVerification] = useState('');
     const [emailErr, setEmailErr] = useState(false);
     const [emailVerificationErr, setEmailVerificationErr] = useState(false);
-    const [telefono, setTelefono] = useState(null);
+    const [telefono, setTelefono] = useState('');
 
     //Context de Cart
     const { totalItems, totalPrecio, setItemsCarrito } = useContext(CartContext);
@@ -240,7 +240,7 @@ export const Form = () => {
                             </div>
                             {itemsInfoCompleta.map(e => (
 
-                                <ul ul key={e.idProducto} className="listaResumen " >
+                                <ul key={e.idProducto} className="listaResumen " >
                                     <li className="itemListaResumen border border-2 p-2">
                                         <div className=" d-flex justify-content-start align-items-center">
                                             <img className="mx-1" src={`./../` + e.pictureUrl} alt="" width="50px" />
