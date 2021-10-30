@@ -21,7 +21,7 @@ const Cart = () => {
     const getCart = async () => {
         setLoading(true);
         setData(null);
-        const listaTemporal = await consultarDatabase('productos');
+        const listaTemporal = await consultarDatabase('items');
         setLoading(false);
         //setListaProductos(listaTemporal);
         // console.log("lista Temporal: ", listaTemporal);

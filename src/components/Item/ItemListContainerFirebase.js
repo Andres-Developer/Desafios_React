@@ -22,7 +22,7 @@ const ItemListContainer = (props) => {
     // Carga productos desde la DB
     const llamadaServidor = async () => {
         setLoading(true);
-        const listaTemporal = await consultarDatabase('productos');
+        const listaTemporal = await consultarDatabase('items');
         setLoading(false);
         //setListaProductos(listaTemporal);
         // console.log("lista Temporal: ", listaTemporal);

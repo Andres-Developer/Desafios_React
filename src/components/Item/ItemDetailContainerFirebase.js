@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
     // Carga producto desde la DB
     const getItem = async () => {
         setLoading(true);
-        const productoObtenido = await consultarDocumentoDatabase('productos', productId);
+        const productoObtenido = await consultarDocumentoDatabase('items', productId);
         //console.log("producto Encontrado: ", productoObtenido);
         setLoading(false);
 

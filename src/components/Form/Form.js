@@ -50,7 +50,7 @@ export const Form = () => {
                 nro_orden
             };
             // console.log(ordenCompra);            
-            let ordenGuardada = await guardarDatabase('ordenes_compra', nueva_orden);
+            let ordenGuardada = await guardarDatabase('orders', nueva_orden);
             // console.log("orden Guardada: ", ordenGuardada.id);        
             //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
 
@@ -95,7 +95,7 @@ export const Form = () => {
     const getOrder = async (idOrder) => {
         setLoading(true);
         setOrdenCompra(null);
-        const ordenObtenida = await consultarDocumentoDatabase('ordenes_compra', idOrder);
+        const ordenObtenida = await consultarDocumentoDatabase('orders', idOrder);
         // console.log("orden Obtenida: ", ordenObtenida);
         setOrdenCompra(ordenObtenida);
         setLoading(false);
