@@ -19,15 +19,20 @@ export const Form = () => {
     const [emailVerificationErr, setEmailVerificationErr] = useState(false);
     const [telefono, setTelefono] = useState(null);
 
-
-
-
     //Context de Cart
     const { totalItems, totalPrecio, setItemsCarrito } = useContext(CartContext);
 
     //Props del LINK
     const location = useLocation();
     const itemsInfoCompleta = location.itemsInfoCompleta;
+
+    // Effect que está pendiente si se genera orden compra para poner loading en false (puesto que ordenCmpra se toma su tiempo)
+    useEffect(() => {
+        if (ordenCompra) {
+            setLoading(false);
+        }
+    }, [ordenCompra]);
+
 
     //--Función Submit que envía la información de Orden de Compra a la DB
     const handleSubmit = async (event) => {
@@ -52,13 +57,10 @@ export const Form = () => {
             // console.log(ordenCompra);            
             let ordenGuardada = await guardarDatabase('orders', nueva_orden);
             // console.log("orden Guardada: ", ordenGuardada.id);        
-            //alert(`orden registrada con éxito, id: ${ordenGuardada.id}`);
-
             //Setea a 0 el contenido del carrito de compras
             setItemsCarrito([]);
             //Obtiene toda la orden desde la DB
             getOrder(ordenGuardada.id);
-            setLoading(false);
         } else {
             alert("Los e-mail deben coincidir para realizar la la orden de compra");
         }
@@ -93,12 +95,10 @@ export const Form = () => {
 
     //---Funcion Carga la Orden generada desde la DB--------------------
     const getOrder = async (idOrder) => {
-        setLoading(true);
         setOrdenCompra(null);
         const ordenObtenida = await consultarDocumentoDatabase('orders', idOrder);
         // console.log("orden Obtenida: ", ordenObtenida);
         setOrdenCompra(ordenObtenida);
-        setLoading(false);
     };
 
     //----Función para convertir Timestamp a formato legible por el usuario
@@ -124,12 +124,12 @@ export const Form = () => {
 
     //--Función Generadora de Número de Orden (verifica si existe, lo incrementa)
     let generaNumeroOrden = async () => {
-        let dbConsultada = await consultarDatabase("ordenes_compra");
+        let dbConsultada = await consultarDatabase("orders");
         if (dbConsultada.length === 0) {
             return 1;
         } else {
             //--Obtiene una lista ordenada descendentemente por "nro_orden" (>0)
-            let datosOrdenados = await getFilterCollection("ordenes_compra", "nro_orden", ">", 0, 1, "desc");
+            let datosOrdenados = await getFilterCollection("orders", "nro_orden", ">", 0, 1, "desc");
 
             //--extrae el primer elemento de la lista ordenada
             let primerElementoLista = datosOrdenados[0];
