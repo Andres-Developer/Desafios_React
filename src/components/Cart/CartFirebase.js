@@ -38,6 +38,7 @@ const Cart = () => {
                 'stock': data.find(ef => e.idProducto == ef.id).stock,
                 'pictureUrl': data.find(ef => e.idProducto == ef.id).pictureUrl,
                 'precio': data.find(ef => e.idProducto == ef.id).price,
+                'id_interno': data.find(ef => e.idProducto == ef.id).id_interno,
                 'cantidad': e.cantidad
             }));
             setItemsInfoCompleta(itemsFiltrados);
@@ -125,7 +126,7 @@ const Cart = () => {
                                     <tr key={e.idProducto} className="">
                                         <td className="d-flex justify-content-end">
                                             <div className="text-capitalize">
-                                                {e.title + ' ' + e.marca + ' id:' + e.idProducto}
+                                                {e.title + ' ' + e.marca + ' (Ref:' + e.id_interno + ')'}
                                                 <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
                                             </div>
                                         </td>

@@ -316,7 +316,7 @@ export const Form = () => {
                             <thead  >
                                 <tr>
                                     <th className="text-center">Producto</th>
-                                    <th className="text-center">id</th>
+                                    <th className="text-center">Ref</th>
                                     <th className="text-center">Cantidad</th>
                                     <th className="text-center">Precio unitario</th>
                                     <th className="text-center">Precio * cantidad</th>
@@ -331,7 +331,7 @@ export const Form = () => {
                                                 <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
                                             </div>
                                         </td>
-                                        <td>{e.idProducto}</td>
+                                        <td>{e.id_interno}</td>
                                         <td className="py-auto text-center" >{e.cantidad} </td>
                                         <td className="py-auto text-center" >${muestraNumeroComas(e.precio)} </td>
                                         <td className="py-auto text-center" >${muestraNumeroComas(e.precio * e.cantidad)} </td>
