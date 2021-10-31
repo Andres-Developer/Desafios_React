@@ -10,23 +10,24 @@ ul.Navbar {
   height: 45px;
 }
 
-.dropdown-menu.show{
-  background-color:rgb(78, 78, 78);
+.dropdown-menu.show {
+  background-color: rgb(78, 78, 78);
   max-width: 80px;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
+.dropdown-item:focus,
+.dropdown-item:hover {
   color: #1e2125;
-  background-color: #ffffff00!important;
+  background-color: #ffffff00 !important;
 }
 
 .nav-link {
-  color: #d7ddd0;
+  color: #d7ddd0; 
 }
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
   color: #a3d448;
 }
-
 
 /* Estilos para NAVLINK */
 a.brand {
@@ -37,6 +38,7 @@ a.nav_link,
 a.brand {
   text-decoration: none;
   color: white;
+  padding: 4px 8px;
 }
 
 a.nav_link:hover,
@@ -49,7 +51,7 @@ a.nav_link.active {
   background-color: #83ad36;
   color: white;
   font-weight: 500;
-  padding: 0.35rem;
+  padding:2px 8px;
   border-radius: 0.2rem;
 }
 a.nav_link.active:hover {

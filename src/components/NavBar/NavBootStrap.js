@@ -17,13 +17,15 @@ const NavBootStrap = () => {
                         </NavLink>
                     </Navbar.Brand>
                     <NavDropdown title="Categorías" className="me-auto">
-                        <NavDropdown.Item > <NavLink className="nav_link" to="/category/1">Accesorios</NavLink></NavDropdown.Item>
-                        <NavDropdown.Item ><NavLink className="nav_link" to="/category/2">Calzado</NavLink></NavDropdown.Item>
-                        <NavDropdown.Item ><NavLink className="nav_link" to="/category/3">Vestir</NavLink></NavDropdown.Item>
+                        <div className="d-flex flex-column px-1">
+                            <NavLink className="nav_link" to="/category/1">Accesorios</NavLink>
+                            <NavLink className="nav_link" to="/category/2">Calzado</NavLink>
+                            <NavLink className="nav_link" to="/category/3">Vestir</NavLink>
+                        </div>
                     </NavDropdown>
-                </Container>
-            </Navbar>
-        </div>
+                </Container >
+            </Navbar >
+        </div >
     );
 };
 
