@@ -131,7 +131,10 @@ const Cart = () => {
                                         <td className="d-flex justify-content-between">
                                             <div className="text-capitalize d-flex justify-content-between">
                                                 <div>
-                                                    <div>{e.title + ' ' + e.marca}</div>
+                                                    <div>{e.title}</div>
+                                                    <div className="fw-bold text-black-50">
+                                                        {e.marca}
+                                                    </div>
                                                     <div>
                                                         {'(Ref: ' + e.id_interno + ')'}
                                                     </div>
