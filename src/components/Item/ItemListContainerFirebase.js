@@ -69,7 +69,7 @@ const ItemListContainer = (props) => {
 
 
     return (
-        <div className="itemList mt-5">
+        <div className="itemList mt-5 pt-5">
             <h4>Conoce nuestros productos: </h4>
             {idCategory ?
                 <h5> Categoría: <span className="text-danger">{categorias[idCategory - 1]}</span></h5>
@@ -83,7 +83,7 @@ const ItemListContainer = (props) => {
                         <ItemList itemsArray={items} />
                     </div>
                     :
-                    <div className="showCards">
+                    <div className="showCards container mx-5 px-5">
                         <Spinner animation="border" variant="primary" />
                     </div>
             }
