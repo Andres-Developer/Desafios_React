@@ -16,7 +16,7 @@ const Cart = () => {
     // const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
     const [idItemEliminar, setIdItemEliminar] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [mounted, setMounted] = useState(true);
+    const [mounted, setMounted] = useState(true); //---- SOLUCIÓN leak Memory unmount ------//
 
     //Context Cart
     const { itemsCarrito, setItemsCarrito, totalItems, removeItem, addCountItem, removeCountItem, totalPrecio } = useContext(CartContext);
