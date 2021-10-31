@@ -51,7 +51,7 @@ a.nav_link.active {
   background-color: #83ad36;
   color: white;
   font-weight: 500;
-  padding:2px 8px;
+  /* padding:2px 8px; */
   border-radius: 0.2rem;
 }
 a.nav_link.active:hover {
