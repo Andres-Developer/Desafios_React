@@ -20,6 +20,13 @@ ul.Navbar {
   background-color: #ffffff00!important;
 }
 
+.nav-link {
+  color: #d7ddd0;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #a3d448;
+}
+
 
 /* Estilos para NAVLINK */
 a.brand {
