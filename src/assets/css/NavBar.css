@@ -10,6 +10,17 @@ ul.Navbar {
   height: 45px;
 }
 
+.dropdown-menu.show{
+  background-color:rgb(78, 78, 78);
+  max-width: 80px;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: #ffffff00!important;
+}
+
+
 /* Estilos para NAVLINK */
 a.brand {
   text-decoration: none;
@@ -23,12 +34,12 @@ a.brand {
 
 a.nav_link:hover,
 a.brand:hover {
-  color: #0d6efd;
+  color: #83ad36;
   font-weight: 400;
 }
 
 a.nav_link.active {
-  background-color: #0d6efd;
+  background-color: #83ad36;
   color: white;
   font-weight: 500;
   padding: 0.35rem;
