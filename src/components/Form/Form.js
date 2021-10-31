@@ -150,7 +150,7 @@ export const Form = () => {
         // console.log("ordenCompra", ordenCompra);
         return (
             !ordenCompra && !loading ?
-                <div className="container">
+                <div className="container mt-5">
                     <div className="row">
                         <div className="col-6">
                             <div className="headerForm container mt-5 d-flex flex-column justify-content-center align-items-center">
@@ -274,7 +274,7 @@ export const Form = () => {
                         <Spinner animation="border" variant="primary" />
                     </div>
                     :
-                    <div className="container d-flex flex-column justify-content-center align-items-center pt-4 ">
+                    <div className="container d-flex flex-column justify-content-center align-items-center pt-4 mt-5">
                         <div className="d-flex flex-column justify-content-center align-items-center">
                             <div className="h2 text-success">¡Felicidades! </div>
                             <div className="h5 text-primary">El resumen de tu compra es: </div>

@@ -103,7 +103,7 @@ const Cart = () => {
     };
 
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center">
+        <div className="d-flex flex-column justify-content-center align-items-center mt-3 pt-5">
             {!infoCart ?
                 <div className="container d-flex flex-column justify-content-center align-items-center my-5 py-5">
                     <Spinner animation="border" variant="primary" />
@@ -169,7 +169,7 @@ const Cart = () => {
                     </>
                     :
                     <>
-                        <h4>Tu carrito de compras está vacío</h4>
+                        <div className="h4 pt-4">Tu carrito de compras está vacío</div>
                         <h5 className="mt-5 mb-5">Da click en el siguiente botón para que puedas comprar </h5>
                         <Link className="btn btn-warning" to="/">Volver a Productos</Link>
                     </>
