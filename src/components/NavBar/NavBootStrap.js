@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
+import CartWidget from "./../Cart/CartWidget";
 import shoppingLogo from './../../img/shoppingLogo.svg';
 
 import './../../assets/css/NavBar.css';
@@ -23,6 +24,9 @@ const NavBootStrap = () => {
                             <NavLink className="nav_link" to="/category/3">Vestir</NavLink>
                         </div>
                     </NavDropdown>
+
+                    <NavLink className="nav_link" to="/cart/"><CartWidget /></NavLink>
+
                 </Container >
             </Navbar >
         </div >
