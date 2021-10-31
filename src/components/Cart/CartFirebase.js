@@ -128,9 +128,14 @@ const Cart = () => {
                             <tbody>
                                 {itemsInfoCompleta.map(e => (
                                     <tr key={e.idProducto} className="">
-                                        <td className="d-flex justify-content-end">
-                                            <div className="text-capitalize">
-                                                {e.title + ' ' + e.marca + ' (Ref:' + e.id_interno + ')'}
+                                        <td className="d-flex justify-content-between">
+                                            <div className="text-capitalize d-flex justify-content-between">
+                                                <div>
+                                                    <div>{e.title + ' ' + e.marca}</div>
+                                                    <div>
+                                                        {'(Ref: ' + e.id_interno + ')'}
+                                                    </div>
+                                                </div>
                                                 <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
                                             </div>
                                         </td>
