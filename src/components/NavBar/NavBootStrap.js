@@ -8,7 +8,7 @@ import './../../assets/css/NavBar.css';
 const NavBootStrap = () => {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar className="fixed-top" collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand>
                         <NavLink className="brand " to="/">
