@@ -3,6 +3,8 @@ import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import shoppingLogo from './../../img/shoppingLogo.svg';
 
+import './../../assets/css/NavBar.css';
+
 const NavBootStrap = () => {
     return (
         <div>
