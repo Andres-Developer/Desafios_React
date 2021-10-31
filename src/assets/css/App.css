@@ -1,0 +1,5 @@
+/* Siempre muestra scroll para evitar que se redimensione la pantalla cuando no cargan los productos y por ende el scroll no aparece */
+body {
+    overflow: scroll!important;
+  }
+  
