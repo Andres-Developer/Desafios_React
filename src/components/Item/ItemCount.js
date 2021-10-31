@@ -40,7 +40,7 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, prec
 
                     </div>
                 }
-                <Link type="" className="btn btn-outline-success mt-2" to="/">Seguir Comprando</Link>
+                <Link type="" className="btn btn-outline-success mt-5" to="/">Seguir Comprando</Link>
             </div>
         </>
     );
