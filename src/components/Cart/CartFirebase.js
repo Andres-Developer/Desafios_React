@@ -16,37 +16,7 @@ const Cart = () => {
     // const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
     const [idItemEliminar, setIdItemEliminar] = useState(null);
     const [loading, setLoading] = useState(false);
-
-    // Carga productos desde la DB
-    const getCart = async () => {
-        setLoading(true);
-        setData(null);
-        const listaTemporal = await consultarDatabase('items');
-        setLoading(false);
-        //setListaProductos(listaTemporal);
-        // console.log("lista Temporal: ", listaTemporal);
-        setData(listaTemporal);
-
-        if (!loading && data) { //Condicón con "data" puesto que se demoera en el setData, entonces en el useEffect estará pendiente
-            setLoading(true);
-            // console.log("data", data);
-
-            let itemsFiltrados = itemsCarrito.map(e => ({
-                'idProducto': e.idProducto,
-                'title': data.find(ef => e.idProducto == ef.id).title,
-                'marca': data.find(ef => e.idProducto == ef.id).marca,
-                'stock': data.find(ef => e.idProducto == ef.id).stock,
-                'pictureUrl': data.find(ef => e.idProducto == ef.id).pictureUrl,
-                'precio': data.find(ef => e.idProducto == ef.id).price,
-                'id_interno': data.find(ef => e.idProducto == ef.id).id_interno,
-                'cantidad': e.cantidad
-            }));
-            setItemsInfoCompleta(itemsFiltrados);
-            setLoading(false);
-            setInfoCart(true);
-        }
-    };
-
+    const [mounted, setMounted] = useState(true);
 
     //Context Cart
     const { itemsCarrito, setItemsCarrito, totalItems, removeItem, addCountItem, removeCountItem, totalPrecio } = useContext(CartContext);
@@ -62,13 +32,47 @@ const Cart = () => {
     //Efecto que está pendiente si se elimina un item del carrito
     useEffect(() => {
 
+        setMounted(true); //---- SOLUCIÓN leak Memory unmount ------//
+
         setData(null);
         setLoading(true);
         getCart();
         setLoading(false);
 
+        //---- SOLUCIÓN leak Memory unmount------//
+        return () => setMounted(false);
+
     }, [itemsCarrito, data]); //Renderiza cuando se carga "data" con los valores
 
+    // Función Carga productos desde la DB
+    const getCart = async () => {
+        if (mounted) {  //---- SOLUCIÓN leak Memory unmount------//
+            setLoading(true);
+            setData(null);
+            const listaTemporal = await consultarDatabase('items');
+            setLoading(false);
+            //setListaProductos(listaTemporal);
+            // console.log("lista Temporal: ", listaTemporal);
+            setData(listaTemporal);
+            if (!loading && data) { //Condicón con "data" puesto que se demoera en el setData, entonces en el useEffect estará pendiente
+                setLoading(true);
+                // console.log("data", data);
+                let itemsFiltrados = itemsCarrito.map(e => ({
+                    'idProducto': e.idProducto,
+                    'title': data.find(ef => e.idProducto == ef.id).title,
+                    'marca': data.find(ef => e.idProducto == ef.id).marca,
+                    'stock': data.find(ef => e.idProducto == ef.id).stock,
+                    'pictureUrl': data.find(ef => e.idProducto == ef.id).pictureUrl,
+                    'precio': data.find(ef => e.idProducto == ef.id).price,
+                    'id_interno': data.find(ef => e.idProducto == ef.id).id_interno,
+                    'cantidad': e.cantidad
+                }));
+                setItemsInfoCompleta(itemsFiltrados);
+                setLoading(false);
+                setInfoCart(true);
+            }
+        }
+    };
 
     //Función que confirma la Eliminación del Item de la lista
     const confirmaEliminacionItem = () => {
