@@ -7,8 +7,8 @@ import "./../../assets/css/CartWidget.css";
 
 const CartWidget = ({cantidad}) => {
     return (
-        <div className="cartWidget">
-            <FaShoppingCart />
+        <div className="cartWidget position-relative">
+            <FaShoppingCart/>
             <ContadorCarrito />
         </div>
     );
