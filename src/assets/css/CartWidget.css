@@ -1,0 +1,5 @@
+/* Cambio color del Carrito */
+div.cartWidget{
+    color: #eeeeee;
+    font-size: 19px;    
+}

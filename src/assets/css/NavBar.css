@@ -1,0 +1,60 @@
+/* Estilos NavBar */
+ul.Navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /* border: 2px dotted red; */
+  background-color: #212529;
+  height: 45px;
+}
+
+.dropdown-menu.show {
+  background-color: rgb(78, 78, 78);
+  max-width: 80px;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #1e2125;
+  background-color: #ffffff00 !important;
+}
+
+.nav-link {
+  color: #d7ddd0; 
+}
+.nav-link:focus,
+.nav-link:hover {
+  color: #a3d448;
+}
+
+/* Estilos para NAVLINK */
+a.brand {
+  text-decoration: none;
+}
+
+a.nav_link,
+a.brand {
+  text-decoration: none;
+  color: white;
+  padding: 4px 8px;
+}
+
+a.nav_link:hover,
+a.brand:hover {
+  color: #83ad36;
+  font-weight: 400;
+}
+
+a.nav_link.active {
+  background-color: #83ad36;
+  color: white;
+  font-weight: 500;
+  /* padding:2px 8px; */
+  border-radius: 0.2rem;
+}
+a.nav_link.active:hover {
+  color: white;
+  font-weight: 500;
+}
