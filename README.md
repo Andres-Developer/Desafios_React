@@ -4,7 +4,11 @@
 https://ecommerce-ab.web.app/
 -----------------------------
 -----------------------------
-https://ecommerce-ab.web.app/video/Navegaci%C3%B3n_Proyecto_Final_(comprimido).mp4
+Video de Recorrido completo de una compra:
+
+https://raw.githubusercontent.com/Andres-Developer/Desafios_React/01-entrega-final-sin-console.log()/public/video/Navegaci%C3%B3n_Proyecto_Final_(comprimido).mp4
+
+
 -----------------------------
 ### Bibliotecas usadas: 📚
 * <img src="./public/getbootstrap-ar21.svg" width="50"  /> [__Bootstrap__](https://getbootstrap.com/): Utilizo el framework de estilos CSS (columns, flex, margins, paddings)
