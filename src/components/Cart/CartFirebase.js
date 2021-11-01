@@ -132,19 +132,17 @@ const Cart = () => {
                             <tbody>
                                 {itemsInfoCompleta.map(e => (
                                     <tr key={e.idProducto} className="">
-                                        <td className="d-flex justify-content-between">
-                                            <div className="text-capitalize d-flex justify-content-between">
-                                                <div>
-                                                    <div>{e.title}</div>
-                                                    <div className="fw-bold text-black-50">
-                                                        {e.marca}
-                                                    </div>
-                                                    <div>
-                                                        {'(Ref: ' + e.id_interno + ')'}
-                                                    </div>
+                                        <td className="text-capitalize d-flex justify-content-between">
+                                            <div>
+                                                <div>{e.title}</div>
+                                                <div className="fw-bold text-black-50">
+                                                    {e.marca}
                                                 </div>
-                                                <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />
+                                                <div>
+                                                    {'(Ref: ' + e.id_interno + ')'}
+                                                </div>
                                             </div>
+                                            <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />
                                         </td>
                                         <td>
                                             <div className="btn btn-primary rounded-pill" onClick={() => { removeCountItem(e.idProducto, 1); }}  >-</div>
