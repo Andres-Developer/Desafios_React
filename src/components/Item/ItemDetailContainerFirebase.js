@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
     const getItem = async () => {
         setLoading(true);
         const productoObtenido = await consultarDocumentoDatabase('items', productId);
-        //console.log("producto Encontrado: ", productoObtenido);
         setLoading(false);
 
         if (!loading) {

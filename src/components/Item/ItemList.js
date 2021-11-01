@@ -3,17 +3,14 @@ import Item from './Item';
 import moduleName from './../../assets/css/ItemList.css';
 
 const ItemList = ({ itemsArray }) => {
-    //console.log(items);
     const [items, setItems] = useState(itemsArray);
 
     return (
         <div>
             <div className="listaItems">
                 {items.map((e, idx) => {
-                    // console.log(e.pictureUrl);
                     return <Item id={e.id} id_interno={e.id_interno} title={e.title} stock={e.stock} pictureUrl={e.pictureUrl} key={idx} />;
                 })}
-                {/* {console.log(items)} */}
             </div>
         </div>
     );

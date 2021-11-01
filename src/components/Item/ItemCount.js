@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
 
 const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, precio }) => {
-    //Testing props
-    // console.log(stock, initial);    
     //Paso a Number los props
     stock = Number(stock);
     initial = Number(initial);

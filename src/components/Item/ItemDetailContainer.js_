@@ -19,7 +19,6 @@ const ItemDetailContainer = () => {
                 .then(() => Data.find(e => e.id === parseInt(productId)))
                 .then((res) => {
                     setItemsDetail(res);
-                    /* console.log("Llegó producto: ", res); */
                 });
         };
         getItem();

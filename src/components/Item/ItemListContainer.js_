@@ -16,14 +16,12 @@ const ItemListContainer = (props) => {
     /* Hook de Ciclo de Vida */
     useEffect(() => {
         /* Llamando al servidor  */
-        // console.log("Hook efecto");
         const llamadaServidor = async () => {
             await new Promise((resolve, reject) => setTimeout(resolve, 800))
                 .then(() => {
                     setLoading(true);
                     if (idCategory) {
                         setItems(null);
-                        //console.log("Entró por URL params: ", idCategory);
                         const categoryFilter = listaProductos.filter(
                             (producto) => producto.IdClasificacion === parseInt(idCategory));                        
                         setItems(categoryFilter);                       

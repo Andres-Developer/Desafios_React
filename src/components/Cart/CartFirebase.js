@@ -56,11 +56,10 @@ const Cart = () => {
             const listaTemporal = await consultarDatabase('items');
             setLoading(false);
             //setListaProductos(listaTemporal);
-            // console.log("lista Temporal: ", listaTemporal);
             setData(listaTemporal);
             if (!loading && data) { //Condicón con "data" puesto que se demoera en el setData, entonces en el useEffect estará pendiente
                 setLoading(true);
-                // console.log("data", data);
+
                 let itemsFiltrados = itemsCarrito.map(e => ({
                     'idProducto': e.idProducto,
                     'title': data.find(ef => e.idProducto == ef.id).title,
@@ -80,13 +79,12 @@ const Cart = () => {
 
     //Función que confirma la Eliminación del Item de la lista
     const confirmaEliminacionItem = () => {
-        //console.log("Entro a la confirmación eliminacion");
+
         removeItem(idItemEliminar);
     };
 
     //Función que confirma Vaciar Contenido del Carrito de Compras
-    const confirmaVaciarCarrito = () => {
-        //console.log("Entro a la confirmación eliminacion");
+
         setItemsCarrito([]);
     };
 

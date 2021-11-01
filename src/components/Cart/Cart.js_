@@ -31,7 +31,7 @@ const Cart = () => {
         };
         getCart();
         //
-        //console.log("items carrito: ", itemsCarrito);
+
         //
 
         let itemsFiltrados = itemsCarrito.map(e => ({
@@ -41,7 +41,7 @@ const Cart = () => {
             'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
-        //console.log("itemsFiltrados: ", itemsFiltrados);
+
         setItemsInfoCompleta(itemsFiltrados);
     }, []);
 
@@ -55,14 +55,14 @@ const Cart = () => {
             'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
-        //console.log("itemsFiltrados: ", itemsFiltrados);
+
         setItemsInfoCompleta(itemsFiltrados);
     }, [itemsCarrito]);
 
 
     //Función que confirma la eliminación del Item de la lista
     const confirmaEliminacionItem = () => {
-        //console.log("Entro a la confirmación eliminacion");
+
         removeItem(idItemEliminar);
     };
 

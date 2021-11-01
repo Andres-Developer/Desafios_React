@@ -23,7 +23,6 @@ const ItemListContainer = (props) => {
             await new Promise((resolve, reject) => setTimeout(resolve, 2000))
                 .then(() => {
                     if (idCategory) {
-                        console.log("Entró por URL params: ", idCategory);
                         const categoryFilter = listaProductos.filter(
                             (producto) => producto.IdClasficacion === parseInt(idCategory));
 

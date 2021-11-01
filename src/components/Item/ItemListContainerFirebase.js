@@ -25,24 +25,18 @@ const ItemListContainer = (props) => {
         const listaTemporal = await consultarDatabase('items');
         setLoading(false);
         //setListaProductos(listaTemporal);
-        // console.log("lista Temporal: ", listaTemporal);
 
         if (!loading) {
             if (idCategory) {
                 setLoading(true);
                 setItems(null);
                 setItemsFiltrados(null);
-                // console.log("Entró por URL params: ", idCategory);
-                // console.log("Entró con lista temporal: ", listaTemporal);
                 const categoryFilter = listaTemporal.filter(
                     (producto) => producto.IdCategory === parseInt(idCategory));
-                // console.log("categoryFilter: ", categoryFilter)
                 setItems(categoryFilter);
                 setItemsFiltrados(categoryFilter);
-                // console.log("Items por categoría: filtrados ", itemsFiltrados);
                 setLoading(false);
             } else {
-                // console.log("entró por else: sin categoría, loading:", loading);
                 setItems(null);
                 setItemsFiltrados(null);
                 setItems(listaTemporal);

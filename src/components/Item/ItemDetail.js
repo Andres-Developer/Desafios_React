@@ -4,7 +4,6 @@ import './../../assets/css/ItemDetail.css'
 
 const ItemDetail = ({ itemDetail }) => {
     const [totalProductos, setTotalProductos] = useState(0);
-    /* console.log(itemDetail); */
 
     const productosAgregadosCarrito = (quantityToAdd) => {
         setTotalProductos(quantityToAdd);
@@ -12,7 +11,7 @@ const ItemDetail = ({ itemDetail }) => {
 
 
     useEffect(() => {
-        //console.log("Productos traídos de ItemCount: ", totalProductos);
+
     }, [totalProductos]);
     return (
         <div className="container d-flex justify-content-center align-items-center mt-5 pt-4">

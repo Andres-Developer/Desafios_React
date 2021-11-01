@@ -6,55 +6,42 @@ const ProviderCart = ({ children }) => {
     const [itemsCarrito, setItemsCarrito] = useState([]);
 
     useEffect(() => {
-        //console.log(itemsCarrito);
         let sumaCantidad = 0;
         let sumaPrecios = 0;
         //---Suma cantidad TOTAL de productos en el Carrito
         itemsCarrito.forEach(e => {
             sumaCantidad += e.cantidad;
             sumaPrecios += e.cantidad * e.precio;
-            //console.log("precio: ", e.precio);
         });
-        //console.log("suma total precios: ", sumaPrecios);
-        // console.log("sumatoria de cantidad productos: ", sumaCantidad);
         setTotalItems(sumaCantidad);
         setTotalPrecio(sumaPrecios);
     }, [itemsCarrito]);
 
     //Función que agrega items a la lista de objetos de items
     const addItem = (item) => {
-        //console.log("click addItem: ", item); //---Testing
-        //console.log("Items del context:", itemsCarrito);//---Testing
         //----Verifica si la lista está vacía
         if (itemsCarrito.length == 0) {
             setItemsCarrito([...itemsCarrito, item]);
         } else {
             //----Busca si el item está repetido
             let itemRepetido = itemsCarrito.find(e => e.idProducto == item.idProducto);
-            //console.log("rta find:", itemRepetido);
             //----Condición si hay repetidos
             if (itemRepetido) {
-                //console.log("Item para actualizar cantidad:", item);//---Testing
                 let itemActualizado = { ...itemRepetido, 'cantidad': itemRepetido.cantidad + Number(item.cantidad) };
                 let itemsSinItemRepetido = itemsCarrito.map(e => (e.idProducto == item.idProducto ? itemActualizado : e));
                 setItemsCarrito(itemsSinItemRepetido);
             } else {
-                //console.log("Nuevo item para agregar:", item);//---Testing
                 setItemsCarrito([...itemsCarrito, item]);
             }
         }
     };
     //Función para remover item de la lista de items:
     const removeItem = (idProducto) => {
-        //console.log("id llega:", idProducto);
         let listaSinItem = itemsCarrito.filter(e => e.idProducto != idProducto);
-        //console.log("lista con item: ", itemsCarrito);
-        //console.log("lista SIN item: ", listaSinItem);
         setItemsCarrito(listaSinItem);
     };
     //Función para agregar más Cantidad a un mismo item
     const addCountItem = (idProducto, cantidad, stock) => {
-        console.log("id llega:", idProducto);
         let listaModCantidadItem = itemsCarrito.map(e => {
             if (e.idProducto == idProducto) {
                 if (e.cantidad < Number(stock)) {
@@ -67,12 +54,10 @@ const ProviderCart = ({ children }) => {
                 return e;
             }
         });
-        //console.log("Lista cantidad modificada: ", listaModCantidadItem);
         setItemsCarrito(listaModCantidadItem);
     };
     //Funcion para remover Cantidad a un mismo item
     const removeCountItem = (idProducto, cantidad) => {
-        console.log("id llega:", idProducto);
         let listaModCantidadItem = itemsCarrito.map(e => {
             if (e.idProducto == idProducto) {
                 if (e.cantidad > 1) {
@@ -85,7 +70,6 @@ const ProviderCart = ({ children }) => {
                 return e;
             }
         });
-        console.log("Lista cantidad modificada: ", listaModCantidadItem);
         setItemsCarrito(listaModCantidadItem);
     };
 

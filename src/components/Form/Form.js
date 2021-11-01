@@ -38,7 +38,6 @@ export const Form = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (email === emailVerification && !emailErr && !emailVerificationErr) {
-            // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
             setLoading(true);
             let nro_orden = await generaNumeroOrden();
             const nueva_orden = {
@@ -53,10 +52,8 @@ export const Form = () => {
                 totalItems,
                 totalPrecio,
                 nro_orden
-            };
-            // console.log(ordenCompra);            
-            let ordenGuardada = await guardarDatabase('orders', nueva_orden);
-            // console.log("orden Guardada: ", ordenGuardada.id);        
+            };         
+            let ordenGuardada = await guardarDatabase('orders', nueva_orden);   
             //Setea a 0 el contenido del carrito de compras
             setItemsCarrito([]);
             //Obtiene toda la orden desde la DB
@@ -73,11 +70,9 @@ export const Form = () => {
         const emailInput = e.target.value;
         setEmail(emailInput);
         if (emailRegex.test(emailInput)) {
-            // console.log("email ok: ", emailInput);
             setEmailErr(false);
         } else {
             setEmailErr(true);
-            // console.log("email fail: ", emailInput);
         }
     };
 
@@ -85,11 +80,9 @@ export const Form = () => {
         const emailInput = e.target.value;
         setEmailVerification(emailInput);
         if (emailRegex.test(emailInput)) {
-            // console.log("email verification ok: ", emailInput);
             setEmailVerificationErr(false);
         } else {
             setEmailVerificationErr(true);
-            // console.log("email verification fail: ", emailInput);
         }
     };
 
@@ -97,13 +90,11 @@ export const Form = () => {
     const getOrder = async (idOrder) => {
         setOrdenCompra(null);
         const ordenObtenida = await consultarDocumentoDatabase('orders', idOrder);
-        // console.log("orden Obtenida: ", ordenObtenida);
         setOrdenCompra(ordenObtenida);
     };
 
     //----Función para convertir Timestamp a formato legible por el usuario
     const convierteFechaHora = (timeStamp) => {
-        // console.log(timeStamp.toMillis())
         let fecha = new Date(timeStamp.toMillis()); //Fecha-hora con el timeStamp de Firebase
         let mes = fecha.getMonth() + 1; //obteniendo mes
         let dia = fecha.getDate(); //obteniendo dia
@@ -136,7 +127,6 @@ export const Form = () => {
 
             //--Obtiene el nro_orden del primer elemento:
             let nro_orden_maximo = primerElementoLista.nro_orden;
-            //console.log("nro_orden_maximo: ", nro_orden_maximo);
 
             //Retorna el numero de orden para ser usado
             return nro_orden_maximo + 1;
@@ -146,8 +136,6 @@ export const Form = () => {
     //============================= RENDER =========================================================================================
     //--Render Condicional (Renderiza solo si vienen elementos en el carrito de compras)
     if (itemsInfoCompleta !== undefined) {
-        // console.log("itemsInfoCompleta: ", itemsInfoCompleta);
-        // console.log("ordenCompra", ordenCompra);
         return (
             !ordenCompra && !loading ?
                 <div className="container mt-5">
