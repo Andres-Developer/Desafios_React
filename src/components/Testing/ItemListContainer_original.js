@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import './../../assets/css/ItemListContainer.css';
-import ItemList from './ItemList';
+import ItemList from '../Item/ItemList';
 import listaProductos from './../../data/listaProductos';
 import { useParams } from 'react-router';
 
 const ItemListContainer = (props) => {
-    const [catalogo, setCatalogo] = useState("--State (Catálogo de Productos)--");
     const [items, setItems] = useState(null);
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();

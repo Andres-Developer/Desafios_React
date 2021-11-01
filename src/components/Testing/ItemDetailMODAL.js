@@ -1,5 +1,5 @@
 import { Modal } from "react-bootstrap";
-import ItemCount from "./ItemCount";
+import ItemCount from "../Item/ItemCount";
 
 const ItemDetail = ({ itemDetail }) => {
     return (

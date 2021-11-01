@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 //Consulta a configuracion firebase
-import { consultarDatabase, consultarDocumentoDatabase } from './../../config/firebaseConfig';
+import { consultarDocumentoDatabase } from './../../config/firebaseConfig';
 import { Spinner } from 'react-bootstrap';
 //import Data from "../../data/listaProductos.json"; //Información completa de los ITEMS
 import ItemDetail from "./ItemDetail";

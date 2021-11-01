@@ -4,14 +4,11 @@ import { Spinner } from 'react-bootstrap';
 import { consultarDatabase } from './../../config/firebaseConfig';
 import './../../assets/css/ItemListContainer.css';
 import ItemList from './ItemList';
-//import listaProductos from './../../data/listaProductos';
 import { useParams } from 'react-router';
 
 const ItemListContainer = (props) => {
-    const [listaProductos, setListaProductos] = useState(null);
-    const [items, setItems] = useState(null);
-    const [itemsFiltrados, setItemsFiltrados] = useState(null);
 
+    const [items, setItems] = useState(null);
 
     //Obteniendo parámetros por URL
     const { id: idCategory } = useParams();
@@ -24,39 +21,28 @@ const ItemListContainer = (props) => {
         setLoading(true);
         const listaTemporal = await consultarDatabase('items');
         setLoading(false);
-        //setListaProductos(listaTemporal);
 
         if (!loading) {
             if (idCategory) {
                 setLoading(true);
                 setItems(null);
-                setItemsFiltrados(null);
                 const categoryFilter = listaTemporal.filter(
                     (producto) => producto.IdCategory === parseInt(idCategory));
                 setItems(categoryFilter);
-                setItemsFiltrados(categoryFilter);
                 setLoading(false);
             } else {
                 setItems(null);
-                setItemsFiltrados(null);
                 setItems(listaTemporal);
             }
         }
     };
 
 
-    /* Hook de Ciclo de Vida */
-    // useEffect(() => {
-    //     llamadaServidor();
-    //     setLoading(false);
-    // }, []);
-
     /* Hook de Ciclo de Vida pendiente de la categoría */
     useEffect(() => {
         /* Llamando al servidor  */
 
         setItems(null);
-        setItemsFiltrados(null);
         llamadaServidor(idCategory);
 
     }, [idCategory]);

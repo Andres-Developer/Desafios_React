@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Modal } from 'react-bootstrap';
 
 import Data from "../../data/listaProductos.json"; //Información completa de los ITEMS
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../Item/ItemDetail";
 
 const ItemDetailContainer = ( { id } ) => {
     const [itemDetail, setItemsDetail] = useState(null);

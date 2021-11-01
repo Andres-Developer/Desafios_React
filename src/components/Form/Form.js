@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
 import { consultarDocumentoDatabase, guardarDatabase, fechaFirebase, consultarDatabase, getFilterCollection } from './../../config/firebaseConfig';
-import { Spinner, Modal, Button } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import { CartContext } from 'context/CartContext';
 import { useLocation, Link } from 'react-router-dom';
 import './../../assets/css/Form.css';

@@ -2,8 +2,6 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import ItemDetailContainer from './ItemDetailContainer.js_';
-
 const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
     return (
         //Renderizo una Card de Bootstrap        
