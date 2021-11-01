@@ -325,11 +325,12 @@ export const Form = () => {
                             <tbody>
                                 {ordenCompra.items.map(e => (
                                     <tr key={e.idProducto} className="">
-                                        <td className="d-flex justify-content-end">
-                                            <div className="text-capitalize">
-                                                {e.title + ' ' + e.marca}
-                                                <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
-                                            </div>
+                                        <td className="text-capitalize d-flex justify-content-between">                                           
+                                                <div>
+                                                    <div className="h5">  {e.title} </div>
+                                                    <div>  {e.marca} </div>
+                                                </div>
+                                                <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />                                            
                                         </td>
                                         <td>{e.id_interno}</td>
                                         <td className="py-auto text-center" >{e.cantidad} </td>
