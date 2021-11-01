@@ -75,7 +75,7 @@ const Cart = () => {
         <div className="d-flex flex-column justify-content-center align-items-center">
             {!infoCart ? <Spinner animation="border" variant="primary" />
                 :
-                itemsCarrito.length != 0
+                itemsCarrito.length !== 0
                     ?
                     <>
                         <h5 className="mt-5">

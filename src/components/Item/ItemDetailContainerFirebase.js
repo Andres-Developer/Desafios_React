@@ -56,10 +56,10 @@ const ItemDetailContainer = () => {
                         :
                         <ItemDetail itemDetail={itemDetail} />
                     :
-                        <div className="container d-flex align-items-center justify-content-center my-5 py-5">
-                            <div className="h3">Producto con id: <strong className="text-danger">{productId}</strong> no encontrado en la base de datos</div>
-                        </div>
-                    }
+                    <div className="container d-flex align-items-center justify-content-center my-5 py-5">
+                        <div className="h3">Producto con id: <strong className="text-danger">{productId}</strong> no encontrado en la base de datos</div>
+                    </div>
+            }
 
             {/*  */}
         </div>

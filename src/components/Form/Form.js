@@ -52,8 +52,8 @@ export const Form = () => {
                 totalItems,
                 totalPrecio,
                 nro_orden
-            };         
-            let ordenGuardada = await guardarDatabase('orders', nueva_orden);   
+            };
+            let ordenGuardada = await guardarDatabase('orders', nueva_orden);
             //Setea a 0 el contenido del carrito de compras
             setItemsCarrito([]);
             //Obtiene toda la orden desde la DB
@@ -313,12 +313,12 @@ export const Form = () => {
                             <tbody>
                                 {ordenCompra.items.map(e => (
                                     <tr key={e.idProducto} className="">
-                                        <td className="text-capitalize d-flex justify-content-between">                                           
-                                                <div>
-                                                    <div className="h5">  {e.title} </div>
-                                                    <div>  {e.marca} </div>
-                                                </div>
-                                                <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />                                            
+                                        <td className="text-capitalize d-flex justify-content-between">
+                                            <div>
+                                                <div className="h5">  {e.title} </div>
+                                                <div>  {e.marca} </div>
+                                            </div>
+                                            <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />
                                         </td>
                                         <td>{e.id_interno}</td>
                                         <td className="py-auto text-center" >{e.cantidad} </td>

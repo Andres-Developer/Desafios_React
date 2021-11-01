@@ -37,7 +37,7 @@ const ProviderCart = ({ children }) => {
     };
     //Función para remover item de la lista de items:
     const removeItem = (idProducto) => {
-        let listaSinItem = itemsCarrito.filter(e => e.idProducto != idProducto);
+        let listaSinItem = itemsCarrito.filter(e => e.idProducto !== idProducto);
         setItemsCarrito(listaSinItem);
     };
     //Función para agregar más Cantidad a un mismo item

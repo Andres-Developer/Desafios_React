@@ -36,7 +36,7 @@ const Cart = () => {
 
         setData(null);
         setLoading(true);
-        if (itemsCarrito.length != 0) {
+        if (itemsCarrito.length !== 0) {
             getCart();
         } else {
             setInfoCart(true);
@@ -111,7 +111,7 @@ const Cart = () => {
                     <Spinner animation="border" variant="primary" />
                 </div>
                 :
-                itemsCarrito.length != 0
+                itemsCarrito.length !== 0
                     ?
                     <>
                         <h5 className="mt-5">

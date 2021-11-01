@@ -8,7 +8,7 @@ const ContadorCarrito = ({ cantidad }) => {
     const { totalItems } = useContext(CartContext);
     return (
         <span className="ContadorCarrito position-absolute badge rounded-pill bg-danger">
-            {totalItems != 0 ? totalItems : ''}
+            {totalItems !== 0 ? totalItems : ''}
         </span>
 
     );

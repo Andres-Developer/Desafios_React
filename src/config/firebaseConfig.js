@@ -161,7 +161,7 @@ export const getFilterCollection = async (nombreColeccion, keyDocumento, condici
   // == igual que
   // > mayor que
   // >= mayor que o igual que
-  // != no igual a
+  // !== no igual a
   // array - contains
   // array - contains - any
   // in
