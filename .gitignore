@@ -3,6 +3,7 @@
 token_firebase.txt
 
 /public/images
+/public/video
 
 # dependencies
 /node_modules
