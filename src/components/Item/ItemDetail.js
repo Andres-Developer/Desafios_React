@@ -18,7 +18,7 @@ const ItemDetail = ({ itemDetail }) => {
         <div className="container d-flex justify-content-center align-items-center mt-5 pt-4">
             <div id="columnas" className="row">
                 <div className="col-12 col-md-6">
-                    <img className ="img-fluid" src={`./../` + itemDetail.pictureUrl}  alt="" />
+                    <img className ="img-fluid" src={itemDetail.pictureUrl}  alt="" />
                 </div>
                 <div className="col-12 col-md-6 pt-3">
                     <div className="h3 text-capitalize">{itemDetail.title + " " + itemDetail.marca.toUpperCase()}</div>

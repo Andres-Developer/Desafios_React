@@ -139,7 +139,7 @@ const Cart = () => {
                                                         {'(Ref: ' + e.id_interno + ')'}
                                                     </div>
                                                 </div>
-                                                <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />
+                                                <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />
                                             </div>
                                         </td>
                                         <td>

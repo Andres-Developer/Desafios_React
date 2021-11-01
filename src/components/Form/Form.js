@@ -243,7 +243,7 @@ export const Form = () => {
                                 <ul key={e.idProducto} className="listaResumen " >
                                     <li className="itemListaResumen border border-2 p-2">
                                         <div className=" d-flex justify-content-start align-items-center">
-                                            <img className="mx-1" src={`./../` + e.pictureUrl} alt="" width="50px" />
+                                            <img className="mx-1" src={e.pictureUrl} alt="" width="50px" />
                                             <div>
                                                 <div className="h6 text-capitalize">
                                                     {e.title + ' ' + e.marca}
@@ -330,7 +330,7 @@ export const Form = () => {
                                                     <div className="h5">  {e.title} </div>
                                                     <div>  {e.marca} </div>
                                                 </div>
-                                                <img className="ms-3" src={`./../` + e.pictureUrl} alt="" width="50px" />                                            
+                                                <img className="ms-3" src={e.pictureUrl} alt="" width="50px" />                                            
                                         </td>
                                         <td>{e.id_interno}</td>
                                         <td className="py-auto text-center" >{e.cantidad} </td>
