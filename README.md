@@ -4,6 +4,8 @@
 https://ecommerce-ab.web.app/
 -----------------------------
 -----------------------------
+https://ecommerce-ab.web.app/video/Navegaci%C3%B3n_Proyecto_Final_(comprimido).mp4
+-----------------------------
 ### Bibliotecas usadas: 📚
 * <img src="./public/getbootstrap-ar21.svg" width="50"  /> [__Bootstrap__](https://getbootstrap.com/): Utilizo el framework de estilos CSS (columns, flex, margins, paddings)
 * <img src="./public/logo-react-bootstrap.svg" width="24" height="24" /> [__react-bootstrap__](https://react-bootstrap.github.io/): Utilizo sus componentes para el Navbar
