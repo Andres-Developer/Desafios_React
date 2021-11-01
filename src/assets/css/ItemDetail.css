@@ -1,3 +1,8 @@
 #columnas{
     /* background-color: red; */    
 }
+
+#img_detail{
+    max-width: 300px;
+    padding: 0 10px;
+}
