@@ -2,12 +2,11 @@
 -----------------------------
 ### _URL_ del proyecto desplegado:
 https://ecommerce-ab.web.app/
------------------------------
------------------------------
-Video de Recorrido completo de una compra:
 
-https://raw.githubusercontent.com/Andres-Developer/Desafios_React/01-entrega-final-sin-console.log()/public/video/Navegaci%C3%B3n_Proyecto_Final_(comprimido).mp4
 
+## 📽 _Video de recorrido completo de una compra:_
+
+https://user-images.githubusercontent.com/58063683/139620569-08f9e627-6a72-4cc0-9e7a-b9d3218401b0.mp4
 
 -----------------------------
 ### Bibliotecas usadas: 📚
@@ -18,7 +17,7 @@ https://raw.githubusercontent.com/Andres-Developer/Desafios_React/01-entrega-fin
 * <img src="./public/firebase-ar21.svg" width="60"  /> [__npm firebase__](https://www.npmjs.com/package/firebase): Utilizado para interactuar con Firebase
 -----------------------------
 
-## Rutas configuradas de la siguiente manera;
+## Rutas configuradas de la siguiente manera:
 * ‘/’ navega a < ItemListContainer />
 * ‘/category/:id’  < ItemListContainer />
 * ‘/item/:id’ navega a < ItemDetailContainer />
