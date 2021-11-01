@@ -36,7 +36,11 @@ const Cart = () => {
 
         setData(null);
         setLoading(true);
-        getCart();
+        if (itemsCarrito.length != 0) {
+            getCart();
+        } else {
+            setInfoCart(true);
+        }
         setLoading(false);
 
         //---- SOLUCIÓN leak Memory unmount------//
