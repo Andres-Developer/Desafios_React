@@ -84,7 +84,7 @@ const Cart = () => {
     };
 
     //Función que confirma Vaciar Contenido del Carrito de Compras
-
+    const confirmaVaciarCarrito = () => {
         setItemsCarrito([]);
     };
 
