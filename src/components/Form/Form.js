@@ -355,7 +355,7 @@ export const Form = () => {
     else {
         return (
             <div className="d-flex flex-column justify-content-center align-items-center mt-4 pt-4">
-                <h5>Para generar una órden de compra debes tener productos en tu carrito 🛒</h5>
+                <h5 className="pt-5">Para generar una órden de compra debes tener productos en tu carrito 🛒</h5>
                 <h6 className="mt-4 mb-5">Da click en el siguiente botón para que puedas comprar </h6>
                 <Link className="btn btn-primary" to="/">Volver a Productos</Link>
             </div>
