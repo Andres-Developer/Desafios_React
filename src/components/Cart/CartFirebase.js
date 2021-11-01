@@ -62,12 +62,12 @@ const Cart = () => {
 
                 let itemsFiltrados = itemsCarrito.map(e => ({
                     'idProducto': e.idProducto,
-                    'title': data.find(ef => e.idProducto == ef.id).title,
-                    'marca': data.find(ef => e.idProducto == ef.id).marca,
-                    'stock': data.find(ef => e.idProducto == ef.id).stock,
-                    'pictureUrl': data.find(ef => e.idProducto == ef.id).pictureUrl,
-                    'precio': data.find(ef => e.idProducto == ef.id).price,
-                    'id_interno': data.find(ef => e.idProducto == ef.id).id_interno,
+                    'title': data.find(ef => e.idProducto === ef.id).title,
+                    'marca': data.find(ef => e.idProducto === ef.id).marca,
+                    'stock': data.find(ef => e.idProducto === ef.id).stock,
+                    'pictureUrl': data.find(ef => e.idProducto === ef.id).pictureUrl,
+                    'precio': data.find(ef => e.idProducto === ef.id).price,
+                    'id_interno': data.find(ef => e.idProducto === ef.id).id_interno,
                     'cantidad': e.cantidad
                 }));
                 setItemsInfoCompleta(itemsFiltrados);

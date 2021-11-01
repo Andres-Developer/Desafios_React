@@ -42,8 +42,8 @@ const ItemListContainer = (props) => {
             <h3>Conoce todos nuestros productos </h3>
 
             <div className="showCards">
-                {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory-1]}</h5>: <h5>Estos son todos nuestros productos</h5> }
-                {items == null ? <Spinner animation="border" variant="primary" /> : <ItemList itemsArray={items} />}
+                {idCategory ? <h5>Estos son los Items de la categoría: {categorias[idCategory - 1]}</h5> : <h5>Estos son todos nuestros productos</h5>}
+                {items === null ? <Spinner animation="border" variant="primary" /> : <ItemList itemsArray={items} />}
             </div>
         </div>
     );

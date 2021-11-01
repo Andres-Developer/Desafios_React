@@ -20,15 +20,15 @@ const ProviderCart = ({ children }) => {
     //Función que agrega items a la lista de objetos de items
     const addItem = (item) => {
         //----Verifica si la lista está vacía
-        if (itemsCarrito.length == 0) {
+        if (itemsCarrito.length === 0) {
             setItemsCarrito([...itemsCarrito, item]);
         } else {
             //----Busca si el item está repetido
-            let itemRepetido = itemsCarrito.find(e => e.idProducto == item.idProducto);
+            let itemRepetido = itemsCarrito.find(e => e.idProducto === item.idProducto);
             //----Condición si hay repetidos
             if (itemRepetido) {
                 let itemActualizado = { ...itemRepetido, 'cantidad': itemRepetido.cantidad + Number(item.cantidad) };
-                let itemsSinItemRepetido = itemsCarrito.map(e => (e.idProducto == item.idProducto ? itemActualizado : e));
+                let itemsSinItemRepetido = itemsCarrito.map(e => (e.idProducto === item.idProducto ? itemActualizado : e));
                 setItemsCarrito(itemsSinItemRepetido);
             } else {
                 setItemsCarrito([...itemsCarrito, item]);
@@ -43,7 +43,7 @@ const ProviderCart = ({ children }) => {
     //Función para agregar más Cantidad a un mismo item
     const addCountItem = (idProducto, cantidad, stock) => {
         let listaModCantidadItem = itemsCarrito.map(e => {
-            if (e.idProducto == idProducto) {
+            if (e.idProducto === idProducto) {
                 if (e.cantidad < Number(stock)) {
                     return { ...e, 'cantidad': e.cantidad += Number(cantidad) };
                 } else {
@@ -59,7 +59,7 @@ const ProviderCart = ({ children }) => {
     //Funcion para remover Cantidad a un mismo item
     const removeCountItem = (idProducto, cantidad) => {
         let listaModCantidadItem = itemsCarrito.map(e => {
-            if (e.idProducto == idProducto) {
+            if (e.idProducto === idProducto) {
                 if (e.cantidad > 1) {
                     return { ...e, 'cantidad': e.cantidad -= Number(cantidad) };
                 } else {

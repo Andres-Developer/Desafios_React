@@ -144,9 +144,9 @@ const array1 = [
         "pictureUrl": "images/accesorio_trekking_bandana_the-north-face_hombre_rojo.jpg"
     }
 ];
-const found = array1.find(e => e.id == 10);
+const found = array1.find(e => e.id === 10);
 
-const index = array1.findIndex(e => e.id == 10);
+const index = array1.findIndex(e => e.id === 10);
 //Rta index: 
 console.log("index :", index);
 
@@ -172,6 +172,6 @@ let arrayActualizado = [...array1, newObject];
 console.log(arrayActualizado);
 
 ///// MAP en listas: para modificar SOLO 1 elementod el array en su MISMA POSICIÓN
-let listaSinElemento = array1.map(e => (e.id == 7 ? { "editado": "editado" } : e));
+let listaSinElemento = array1.map(e => (e.id === 7 ? { "editado": "editado" } : e));
 console.log(listaSinElemento);
 // muestra el mismo array pero en donde iría el objeto con id 7  irá el objeto:  { "editado": "editado" }

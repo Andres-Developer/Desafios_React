@@ -36,9 +36,9 @@ const Cart = () => {
 
         let itemsFiltrados = itemsCarrito.map(e => ({
             'idProducto': e.idProducto,
-            'title': Data.find(ef => e.idProducto == ef.id).title,
-            'marca': Data.find(ef => e.idProducto == ef.id).marca,
-            'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
+            'title': Data.find(ef => e.idProducto === ef.id).title,
+            'marca': Data.find(ef => e.idProducto === ef.id).marca,
+            'pictureUrl': Data.find(ef => e.idProducto === ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
 
@@ -49,10 +49,10 @@ const Cart = () => {
     useEffect(() => {
         let itemsFiltrados = itemsCarrito.map(e => ({
             'idProducto': e.idProducto,
-            'title': Data.find(ef => e.idProducto == ef.id).title,
-            'marca': Data.find(ef => e.idProducto == ef.id).marca,
-            'stock': Data.find(ef => e.idProducto == ef.id).stock,
-            'pictureUrl': Data.find(ef => e.idProducto == ef.id).pictureUrl,
+            'title': Data.find(ef => e.idProducto === ef.id).title,
+            'marca': Data.find(ef => e.idProducto === ef.id).marca,
+            'stock': Data.find(ef => e.idProducto === ef.id).stock,
+            'pictureUrl': Data.find(ef => e.idProducto === ef.id).pictureUrl,
             'cantidad': e.cantidad
         }));
 
