@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-//Consulta a configuracion firebase
-import { consultarDatabase } from './../../config/firebaseConfig';
+import { consultarDatabase, buscarDocumentoFiltradoCategoria } from './../../config/firebaseConfig';
 import './../../assets/css/ItemListContainer.css';
 import ItemList from './ItemList';
 import { useParams } from 'react-router';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState(null);
 
@@ -26,8 +25,8 @@ const ItemListContainer = (props) => {
             if (idCategory) {
                 setLoading(true);
                 setItems(null);
-                const categoryFilter = listaTemporal.filter(
-                    (producto) => producto.IdCategory === parseInt(idCategory));
+                //Implementando la búsqueda por Categoría con Query (where) de firestore
+                const categoryFilter = await buscarDocumentoFiltradoCategoria('items', idCategory);
                 setItems(categoryFilter);
                 setLoading(false);
             } else {
@@ -37,16 +36,11 @@ const ItemListContainer = (props) => {
         }
     };
 
-
-    /* Hook de Ciclo de Vida pendiente de la categoría */
     useEffect(() => {
-        /* Llamando al servidor  */
-
         setItems(null);
+        /* Llamando al servidor  */
         llamadaServidor(idCategory);
-
     }, [idCategory]);
-
 
     return (
         <div className="itemList mt-5 pt-5">
@@ -56,7 +50,6 @@ const ItemListContainer = (props) => {
                 :
                 <h5 className="text-danger">(Todos)</h5>
             }
-
             {
                 items ?
                     <div className="showCards container mx-5 px-5">

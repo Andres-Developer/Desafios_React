@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Item from './Item';
-import moduleName from './../../assets/css/ItemList.css';
+import './../../assets/css/ItemList.css';
 
 const ItemList = ({ itemsArray }) => {
     const [items, setItems] = useState(itemsArray);

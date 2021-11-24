@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
+const Item = ({ id, id_interno, title, pictureUrl, stock }) => {
     return (
         //Renderizo una Card de Bootstrap        
         <Card style={{ width: '10rem' }}>
@@ -15,7 +15,6 @@ const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
                     Stock del producto: {stock}
                 </Card.Text>
                 {/* Llamando al componente encargado de cargar los detalles del Item */}
-                {/* <ItemDetailContainer id={id} /> */}
                 <Link to={`/item/${id}`} className="btn btn-success">
                     detalle
                 </Link>
@@ -23,7 +22,5 @@ const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
         </Card>
     );
 };
-
-
 
 export default Item;
