@@ -15,7 +15,7 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, prec
     //Lógica de botones
     let onAdd = () => { count < stock ? setCount(count + 1) : alert(`No puedes agregar más de ${stock} productos porque no hay más stock`); };
     let onMinus = () => { count > initial ? setCount(count - 1) : alert(`El valor mínimo es: ${initial}`); };
-    //Render
+
     return (
         <>
             <div>
