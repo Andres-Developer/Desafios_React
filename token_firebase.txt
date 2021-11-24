@@ -1,6 +1,0 @@
-1//05x0JNIUCPXT4CgYIARAAGAUSNwF-L9IrxMBUZ-ZS9UWBklFdnIsCK7TZ9umYqRyRRVbtQA_Gi1ADDhSjOvyIyc6rhZsM-hdY1Zc
-
-
-** Usar: 
-firebase-multi use proyecto-coder-react firebase deploy
-                                        firebase init
