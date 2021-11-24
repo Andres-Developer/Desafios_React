@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-//Consulta a configuracion firebase
-import { consultarDatabase } from './../../config/firebaseConfig';
+import { consultarDatabase, buscarDocumentoFiltradoCategoria } from './../../config/firebaseConfig';
 import './../../assets/css/ItemListContainer.css';
 import ItemList from './ItemList';
 import { useParams } from 'react-router';
@@ -25,9 +24,9 @@ const ItemListContainer = (props) => {
         if (!loading) {
             if (idCategory) {
                 setLoading(true);
-                setItems(null);
-                const categoryFilter = listaTemporal.filter(
-                    (producto) => producto.IdCategory === parseInt(idCategory));
+                setItems(null); 
+                //Implementando la búsqueda por Categoría con Query (where) de firestore
+                const categoryFilter = await buscarDocumentoFiltradoCategoria('items', idCategory);
                 setItems(categoryFilter);
                 setLoading(false);
             } else {

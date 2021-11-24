@@ -80,6 +80,30 @@ export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
   }
 };
 
+//Consultar un documento filtrado por: categoría
+export const buscarDocumentoFiltradoCategoria = async (nombreColeccion, idCategory) => {
+  try {
+    let elementos = '';
+    const response = await getDocs(
+      query(
+        collection(database, nombreColeccion), where("IdCategory", "==", Number(idCategory))
+      )
+    );
+    // console.log("response filtrado: ", response);
+     elementos = response.docs.map((doc) => {
+      const document = {
+        id: doc.id, //doc.id: es el id que genera firebase (externo)
+        ...doc.data(), // Si ya existe un atributo "id" lo reescribe del id que genera firebase
+      };
+      return document;
+    });
+    return elementos;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+
 //Consultar un documento filtrado por: id
 export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
   try {
@@ -100,12 +124,13 @@ export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
       //console.log("documento filtrado:", document);
       //return document;
     });
-    console.log("elementos.doc de response: ", elementos);
+    // console.log("elementos.doc de response: ", elementos);
     return document;
   } catch (error) {
     throw new Error(error.message);
   }
 };
+
 
 
 // Actualizar un documento
