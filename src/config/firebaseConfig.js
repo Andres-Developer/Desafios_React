@@ -32,7 +32,6 @@ const database = getFirestore();
 export const guardarDatabase = async (nombreColeccion, data) => {
   try {
     const response = await addDoc(collection(database, nombreColeccion), data);
-    // console.log("id documento insertado: ", response.id);
     return response;
   } catch (error) {
     throw new Error(error.message);
@@ -60,7 +59,6 @@ export const consultarDatabase = async (nombreColeccion) => {
 export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
   try {
     const response = await getDoc(doc(database, nombreColeccion, id));
-    // console.log("response consulta 1 documento: ", response._document);
     // Si no encuentra el documento response._document = null
     if (response._document !== null) {
       const document = {
@@ -90,8 +88,8 @@ export const buscarDocumentoFiltradoCategoria = async (nombreColeccion, idCatego
     // console.log("response filtrado: ", response);
     elementos = response.docs.map((doc) => {
       const document = {
-        id: doc.id, //doc.id: es el id que genera firebase (externo)
-        ...doc.data(), // Si ya existe un atributo "id" lo reescribe del id que genera firebase
+        id: doc.id, 
+        ...doc.data(), 
       };
       return document;
     });
@@ -164,7 +162,6 @@ export const fechaFirebase = () => {
 
 
 //======================CONSULTA PARA ORDENAR===============================//
-
 export const getFilterCollection = async (nombreColeccion, keyDocumento, condicion, value, limite, orden = "asc") => {
 
   //orden: 'asc', 'desc"
