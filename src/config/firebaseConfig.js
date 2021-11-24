@@ -120,9 +120,6 @@ export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
         id: doc.id,
         ...doc.data()
       };
-
-      //console.log("documento filtrado:", document);
-      //return document;
     });
     // console.log("elementos.doc de response: ", elementos);
     return document;
@@ -130,8 +127,6 @@ export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
     throw new Error(error.message);
   }
 };
-
-
 
 // Actualizar un documento
 export const actualizarDocumentoDatabase = async (nombreColeccion, id, data) => {
@@ -173,8 +168,7 @@ export const fechaFirebase = () => {
 };
 
 
-//======================CONSULTA PARA ORDENAR===============================
-
+//======================CONSULTA PARA ORDENAR===============================//
 
 export const getFilterCollection = async (nombreColeccion, keyDocumento, condicion, value, limite, orden = "asc") => {
 

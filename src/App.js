@@ -10,7 +10,6 @@ import './assets/css/App.css';
 import { Form } from './components/Form/Form';
 import NavBootStrap from 'components/NavBar/NavBootStrap';
 
-
 function App() {
   return (
     <ProviderCart>

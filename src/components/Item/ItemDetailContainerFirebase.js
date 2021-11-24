@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 //Consulta a configuracion firebase
 import { consultarDocumentoDatabase } from './../../config/firebaseConfig';
 import { Spinner } from 'react-bootstrap';
-//import Data from "../../data/listaProductos.json"; //Información completa de los ITEMS
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -33,10 +32,7 @@ const ItemDetailContainer = () => {
 
 
 
-
-    /* Hook de Ciclo de Vida */
     useEffect(() => {
-        /* Llamando al item para obtener TODOS los detalles a partir del ID entregado por Props */
 
         getItem();
 
