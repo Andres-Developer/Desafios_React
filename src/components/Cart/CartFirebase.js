@@ -4,7 +4,6 @@ import { consultarDatabase } from './../../config/firebaseConfig';
 import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
 import { Spinner, Modal, Button } from 'react-bootstrap';
-// import Data from "./../../data/listaProductos.json"; //Información completa de los ITEMS
 import './../../assets/css/Cart.css';
 import { FaCheck } from 'react-icons/fa';
 
@@ -12,8 +11,6 @@ const Cart = () => {
     const [infoCart, setInfoCart] = useState(null);
     const [data, setData] = useState(null);
     const [itemsInfoCompleta, setItemsInfoCompleta] = useState(null);
-    //Estado de confirmación de eliminación
-    // const [confirmacionEliminacion, setConfirmacionEliminacion] = useState(false);
     const [idItemEliminar, setIdItemEliminar] = useState(null);
     const [loading, setLoading] = useState(false);
     const [mounted, setMounted] = useState(true); //---- SOLUCIÓN leak Memory unmount ------//
@@ -32,7 +29,7 @@ const Cart = () => {
     //Efecto que está pendiente si se elimina un item del carrito
     useEffect(() => {
 
-        setMounted(true); //---- SOLUCIÓN leak Memory unmount ------//
+        setMounted(true); 
 
         setData(null);
         setLoading(true);
@@ -43,21 +40,19 @@ const Cart = () => {
         }
         setLoading(false);
 
-        //---- SOLUCIÓN leak Memory unmount------//
         return () => setMounted(false);
 
-    }, [itemsCarrito, data]); //Renderiza cuando se carga "data" con los valores
+    }, [itemsCarrito, data]); 
 
     // Función Carga productos desde la DB
     const getCart = async () => {
-        if (mounted) {  //---- SOLUCIÓN leak Memory unmount------//
+        if (mounted) {  
             setLoading(true);
             setData(null);
             const listaTemporal = await consultarDatabase('items');
             setLoading(false);
-            //setListaProductos(listaTemporal);
             setData(listaTemporal);
-            if (!loading && data) { //Condicón con "data" puesto que se demoera en el setData, entonces en el useEffect estará pendiente
+            if (!loading && data) { 
                 setLoading(true);
 
                 let itemsFiltrados = itemsCarrito.map(e => ({
