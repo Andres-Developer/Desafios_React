@@ -31,12 +31,8 @@ const ItemDetailContainer = () => {
     };
 
     useEffect(() => {
-
         getItem();
-
     }, [productId]);
-
-
 
     return (
         <div>
@@ -54,8 +50,6 @@ const ItemDetailContainer = () => {
                         <div className="h3">Producto con id: <strong className="text-danger">{productId}</strong> no encontrado en la base de datos</div>
                     </div>
             }
-
-            {/*  */}
         </div>
     );
 };

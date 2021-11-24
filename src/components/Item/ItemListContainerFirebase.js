@@ -24,7 +24,7 @@ const ItemListContainer = () => {
         if (!loading) {
             if (idCategory) {
                 setLoading(true);
-                setItems(null); 
+                setItems(null);
                 //Implementando la búsqueda por Categoría con Query (where) de firestore
                 const categoryFilter = await buscarDocumentoFiltradoCategoria('items', idCategory);
                 setItems(categoryFilter);
@@ -36,16 +36,11 @@ const ItemListContainer = () => {
         }
     };
 
-
-    /* Hook de Ciclo de Vida pendiente de la categoría */
     useEffect(() => {
-        /* Llamando al servidor  */
-
         setItems(null);
+        /* Llamando al servidor  */
         llamadaServidor(idCategory);
-
     }, [idCategory]);
-
 
     return (
         <div className="itemList mt-5 pt-5">
@@ -55,7 +50,6 @@ const ItemListContainer = () => {
                 :
                 <h5 className="text-danger">(Todos)</h5>
             }
-
             {
                 items ?
                     <div className="showCards container mx-5 px-5">

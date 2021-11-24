@@ -9,9 +9,7 @@ const ItemDetail = ({ itemDetail }) => {
         setTotalProductos(quantityToAdd);
     };
 
-
     useEffect(() => {
-
     }, [totalProductos]);
     return (
         <div className="container d-flex justify-content-center align-items-center mt-5 pt-4">

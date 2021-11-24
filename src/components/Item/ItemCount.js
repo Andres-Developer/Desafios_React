@@ -18,7 +18,7 @@ const ItemCount = ({ productosAgregadosCarrito, stock, initial, idProducto, prec
     //Render
     return (
         <>
-            <div /* className="cardCounter" */>
+            <div>
                 {!agregadoCarrito ?
                     <>
                         <div className="counter">
