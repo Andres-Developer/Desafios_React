@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-//Consulta a configuracion firebase
+
 import { consultarDatabase } from './../../config/firebaseConfig';
 import { Link } from 'react-router-dom';
 import { CartContext } from 'context/CartContext';
@@ -13,7 +13,7 @@ const Cart = () => {
     const [itemsInfoCompleta, setItemsInfoCompleta] = useState(null);
     const [idItemEliminar, setIdItemEliminar] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [mounted, setMounted] = useState(true); //---- SOLUCIÓN leak Memory unmount ------//
+    const [mounted, setMounted] = useState(true); 
 
     //Context Cart
     const { itemsCarrito, setItemsCarrito, totalItems, removeItem, addCountItem, removeCountItem, totalPrecio } = useContext(CartContext);
