@@ -65,7 +65,6 @@ export const consultarDocumentoDatabase = async (nombreColeccion, id) => {
         id: response.id,
         ...response.data(),
       };
-      //console.log("Documento consultado: ", document);
       return document;
     } else {
       //No encontró el documento
@@ -85,7 +84,6 @@ export const buscarDocumentoFiltradoCategoria = async (nombreColeccion, idCatego
         collection(database, nombreColeccion), where("IdCategory", "==", Number(idCategory))
       )
     );
-    // console.log("response filtrado: ", response);
     elementos = response.docs.map((doc) => {
       const document = {
         id: doc.id, 
