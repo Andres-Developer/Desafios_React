@@ -43,7 +43,6 @@ export const guardarDatabase = async (nombreColeccion, data) => {
 export const consultarDatabase = async (nombreColeccion) => {
   try {
     const response = await getDocs(query(collection(database, nombreColeccion)));
-    // console.log("response.docs: ", response.docs);//Testing
     const elementos = response.docs.map((doc) => {
       const document = {
         id: doc.id, //doc.id: es el id que genera firebase (externo)
@@ -51,7 +50,6 @@ export const consultarDatabase = async (nombreColeccion) => {
       };
       return document;
     });
-    //console.log(elementos);//Testing
     return elementos;
   } catch (error) {
     throw new Error(error.message);
@@ -90,7 +88,7 @@ export const buscarDocumentoFiltradoCategoria = async (nombreColeccion, idCatego
       )
     );
     // console.log("response filtrado: ", response);
-     elementos = response.docs.map((doc) => {
+    elementos = response.docs.map((doc) => {
       const document = {
         id: doc.id, //doc.id: es el id que genera firebase (externo)
         ...doc.data(), // Si ya existe un atributo "id" lo reescribe del id que genera firebase
@@ -108,20 +106,17 @@ export const buscarDocumentoFiltradoCategoria = async (nombreColeccion, idCatego
 export const buscarDocumentoFiltrado = async (nombreColeccion, id) => {
   try {
     let document = '';
-    let elementos = '';
     const response = await getDocs(
       query(
         collection(database, nombreColeccion), where("id", "==", id)
       )
     );
-    // console.log("response filtrado: ", response);
-    elementos = response.docs.map((doc) => {
+    response.docs.map((doc) => {
       document = {
         id: doc.id,
         ...doc.data()
       };
     });
-    // console.log("elementos.doc de response: ", elementos);
     return document;
   } catch (error) {
     throw new Error(error.message);

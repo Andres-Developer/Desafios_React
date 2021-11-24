@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
@@ -22,7 +22,5 @@ const Item = ({ id,id_interno, title, pictureUrl, stock }) => {
         </Card>
     );
 };
-
-
 
 export default Item;

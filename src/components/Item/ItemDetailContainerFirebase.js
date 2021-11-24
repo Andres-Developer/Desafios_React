@@ -30,8 +30,6 @@ const ItemDetailContainer = () => {
         }
     };
 
-
-
     useEffect(() => {
 
         getItem();

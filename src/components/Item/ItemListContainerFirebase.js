@@ -5,7 +5,7 @@ import './../../assets/css/ItemListContainer.css';
 import ItemList from './ItemList';
 import { useParams } from 'react-router';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState(null);
 
