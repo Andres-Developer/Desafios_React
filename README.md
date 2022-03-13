@@ -1,8 +1,8 @@
 ## _¡Aplicación de e-Commerce!_ 🛒🎁
 -----------------------------
 ### _URL_ del proyecto desplegado:
- https://www.tiendapp.andres-dev.ml/
- https://ecommerce-ab.web.app/
+ * https://www.tiendapp.andres-dev.ml/
+ * https://ecommerce-ab.web.app/
 
 
 ## 📽 _Video de recorrido completo de una compra:_
