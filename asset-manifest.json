@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Desafios_React/static/css/main.4f321885.chunk.css",
+    "main.js": "/Desafios_React/static/js/main.299dc89a.chunk.js",
+    "main.js.map": "/Desafios_React/static/js/main.299dc89a.chunk.js.map",
+    "runtime-main.js": "/Desafios_React/static/js/runtime-main.a50d6963.js",
+    "runtime-main.js.map": "/Desafios_React/static/js/runtime-main.a50d6963.js.map",
+    "static/css/2.0f1110e3.chunk.css": "/Desafios_React/static/css/2.0f1110e3.chunk.css",
+    "static/js/2.14363be9.chunk.js": "/Desafios_React/static/js/2.14363be9.chunk.js",
+    "static/js/2.14363be9.chunk.js.map": "/Desafios_React/static/js/2.14363be9.chunk.js.map",
+    "index.html": "/Desafios_React/index.html",
+    "static/css/2.0f1110e3.chunk.css.map": "/Desafios_React/static/css/2.0f1110e3.chunk.css.map",
+    "static/css/main.4f321885.chunk.css.map": "/Desafios_React/static/css/main.4f321885.chunk.css.map",
+    "static/js/2.14363be9.chunk.js.LICENSE.txt": "/Desafios_React/static/js/2.14363be9.chunk.js.LICENSE.txt",
+    "static/media/shoppingLogo.d351765f.svg": "/Desafios_React/static/media/shoppingLogo.d351765f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a50d6963.js",
+    "static/css/2.0f1110e3.chunk.css",
+    "static/js/2.14363be9.chunk.js",
+    "static/css/main.4f321885.chunk.css",
+    "static/js/main.299dc89a.chunk.js"
+  ]
+}
